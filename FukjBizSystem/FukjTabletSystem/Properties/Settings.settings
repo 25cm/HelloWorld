@@ -1,0 +1,46 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="FukjTabletSystem.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="PrintDirectory" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\FukjTabletSystem\Print</Value>
+    </Setting>
+    <Setting Name="PrintFormatFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\FukjTabletSystem\PrintFormat\</Value>
+    </Setting>
+    <Setting Name="HolidayFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">.\HolidayFile.xml</Value>
+    </Setting>
+    <Setting Name="ErrMsgFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">.\ErrMsgFile.xml</Value>
+    </Setting>
+    <Setting Name="GpsWaitTimer" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="GpsTimer" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">15000</Value>
+    </Setting>
+    <Setting Name="DemoMapArea" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="FukjTabletSystemConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=.\Database\fukjTablet.sdf;Password=fukj_1800;Persist Security Info=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlServerCe.3.5&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=.\Database\fukjTablet.sdf;Password=fukj_1800;Persist Security Info=True</Value>
+    </Setting>
+    <Setting Name="OVLFukjOverlayConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\ProgramData\SoftPlanet\MapWorks50\Mdb\OVLFukjOverlay.mdb&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.OleDb&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\ProgramData\SoftPlanet\MapWorks50\Mdb\OVLFukjOverlay.mdb</Value>
+    </Setting>
+    <Setting Name="PicDataRootDirectory" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\FukjTabletSystem\Pic</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

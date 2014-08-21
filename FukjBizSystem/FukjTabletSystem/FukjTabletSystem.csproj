@@ -1,0 +1,908 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E457FD0B-158B-40F7-922F-E31DDE06066B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FukjTabletSystem</RootNamespace>
+    <AssemblyName>FukjTabletSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://localhost/Fukj/FukjTabletSystem/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>タブレットデモアプリ</ProductName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>92</ApplicationRevision>
+    <ApplicationVersion>0.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>A383615F61777CA6FC53DA4CC6B2B5253C99D48F</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>FukjTabletSystem_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MapWorks50">
+      <HintPath>..\MapWorksDLL\StandAloneTrial\MapWorks50.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MWDlg50">
+      <HintPath>..\MapWorksDLL\StandAloneTrial\MWDlg50.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Device" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application\Boundary\Common\AppData.cs" />
+    <Compile Include="Application\Boundary\Common\GetPhotoDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Common\GetPhotoDialog.Designer.cs">
+      <DependentUpon>GetPhotoDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Common\InkCanvasDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Common\InkCanvasDialog.Designer.cs">
+      <DependentUpon>InkCanvasDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Common\MessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Common\MessageForm.Designer.cs">
+      <DependentUpon>MessageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Common\ProgressDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Common\ProgressDialog.Designer.cs">
+      <DependentUpon>ProgressDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Common\TextInputDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Common\TextInputDialog.Designer.cs">
+      <DependentUpon>TextInputDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Common\ColorSelectDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Common\ColorSelectDialog.Designer.cs">
+      <DependentUpon>ColorSelectDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Common\LineSelectDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Common\LineSelectDialog.Designer.cs">
+      <DependentUpon>LineSelectDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\Common\DummyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\Common\DummyForm.Designer.cs">
+      <DependentUpon>DummyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\Common\FormData.cs" />
+    <Compile Include="Application\Boundary\Demo\Common\FormManager.cs" />
+    <Compile Include="Application\Boundary\Demo\Common\HeaderControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\Common\HeaderControl.Designer.cs">
+      <DependentUpon>HeaderControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\Common\JokasouMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\Common\JokasouMenu.designer.cs">
+      <DependentUpon>JokasouMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\Common\KbnUtility.cs" />
+    <Compile Include="Application\Boundary\Demo\Common\KensaRirekiList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\Common\KensaRirekiList.designer.cs">
+      <DependentUpon>KensaRirekiList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\Common\KensaTaishoList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\Common\KensaTaishoList.designer.cs">
+      <DependentUpon>KensaTaishoList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\Common\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\Common\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\Common\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\Common\Menu.designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\Common\SelectButtonPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\Common\SelectButtonPanel.Designer.cs">
+      <DependentUpon>SelectButtonPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\Common\SelectList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\Common\SelectList.Designer.cs">
+      <DependentUpon>SelectList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\Common\TabBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\Common\TabBaseFormHoriz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\Common\ZFlowLayoutPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\Common\ZFlowLayoutPanel.Designer.cs">
+      <DependentUpon>ZFlowLayoutPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\JokasouInfo\JokasouInfoMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\JokasouInfo\JokasouInfoMenu.designer.cs">
+      <DependentUpon>JokasouInfoMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\KensaKekkaNumEntryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\KensaKekkaNumEntryForm.Designer.cs">
+      <DependentUpon>KensaKekkaNumEntryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\KensaMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\KensaMenuForm.Designer.cs">
+      <DependentUpon>KensaMenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\KensaYoteiListDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KensaYoteiListDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\KensaYoteiListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\KensaYoteiListForm.Designer.cs">
+      <DependentUpon>KensaYoteiListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\ShokenEntry\ChuBunruiSentaku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\ShokenEntry\ChuBunruiSentaku.designer.cs">
+      <DependentUpon>ChuBunruiSentaku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\ShokenEntry\DaiBunruiSentaku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\ShokenEntry\DaiBunruiSentaku.designer.cs">
+      <DependentUpon>DaiBunruiSentaku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\ShokenEntry\GaikanKensaHoriz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\ShokenEntry\GaikanKensaHoriz.designer.cs">
+      <DependentUpon>GaikanKensaHoriz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\ShokenEntry\ShokenKakutei.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\ShokenEntry\ShokenKakutei.designer.cs">
+      <DependentUpon>ShokenKakutei.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\ShokenEntry\ShouBunruiSentaku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\ShokenEntry\ShouBunruiSentaku.designer.cs">
+      <DependentUpon>ShouBunruiSentaku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\ShokenEntry\SoutiSentakuHoriz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\ShokenEntry\SoutiSentakuHoriz.designer.cs">
+      <DependentUpon>SoutiSentakuHoriz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\ShokenEntry\TeidoSentaku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\ShokenEntry\TeidoSentaku.designer.cs">
+      <DependentUpon>TeidoSentaku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\ShoruiKensa\ShoruiKensaEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\ShoruiKensa\ShoruiKensaEntry.designer.cs">
+      <DependentUpon>ShoruiKensaEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\SuishitsuKensa\SuishitsuKensaEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\SuishitsuKensa\SuishitsuKensaEntry.designer.cs">
+      <DependentUpon>SuishitsuKensaEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\SuishitsuKensa\SuishitsuKensaOutput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\SuishitsuKensa\SuishitsuKensaOutput.designer.cs">
+      <DependentUpon>SuishitsuKensaOutput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Common\FolderDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Common\FolderDialog.designer.cs">
+      <DependentUpon>FolderDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\ShoruiKensaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\ShoruiKensaForm.Designer.cs">
+      <DependentUpon>ShoruiKensaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\MonitoringForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\MonitoringForm.Designer.cs">
+      <DependentUpon>MonitoringForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\MapWorks\MapPointMasterDataSet.cs">
+      <DependentUpon>MapPointMasterDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\MapWorks\MapPointMasterDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MapPointMasterDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\MapWorks\MapWorksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\MapWorks\MapWorksForm.Designer.cs">
+      <DependentUpon>MapWorksForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\BusinessLogic\SuishitsuKensa\SuishitsuKensaOutput\ImportToushido.cs" />
+    <Compile Include="Application\BusinessLogic\SuishitsuKensa\SuishitsuKensaOutput\PrintToushido.cs" />
+    <Compile Include="Application\DataAccess\DataAccessUtility.cs" />
+    <Compile Include="Application\DataAccess\Ce\GaikankensaKomokuMst\SelectGaikankensaKomokuMstByKey.cs" />
+    <Compile Include="Application\DataAccess\Ce\GaikankensaKomokuMst\UpdateGaikankensaKomokuMst.cs" />
+    <Compile Include="Application\DataAccess\Mdb\Object\SelectObject.cs" />
+    <Compile Include="Application\DataAccess\Mdb\Object\UpdateObject.cs" />
+    <Compile Include="Application\DataAccess\Mdb\Bitmaps\SelectBitmaps.cs" />
+    <Compile Include="Application\DataAccess\Mdb\Bitmaps\UpdateBitmaps.cs" />
+    <Compile Include="Application\DataSet\Ce\GaikankensaKomokuMstDataSet.cs">
+      <DependentUpon>GaikankensaKomokuMstDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\Ce\GaikankensaKomokuMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GaikankensaKomokuMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\Ce\current_timestampDataSet.cs">
+      <DependentUpon>current_timestampDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\Ce\current_timestampDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>current_timestampDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\Mdb\OVLFukjOverlayDataSet.cs">
+      <DependentUpon>OVLFukjOverlayDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\Mdb\OVLFukjOverlayDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OVLFukjOverlayDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\Ce\NameMstDataSet.cs">
+      <DependentUpon>NameMstDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\Ce\NameMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NameMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\Ce\ShokenMstDataSet.cs">
+      <DependentUpon>ShokenMstDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\Ce\ShokenMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShokenMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\Ce\ShokuinMstDataSet.cs">
+      <DependentUpon>ShokuinMstDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\Ce\ShokuinMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShokuinMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\Ce\TaniSochiGroupMstDataSet.cs">
+      <DependentUpon>TaniSochiGroupMstDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\Ce\TaniSochiGroupMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TaniSochiGroupMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\Ce\TaniSochiKensaJokyoMstDataSet.cs">
+      <DependentUpon>TaniSochiKensaJokyoMstDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\Ce\TaniSochiKensaJokyoMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TaniSochiKensaJokyoMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\Ce\TaniSochiKensaJokyoTeidoMstDataSet.cs">
+      <DependentUpon>TaniSochiKensaJokyoTeidoMstDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\Ce\TaniSochiKensaJokyoTeidoMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TaniSochiKensaJokyoTeidoMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\Ce\TaniSochiKensaKomokuMstDataSet.cs">
+      <DependentUpon>TaniSochiKensaKomokuMstDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\Ce\TaniSochiKensaKomokuMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TaniSochiKensaKomokuMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\Ce\TaniSochiMstDataSet.cs">
+      <DependentUpon>TaniSochiMstDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\Ce\TaniSochiMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TaniSochiMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Utility\Constants.cs" />
+    <Compile Include="Application\Utility\GPSInfo.cs" />
+    <Compile Include="Application\Utility\TabMessageBox.cs" />
+    <Compile Include="Application\Utility\SettingFile.cs" />
+    <Compile Include="Application\Utility\ShokuinInfo.cs" />
+    <Compile Include="Controls\TransparentPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TransparentPictureBox.Designer.cs">
+      <DependentUpon>TransparentPictureBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Utility\Utility.cs" />
+    <Compile Include="Application\Utility\Viewer.cs" />
+    <Compile Include="Application\Utility\XmlInitial.cs" />
+    <Compile Include="Controls\TriStateTreeNode.cs" />
+    <Compile Include="Controls\TriStateTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ZTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ZTextBox.designer.cs">
+      <DependentUpon>ZTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Application\Boundary\Common\GetPhotoDialog.resx">
+      <DependentUpon>GetPhotoDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Common\InkCanvasDialog.resx">
+      <DependentUpon>InkCanvasDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Common\MessageForm.resx">
+      <DependentUpon>MessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Common\ProgressDialog.resx">
+      <DependentUpon>ProgressDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Common\TextInputDialog.resx">
+      <DependentUpon>TextInputDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Common\ColorSelectDialog.resx">
+      <DependentUpon>ColorSelectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Common\LineSelectDialog.resx">
+      <DependentUpon>LineSelectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Demo\Common\DummyForm.resx">
+      <DependentUpon>DummyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Demo\Common\HeaderControl.resx">
+      <DependentUpon>HeaderControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Demo\Common\JokasouMenu.resx">
+      <DependentUpon>JokasouMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Demo\Common\KensaRirekiList.resx">
+      <DependentUpon>KensaRirekiList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Demo\Common\KensaTaishoList.resx">
+      <DependentUpon>KensaTaishoList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Demo\Common\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Demo\Common\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Demo\Common\SelectButtonPanel.resx">
+      <DependentUpon>SelectButtonPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Demo\Common\SelectList.resx">
+      <DependentUpon>SelectList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Demo\Common\TabBaseForm.resx">
+      <DependentUpon>TabBaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Demo\Common\ZFlowLayoutPanel.resx">
+      <DependentUpon>ZFlowLayoutPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Demo\JokasouInfo\JokasouInfoMenu.resx">
+      <DependentUpon>JokasouInfoMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Demo\KensaKekkaNumEntryForm.resx">
+      <DependentUpon>KensaKekkaNumEntryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Demo\KensaMenuForm.resx">
+      <DependentUpon>KensaMenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Demo\KensaYoteiListForm.resx">
+      <DependentUpon>KensaYoteiListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Demo\ShokenEntry\ChuBunruiSentaku.resx">
+      <DependentUpon>ChuBunruiSentaku.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Demo\ShokenEntry\DaiBunruiSentaku.resx">
+      <DependentUpon>DaiBunruiSentaku.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Demo\ShokenEntry\GaikanKensaHoriz.resx">
+      <DependentUpon>GaikanKensaHoriz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Demo\ShokenEntry\ShokenKakutei.resx">
+      <DependentUpon>ShokenKakutei.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Demo\ShokenEntry\ShouBunruiSentaku.resx">
+      <DependentUpon>ShouBunruiSentaku.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Demo\ShokenEntry\SoutiSentakuHoriz.resx">
+      <DependentUpon>SoutiSentakuHoriz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Demo\ShokenEntry\TeidoSentaku.resx">
+      <DependentUpon>TeidoSentaku.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Demo\ShoruiKensa\ShoruiKensaEntry.resx">
+      <DependentUpon>ShoruiKensaEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Demo\SuishitsuKensa\SuishitsuKensaEntry.resx">
+      <DependentUpon>SuishitsuKensaEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Demo\SuishitsuKensa\SuishitsuKensaOutput.resx">
+      <DependentUpon>SuishitsuKensaOutput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Common\FolderDialog.resx">
+      <DependentUpon>FolderDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Demo\ShoruiKensaForm.resx">
+      <DependentUpon>ShoruiKensaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Demo\MonitoringForm.resx">
+      <DependentUpon>MonitoringForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\MapWorks\MapWorksForm.resx">
+      <DependentUpon>MapWorksForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TriStateTreeView.resx">
+      <DependentUpon>TriStateTreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Application\Boundary\Demo\KensaYoteiListDataSet.xsc">
+      <DependentUpon>KensaYoteiListDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\Boundary\Demo\KensaYoteiListDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KensaYoteiListDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\Boundary\Demo\KensaYoteiListDataSet.xss">
+      <DependentUpon>KensaYoteiListDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\Boundary\MapWorks\MapPointMasterDataSet.xsc">
+      <DependentUpon>MapPointMasterDataSet.xsd</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Application\Boundary\MapWorks\MapPointMasterDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MapPointMasterDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\Boundary\MapWorks\MapPointMasterDataSet.xss">
+      <DependentUpon>MapPointMasterDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\Ce\GaikankensaKomokuMstDataSet.xsc">
+      <DependentUpon>GaikankensaKomokuMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\Ce\GaikankensaKomokuMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GaikankensaKomokuMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\Ce\GaikankensaKomokuMstDataSet.xss">
+      <DependentUpon>GaikankensaKomokuMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\Ce\current_timestampDataSet.xsc">
+      <DependentUpon>current_timestampDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\Ce\current_timestampDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>current_timestampDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\Ce\current_timestampDataSet.xss">
+      <DependentUpon>current_timestampDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\Mdb\OVLFukjOverlayDataSet.xsc">
+      <DependentUpon>OVLFukjOverlayDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\Mdb\OVLFukjOverlayDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OVLFukjOverlayDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\Mdb\OVLFukjOverlayDataSet.xss">
+      <DependentUpon>OVLFukjOverlayDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\Ce\NameMstDataSet.xsc">
+      <DependentUpon>NameMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\Ce\NameMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NameMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\Ce\NameMstDataSet.xss">
+      <DependentUpon>NameMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\Ce\ShokenMstDataSet.xsc">
+      <DependentUpon>ShokenMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\Ce\ShokenMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShokenMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\Ce\ShokenMstDataSet.xss">
+      <DependentUpon>ShokenMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\Ce\ShokuinMstDataSet.xsc">
+      <DependentUpon>ShokuinMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\Ce\ShokuinMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShokuinMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\Ce\ShokuinMstDataSet.xss">
+      <DependentUpon>ShokuinMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\Ce\TaniSochiGroupMstDataSet.xsc">
+      <DependentUpon>TaniSochiGroupMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\Ce\TaniSochiGroupMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TaniSochiGroupMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\Ce\TaniSochiGroupMstDataSet.xss">
+      <DependentUpon>TaniSochiGroupMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\Ce\TaniSochiKensaJokyoMstDataSet.xsc">
+      <DependentUpon>TaniSochiKensaJokyoMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\Ce\TaniSochiKensaJokyoMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TaniSochiKensaJokyoMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\Ce\TaniSochiKensaJokyoMstDataSet.xss">
+      <DependentUpon>TaniSochiKensaJokyoMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\Ce\TaniSochiKensaJokyoTeidoMstDataSet.xsc">
+      <DependentUpon>TaniSochiKensaJokyoTeidoMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\Ce\TaniSochiKensaJokyoTeidoMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TaniSochiKensaJokyoTeidoMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\Ce\TaniSochiKensaJokyoTeidoMstDataSet.xss">
+      <DependentUpon>TaniSochiKensaJokyoTeidoMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\Ce\TaniSochiKensaKomokuMstDataSet.xsc">
+      <DependentUpon>TaniSochiKensaKomokuMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\Ce\TaniSochiKensaKomokuMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TaniSochiKensaKomokuMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\Ce\TaniSochiKensaKomokuMstDataSet.xss">
+      <DependentUpon>TaniSochiKensaKomokuMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\Ce\TaniSochiMstDataSet.xsc">
+      <DependentUpon>TaniSochiMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\Ce\TaniSochiMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TaniSochiMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\Ce\TaniSochiMstDataSet.xss">
+      <DependentUpon>TaniSochiMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FukjTabletSystem_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Database\fukjTablet.sdf">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="ErrMsgFile.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="HolidayFile.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualBasic.PowerPacks.Vs">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ZynasControl\ZynasControl.csproj">
+      <Project>{FAE6400B-48ED-44CF-9FFB-2E4A17FDA8A1}</Project>
+      <Name>ZynasControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZynasFramework\ZynasFramework.csproj">
+      <Project>{13672596-FDA4-4C66-8A43-74D64836A854}</Project>
+      <Name>ZynasFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database\fukjTablet.sdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ErrMsgFile.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="HolidayFile.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\9条_透視度.xls" />
+    <None Include="Resources\9条_透視度1001.xls" />
+    <None Include="Resources\9条_透視度_test.xls" />
+    <None Include="Resources\Back.png" />
+    <None Include="Resources\Pin_Red.png" />
+    <None Include="Resources\Text.png" />
+    <None Include="Resources\Remove.png" />
+    <None Include="Resources\line_object.png" />
+    <None Include="Resources\FreePen.png" />
+    <None Include="Resources\Ruler.png" />
+    <None Include="Resources\StampS_L.png" />
+    <None Include="Resources\StampS_S.png" />
+    <None Include="Resources\StampB_L.png" />
+    <None Include="Resources\StampB_S.png" />
+    <None Include="Resources\Pin.png" />
+    <None Include="Resources\Message.png" />
+    <None Include="Resources\Kensa.png" />
+    <None Include="Resources\Pin_Red_S.png" />
+    <None Include="Resources\Rireki.png" />
+    <None Include="Resources\Info.png" />
+    <None Include="Resources\Photo.png" />
+    <None Include="Resources\Pdf.png" />
+    <Content Include="MapWorksViewer.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RunCamera.vbs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Input.png" />
+    <None Include="Resources\Gps.png" />
+    <None Include="Resources\Keybord.png" />
+    <None Include="Resources\camera.png" />
+    <None Include="Resources\Map.png" />
+    <None Include="Resources\ZoomIn.png" />
+    <None Include="Resources\ZoomOut.png" />
+    <Content Include="sqlceca35.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sqlcecompact35.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sqlceer35EN.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sqlceme35.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sqlceoledb35.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sqlceqp35.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sqlcese35.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 および x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows インストーラー 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Application\ApplicationLogic\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,579 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="YoshiHanbaiHdrTblDataSet" targetNamespace="http://tempuri.org/YoshiHanbaiHdrTblDataSet.xsd" xmlns:mstns="http://tempuri.org/YoshiHanbaiHdrTblDataSet.xsd" xmlns="http://tempuri.org/YoshiHanbaiHdrTblDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="FukjBizSystemConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="FukjBizSystemConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.FukjBizSystem.Properties.Settings.GlobalReference.Default.FukjBizSystemConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="YoshiUriageListTableAdapter" GeneratorDataComponentClassName="YoshiUriageListTableAdapter" Name="YoshiUriageList" UserDataComponentName="YoshiUriageListTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FukjBizSystemConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT                      GyoshaMst.GyoshaNm, YoshiHanbaiHdrTbl.YoshiHanbaisakiGyoshaCd, YoshiHanbaiHdrTbl.YoshiHanbaiDt, 
+                                      YoshiHanbaiHdrTbl.YoshiHanbaiGokeiKingaku
+FROM                         GyoshaMst LEFT OUTER JOIN
+                                          (SELECT                      YoshiHanbaisakiGyoshaCd, YoshiHanbaiDt, SUM(YoshiHanbaiGokeiKingaku) AS YoshiHanbaiGokeiKingaku
+                                                FROM                         YoshiHanbaiHdrTbl AS YoshiHanbaiHdrTbl_1
+                                                GROUP BY              YoshiHanbaisakiGyoshaCd, YoshiHanbaiDt) AS YoshiHanbaiHdrTbl ON 
+                                      YoshiHanbaiHdrTbl.YoshiHanbaisakiGyoshaCd = GyoshaMst.GyoshaCd
+WHERE                       (1 = 1) AND (ISNULL(YoshiHanbaiHdrTbl.YoshiHanbaisakiGyoshaCd, '') &lt;&gt; '')
+ORDER BY               YoshiHanbaiHdrTbl.YoshiHanbaisakiGyoshaCd, YoshiHanbaiHdrTbl.YoshiHanbaiDt</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="GyoshaNm" DataSetColumn="GyoshaNm" />
+              <Mapping SourceColumn="YoshiHanbaisakiGyoshaCd" DataSetColumn="YoshiHanbaisakiGyoshaCd" />
+              <Mapping SourceColumn="YoshiHanbaiDt" DataSetColumn="YoshiHanbaiDt" />
+              <Mapping SourceColumn="YoshiHanbaiGokeiKingaku" DataSetColumn="YoshiHanbaiGokeiKingaku" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="YoshiHanbaiHdrTblTableAdapter" GeneratorDataComponentClassName="YoshiHanbaiHdrTblTableAdapter" Name="YoshiHanbaiHdrTbl" UserDataComponentName="YoshiHanbaiHdrTblTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FukjBizSystemConnectionString (Settings)" DbObjectName="johkasou_db.dbo.YoshiHanbaiHdrTbl" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[YoshiHanbaiHdrTbl] WHERE (([YoshiHanbaiChumonNo] = @Original_YoshiHanbaiChumonNo) AND ([YoshiHanbaiShishoCd] = @Original_YoshiHanbaiShishoCd) AND ([YoshiHanbaiDt] = @Original_YoshiHanbaiDt) AND ([YoshiHanbaisakiGyoshaCd] = @Original_YoshiHanbaisakiGyoshaCd) AND ((@IsNull_YoshiHanbaisakiTantosha = 1 AND [YoshiHanbaisakiTantosha] IS NULL) OR ([YoshiHanbaisakiTantosha] = @Original_YoshiHanbaisakiTantosha)) AND ((@IsNull_YoshiHanbaiGokeiKingaku = 1 AND [YoshiHanbaiGokeiKingaku] IS NULL) OR ([YoshiHanbaiGokeiKingaku] = @Original_YoshiHanbaiGokeiKingaku)) AND ((@IsNull_YoshiHanbaiGenkinNyukingaku = 1 AND [YoshiHanbaiGenkinNyukingaku] IS NULL) OR ([YoshiHanbaiGenkinNyukingaku] = @Original_YoshiHanbaiGenkinNyukingaku)) AND ((@IsNull_YoshiHanbaiSeikyuKingaku = 1 AND [YoshiHanbaiSeikyuKingaku] IS NULL) OR ([YoshiHanbaiSeikyuKingaku] = @Original_YoshiHanbaiSeikyuKingaku)) AND ((@IsNull_YoshiHanbaiKansaiFlg = 1 AND [YoshiHanbaiKansaiFlg] IS NULL) OR ([YoshiHanbaiKansaiFlg] = @Original_YoshiHanbaiKansaiFlg)) AND ((@IsNull_YoshiHanbaiSeikyushoHakkoFlg = 1 AND [YoshiHanbaiSeikyushoHakkoFlg] IS NULL) OR ([YoshiHanbaiSeikyushoHakkoFlg] = @Original_YoshiHanbaiSeikyushoHakkoFlg)) AND ((@IsNull_YoshiHanbaiNohinshoHakkoFlg = 1 AND [YoshiHanbaiNohinshoHakkoFlg] IS NULL) OR ([YoshiHanbaiNohinshoHakkoFlg] = @Original_YoshiHanbaiNohinshoHakkoFlg)) AND ((@IsNull_YoshiHanbaiHassoFlg = 1 AND [YoshiHanbaiHassoFlg] IS NULL) OR ([YoshiHanbaiHassoFlg] = @Original_YoshiHanbaiHassoFlg)) AND ((@IsNull_YoshiHanbaiHassoDt = 1 AND [YoshiHanbaiHassoDt] IS NULL) OR ([YoshiHanbaiHassoDt] = @Original_YoshiHanbaiHassoDt)) AND ([InsertDt] = @Original_InsertDt) AND ([InsertUser] = @Original_InsertUser) AND ([InsertTarm] = @Original_InsertTarm) AND ([UpdateDt] = @Original_UpdateDt) AND ([UpdateUser] = @Original_UpdateUser) AND ([UpdateTarm] = @Original_UpdateTarm))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_YoshiHanbaiChumonNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="YoshiHanbaiChumonNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_YoshiHanbaiShishoCd" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="YoshiHanbaiShishoCd" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_YoshiHanbaiDt" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="YoshiHanbaiDt" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_YoshiHanbaisakiGyoshaCd" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="YoshiHanbaisakiGyoshaCd" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_YoshiHanbaisakiTantosha" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YoshiHanbaisakiTantosha" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_YoshiHanbaisakiTantosha" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="YoshiHanbaisakiTantosha" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_YoshiHanbaiGokeiKingaku" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YoshiHanbaiGokeiKingaku" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_YoshiHanbaiGokeiKingaku" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="YoshiHanbaiGokeiKingaku" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_YoshiHanbaiGenkinNyukingaku" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YoshiHanbaiGenkinNyukingaku" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_YoshiHanbaiGenkinNyukingaku" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="YoshiHanbaiGenkinNyukingaku" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_YoshiHanbaiSeikyuKingaku" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YoshiHanbaiSeikyuKingaku" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_YoshiHanbaiSeikyuKingaku" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="YoshiHanbaiSeikyuKingaku" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_YoshiHanbaiKansaiFlg" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YoshiHanbaiKansaiFlg" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_YoshiHanbaiKansaiFlg" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="YoshiHanbaiKansaiFlg" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_YoshiHanbaiSeikyushoHakkoFlg" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YoshiHanbaiSeikyushoHakkoFlg" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_YoshiHanbaiSeikyushoHakkoFlg" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="YoshiHanbaiSeikyushoHakkoFlg" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_YoshiHanbaiNohinshoHakkoFlg" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YoshiHanbaiNohinshoHakkoFlg" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_YoshiHanbaiNohinshoHakkoFlg" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="YoshiHanbaiNohinshoHakkoFlg" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_YoshiHanbaiHassoFlg" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YoshiHanbaiHassoFlg" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_YoshiHanbaiHassoFlg" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="YoshiHanbaiHassoFlg" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_YoshiHanbaiHassoDt" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YoshiHanbaiHassoDt" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_YoshiHanbaiHassoDt" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="YoshiHanbaiHassoDt" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_InsertDt" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="InsertDt" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_InsertUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InsertUser" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_InsertTarm" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InsertTarm" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_UpdateDt" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="UpdateDt" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_UpdateUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="UpdateUser" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_UpdateTarm" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="UpdateTarm" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[YoshiHanbaiHdrTbl] ([YoshiHanbaiChumonNo], [YoshiHanbaiShishoCd], [YoshiHanbaiDt], [YoshiHanbaisakiGyoshaCd], [YoshiHanbaisakiTantosha], [YoshiHanbaiGokeiKingaku], [YoshiHanbaiGenkinNyukingaku], [YoshiHanbaiSeikyuKingaku], [YoshiHanbaiKansaiFlg], [YoshiHanbaiSeikyushoHakkoFlg], [YoshiHanbaiNohinshoHakkoFlg], [YoshiHanbaiHassoFlg], [YoshiHanbaiHassoDt], [InsertDt], [InsertUser], [InsertTarm], [UpdateDt], [UpdateUser], [UpdateTarm]) VALUES (@YoshiHanbaiChumonNo, @YoshiHanbaiShishoCd, @YoshiHanbaiDt, @YoshiHanbaisakiGyoshaCd, @YoshiHanbaisakiTantosha, @YoshiHanbaiGokeiKingaku, @YoshiHanbaiGenkinNyukingaku, @YoshiHanbaiSeikyuKingaku, @YoshiHanbaiKansaiFlg, @YoshiHanbaiSeikyushoHakkoFlg, @YoshiHanbaiNohinshoHakkoFlg, @YoshiHanbaiHassoFlg, @YoshiHanbaiHassoDt, @InsertDt, @InsertUser, @InsertTarm, @UpdateDt, @UpdateUser, @UpdateTarm);
+SELECT YoshiHanbaiChumonNo, YoshiHanbaiShishoCd, YoshiHanbaiDt, YoshiHanbaisakiGyoshaCd, YoshiHanbaisakiTantosha, YoshiHanbaiGokeiKingaku, YoshiHanbaiGenkinNyukingaku, YoshiHanbaiSeikyuKingaku, YoshiHanbaiKansaiFlg, YoshiHanbaiSeikyushoHakkoFlg, YoshiHanbaiNohinshoHakkoFlg, YoshiHanbaiHassoFlg, YoshiHanbaiHassoDt, InsertDt, InsertUser, InsertTarm, UpdateDt, UpdateUser, UpdateTarm FROM YoshiHanbaiHdrTbl WHERE (YoshiHanbaiChumonNo = @YoshiHanbaiChumonNo)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@YoshiHanbaiChumonNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="YoshiHanbaiChumonNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@YoshiHanbaiShishoCd" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="YoshiHanbaiShishoCd" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@YoshiHanbaiDt" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="YoshiHanbaiDt" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@YoshiHanbaisakiGyoshaCd" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="YoshiHanbaisakiGyoshaCd" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@YoshiHanbaisakiTantosha" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="YoshiHanbaisakiTantosha" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@YoshiHanbaiGokeiKingaku" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="YoshiHanbaiGokeiKingaku" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@YoshiHanbaiGenkinNyukingaku" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="YoshiHanbaiGenkinNyukingaku" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@YoshiHanbaiSeikyuKingaku" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="YoshiHanbaiSeikyuKingaku" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@YoshiHanbaiKansaiFlg" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="YoshiHanbaiKansaiFlg" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@YoshiHanbaiSeikyushoHakkoFlg" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="YoshiHanbaiSeikyushoHakkoFlg" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@YoshiHanbaiNohinshoHakkoFlg" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="YoshiHanbaiNohinshoHakkoFlg" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@YoshiHanbaiHassoFlg" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="YoshiHanbaiHassoFlg" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@YoshiHanbaiHassoDt" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="YoshiHanbaiHassoDt" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@InsertDt" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="InsertDt" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@InsertUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InsertUser" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@InsertTarm" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InsertTarm" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@UpdateDt" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="UpdateDt" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@UpdateUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="UpdateUser" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@UpdateTarm" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="UpdateTarm" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT YoshiHanbaiChumonNo, YoshiHanbaiShishoCd, YoshiHanbaiDt, YoshiHanbaisakiGyoshaCd, YoshiHanbaisakiTantosha, YoshiHanbaiGokeiKingaku, YoshiHanbaiGenkinNyukingaku, YoshiHanbaiSeikyuKingaku, YoshiHanbaiKansaiFlg, YoshiHanbaiSeikyushoHakkoFlg, YoshiHanbaiNohinshoHakkoFlg, YoshiHanbaiHassoFlg, YoshiHanbaiHassoDt, InsertDt, InsertUser, InsertTarm, UpdateDt, UpdateUser, UpdateTarm FROM dbo.YoshiHanbaiHdrTbl</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[YoshiHanbaiHdrTbl] SET [YoshiHanbaiChumonNo] = @YoshiHanbaiChumonNo, [YoshiHanbaiShishoCd] = @YoshiHanbaiShishoCd, [YoshiHanbaiDt] = @YoshiHanbaiDt, [YoshiHanbaisakiGyoshaCd] = @YoshiHanbaisakiGyoshaCd, [YoshiHanbaisakiTantosha] = @YoshiHanbaisakiTantosha, [YoshiHanbaiGokeiKingaku] = @YoshiHanbaiGokeiKingaku, [YoshiHanbaiGenkinNyukingaku] = @YoshiHanbaiGenkinNyukingaku, [YoshiHanbaiSeikyuKingaku] = @YoshiHanbaiSeikyuKingaku, [YoshiHanbaiKansaiFlg] = @YoshiHanbaiKansaiFlg, [YoshiHanbaiSeikyushoHakkoFlg] = @YoshiHanbaiSeikyushoHakkoFlg, [YoshiHanbaiNohinshoHakkoFlg] = @YoshiHanbaiNohinshoHakkoFlg, [YoshiHanbaiHassoFlg] = @YoshiHanbaiHassoFlg, [YoshiHanbaiHassoDt] = @YoshiHanbaiHassoDt, [InsertDt] = @InsertDt, [InsertUser] = @InsertUser, [InsertTarm] = @InsertTarm, [UpdateDt] = @UpdateDt, [UpdateUser] = @UpdateUser, [UpdateTarm] = @UpdateTarm WHERE (([YoshiHanbaiChumonNo] = @Original_YoshiHanbaiChumonNo) AND ([YoshiHanbaiShishoCd] = @Original_YoshiHanbaiShishoCd) AND ([YoshiHanbaiDt] = @Original_YoshiHanbaiDt) AND ([YoshiHanbaisakiGyoshaCd] = @Original_YoshiHanbaisakiGyoshaCd) AND ((@IsNull_YoshiHanbaisakiTantosha = 1 AND [YoshiHanbaisakiTantosha] IS NULL) OR ([YoshiHanbaisakiTantosha] = @Original_YoshiHanbaisakiTantosha)) AND ((@IsNull_YoshiHanbaiGokeiKingaku = 1 AND [YoshiHanbaiGokeiKingaku] IS NULL) OR ([YoshiHanbaiGokeiKingaku] = @Original_YoshiHanbaiGokeiKingaku)) AND ((@IsNull_YoshiHanbaiGenkinNyukingaku = 1 AND [YoshiHanbaiGenkinNyukingaku] IS NULL) OR ([YoshiHanbaiGenkinNyukingaku] = @Original_YoshiHanbaiGenkinNyukingaku)) AND ((@IsNull_YoshiHanbaiSeikyuKingaku = 1 AND [YoshiHanbaiSeikyuKingaku] IS NULL) OR ([YoshiHanbaiSeikyuKingaku] = @Original_YoshiHanbaiSeikyuKingaku)) AND ((@IsNull_YoshiHanbaiKansaiFlg = 1 AND [YoshiHanbaiKansaiFlg] IS NULL) OR ([YoshiHanbaiKansaiFlg] = @Original_YoshiHanbaiKansaiFlg)) AND ((@IsNull_YoshiHanbaiSeikyushoHakkoFlg = 1 AND [YoshiHanbaiSeikyushoHakkoFlg] IS NULL) OR ([YoshiHanbaiSeikyushoHakkoFlg] = @Original_YoshiHanbaiSeikyushoHakkoFlg)) AND ((@IsNull_YoshiHanbaiNohinshoHakkoFlg = 1 AND [YoshiHanbaiNohinshoHakkoFlg] IS NULL) OR ([YoshiHanbaiNohinshoHakkoFlg] = @Original_YoshiHanbaiNohinshoHakkoFlg)) AND ((@IsNull_YoshiHanbaiHassoFlg = 1 AND [YoshiHanbaiHassoFlg] IS NULL) OR ([YoshiHanbaiHassoFlg] = @Original_YoshiHanbaiHassoFlg)) AND ((@IsNull_YoshiHanbaiHassoDt = 1 AND [YoshiHanbaiHassoDt] IS NULL) OR ([YoshiHanbaiHassoDt] = @Original_YoshiHanbaiHassoDt)) AND ([InsertDt] = @Original_InsertDt) AND ([InsertUser] = @Original_InsertUser) AND ([InsertTarm] = @Original_InsertTarm) AND ([UpdateDt] = @Original_UpdateDt) AND ([UpdateUser] = @Original_UpdateUser) AND ([UpdateTarm] = @Original_UpdateTarm));
+SELECT YoshiHanbaiChumonNo, YoshiHanbaiShishoCd, YoshiHanbaiDt, YoshiHanbaisakiGyoshaCd, YoshiHanbaisakiTantosha, YoshiHanbaiGokeiKingaku, YoshiHanbaiGenkinNyukingaku, YoshiHanbaiSeikyuKingaku, YoshiHanbaiKansaiFlg, YoshiHanbaiSeikyushoHakkoFlg, YoshiHanbaiNohinshoHakkoFlg, YoshiHanbaiHassoFlg, YoshiHanbaiHassoDt, InsertDt, InsertUser, InsertTarm, UpdateDt, UpdateUser, UpdateTarm FROM YoshiHanbaiHdrTbl WHERE (YoshiHanbaiChumonNo = @YoshiHanbaiChumonNo)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@YoshiHanbaiChumonNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="YoshiHanbaiChumonNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@YoshiHanbaiShishoCd" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="YoshiHanbaiShishoCd" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@YoshiHanbaiDt" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="YoshiHanbaiDt" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@YoshiHanbaisakiGyoshaCd" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="YoshiHanbaisakiGyoshaCd" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@YoshiHanbaisakiTantosha" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="YoshiHanbaisakiTantosha" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@YoshiHanbaiGokeiKingaku" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="YoshiHanbaiGokeiKingaku" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@YoshiHanbaiGenkinNyukingaku" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="YoshiHanbaiGenkinNyukingaku" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@YoshiHanbaiSeikyuKingaku" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="YoshiHanbaiSeikyuKingaku" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@YoshiHanbaiKansaiFlg" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="YoshiHanbaiKansaiFlg" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@YoshiHanbaiSeikyushoHakkoFlg" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="YoshiHanbaiSeikyushoHakkoFlg" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@YoshiHanbaiNohinshoHakkoFlg" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="YoshiHanbaiNohinshoHakkoFlg" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@YoshiHanbaiHassoFlg" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="YoshiHanbaiHassoFlg" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@YoshiHanbaiHassoDt" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="YoshiHanbaiHassoDt" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@InsertDt" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="InsertDt" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@InsertUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InsertUser" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@InsertTarm" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InsertTarm" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@UpdateDt" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="UpdateDt" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@UpdateUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="UpdateUser" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@UpdateTarm" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="UpdateTarm" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_YoshiHanbaiChumonNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="YoshiHanbaiChumonNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_YoshiHanbaiShishoCd" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="YoshiHanbaiShishoCd" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_YoshiHanbaiDt" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="YoshiHanbaiDt" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_YoshiHanbaisakiGyoshaCd" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="YoshiHanbaisakiGyoshaCd" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_YoshiHanbaisakiTantosha" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YoshiHanbaisakiTantosha" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_YoshiHanbaisakiTantosha" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="YoshiHanbaisakiTantosha" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_YoshiHanbaiGokeiKingaku" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YoshiHanbaiGokeiKingaku" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_YoshiHanbaiGokeiKingaku" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="YoshiHanbaiGokeiKingaku" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_YoshiHanbaiGenkinNyukingaku" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YoshiHanbaiGenkinNyukingaku" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_YoshiHanbaiGenkinNyukingaku" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="YoshiHanbaiGenkinNyukingaku" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_YoshiHanbaiSeikyuKingaku" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YoshiHanbaiSeikyuKingaku" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_YoshiHanbaiSeikyuKingaku" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="YoshiHanbaiSeikyuKingaku" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_YoshiHanbaiKansaiFlg" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YoshiHanbaiKansaiFlg" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_YoshiHanbaiKansaiFlg" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="YoshiHanbaiKansaiFlg" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_YoshiHanbaiSeikyushoHakkoFlg" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YoshiHanbaiSeikyushoHakkoFlg" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_YoshiHanbaiSeikyushoHakkoFlg" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="YoshiHanbaiSeikyushoHakkoFlg" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_YoshiHanbaiNohinshoHakkoFlg" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YoshiHanbaiNohinshoHakkoFlg" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_YoshiHanbaiNohinshoHakkoFlg" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="YoshiHanbaiNohinshoHakkoFlg" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_YoshiHanbaiHassoFlg" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YoshiHanbaiHassoFlg" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_YoshiHanbaiHassoFlg" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="YoshiHanbaiHassoFlg" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_YoshiHanbaiHassoDt" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="YoshiHanbaiHassoDt" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiStringFixedLength" Direction="Input" ParameterName="@Original_YoshiHanbaiHassoDt" Precision="0" ProviderType="Char" Scale="0" Size="0" SourceColumn="YoshiHanbaiHassoDt" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_InsertDt" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="InsertDt" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_InsertUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InsertUser" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_InsertTarm" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="InsertTarm" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="DateTime" Direction="Input" ParameterName="@Original_UpdateDt" Precision="0" ProviderType="DateTime" Scale="0" Size="0" SourceColumn="UpdateDt" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_UpdateUser" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="UpdateUser" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_UpdateTarm" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="UpdateTarm" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="YoshiHanbaiChumonNo" DataSetColumn="YoshiHanbaiChumonNo" />
+              <Mapping SourceColumn="YoshiHanbaiShishoCd" DataSetColumn="YoshiHanbaiShishoCd" />
+              <Mapping SourceColumn="YoshiHanbaiDt" DataSetColumn="YoshiHanbaiDt" />
+              <Mapping SourceColumn="YoshiHanbaisakiGyoshaCd" DataSetColumn="YoshiHanbaisakiGyoshaCd" />
+              <Mapping SourceColumn="YoshiHanbaisakiTantosha" DataSetColumn="YoshiHanbaisakiTantosha" />
+              <Mapping SourceColumn="YoshiHanbaiGokeiKingaku" DataSetColumn="YoshiHanbaiGokeiKingaku" />
+              <Mapping SourceColumn="YoshiHanbaiGenkinNyukingaku" DataSetColumn="YoshiHanbaiGenkinNyukingaku" />
+              <Mapping SourceColumn="YoshiHanbaiSeikyuKingaku" DataSetColumn="YoshiHanbaiSeikyuKingaku" />
+              <Mapping SourceColumn="YoshiHanbaiKansaiFlg" DataSetColumn="YoshiHanbaiKansaiFlg" />
+              <Mapping SourceColumn="YoshiHanbaiSeikyushoHakkoFlg" DataSetColumn="YoshiHanbaiSeikyushoHakkoFlg" />
+              <Mapping SourceColumn="YoshiHanbaiNohinshoHakkoFlg" DataSetColumn="YoshiHanbaiNohinshoHakkoFlg" />
+              <Mapping SourceColumn="YoshiHanbaiHassoFlg" DataSetColumn="YoshiHanbaiHassoFlg" />
+              <Mapping SourceColumn="YoshiHanbaiHassoDt" DataSetColumn="YoshiHanbaiHassoDt" />
+              <Mapping SourceColumn="InsertDt" DataSetColumn="InsertDt" />
+              <Mapping SourceColumn="InsertUser" DataSetColumn="InsertUser" />
+              <Mapping SourceColumn="InsertTarm" DataSetColumn="InsertTarm" />
+              <Mapping SourceColumn="UpdateDt" DataSetColumn="UpdateDt" />
+              <Mapping SourceColumn="UpdateUser" DataSetColumn="UpdateUser" />
+              <Mapping SourceColumn="UpdateTarm" DataSetColumn="UpdateTarm" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="FukjBizSystemConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DeleteByKey" Modifier="Public" Name="DeleteByKey" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="DeleteByKey">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>DELETE FROM       YoshiHanbaiHdrTbl
+WHERE                       (YoshiHanbaiChumonNo = @Original_YoshiHanbaiChumonNo)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="Original_YoshiHanbaiChumonNo" ColumnName="YoshiHanbaiChumonNo" DataSourceName="johkasou_db.dbo.YoshiHanbaiHdrTbl" DataTypeServer="nvarchar(10)" DbType="String" Direction="Input" ParameterName="@Original_YoshiHanbaiChumonNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="10" SourceColumn="YoshiHanbaiChumonNo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+              </DbSource>
+              <DbSource ConnectionRef="FukjBizSystemConnectionString (Settings)" DbObjectName="johkasou_db.dbo.YoshiHanbaiHdrTbl" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByKey" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByKey" GeneratorSourceName="FillByKey" GetMethodModifier="Public" GetMethodName="GetDataByKey" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByKey" UserSourceName="FillByKey">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT                      YoshiHanbaiChumonNo, YoshiHanbaiShishoCd, YoshiHanbaiDt, YoshiHanbaisakiGyoshaCd, YoshiHanbaisakiTantosha, YoshiHanbaiGokeiKingaku, 
+                                      YoshiHanbaiGenkinNyukingaku, YoshiHanbaiSeikyuKingaku, YoshiHanbaiKansaiFlg, YoshiHanbaiSeikyushoHakkoFlg, YoshiHanbaiNohinshoHakkoFlg, 
+                                      YoshiHanbaiHassoFlg, YoshiHanbaiHassoDt, InsertDt, InsertUser, InsertTarm, UpdateDt, UpdateUser, UpdateTarm
+FROM                         YoshiHanbaiHdrTbl
+WHERE                       (YoshiHanbaiChumonNo = @YoshiHanbaiChumonNo)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="YoshiHanbaiChumonNo" ColumnName="YoshiHanbaiChumonNo" DataSourceName="johkasou_db.dbo.YoshiHanbaiHdrTbl" DataTypeServer="nvarchar(10)" DbType="String" Direction="Input" ParameterName="@YoshiHanbaiChumonNo" Precision="0" ProviderType="NVarChar" Scale="0" Size="10" SourceColumn="YoshiHanbaiChumonNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TyumonShosaiTableAdapter" GeneratorDataComponentClassName="TyumonShosaiTableAdapter" Name="TyumonShosai" UserDataComponentName="TyumonShosaiTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FukjBizSystemConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT                      ym.YoshiCd, ym.YoshiNm, ym.YoshiKaiinUp, ym.YoshiHiKaiinUp, ym.YoshiKaiinSetKakaku, ym.YoshiHiKaiinSetKakaku, ym.YoshiSetBusu, 
+                                      yoshiTbl.YoshiHanbaiYoshiCd, yoshiTbl.YoshiHanbaiSuryo, yoshiTbl.YoshiHanbaiSetSuryo, yoshiTbl.YoshiHanbaiKakaku
+FROM                         YoshiMst AS ym INNER JOIN
+                                          (SELECT                      ym.YoshiCd, yhdt.YoshiHanbaiYoshiCd, SUM(yhdt.YoshiHanbaiSuryo) AS YoshiHanbaiSuryo, SUM(yhdt.YoshiHanbaiSetSuryo) 
+                                                                                      AS YoshiHanbaiSetSuryo, SUM(yhdt.YoshiHanbaiKakaku) AS YoshiHanbaiKakaku
+                                                FROM                         YoshiHanbaiHdrTbl AS yhht INNER JOIN
+                                                                                      YoshiHanbaiDtlTbl AS yhdt ON yhht.YoshiHanbaiChumonNo = yhdt.YoshiHanbaiChumonNo INNER JOIN
+                                                                                      YoshiMst AS ym ON yhdt.YoshiHanbaiYoshiCd = ym.YoshiCd
+                                                GROUP BY              ym.YoshiCd, yhdt.YoshiHanbaiYoshiCd) AS yoshiTbl ON ym.YoshiCd = yoshiTbl.YoshiCd</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="YoshiCd" DataSetColumn="YoshiCd" />
+              <Mapping SourceColumn="YoshiNm" DataSetColumn="YoshiNm" />
+              <Mapping SourceColumn="YoshiKaiinUp" DataSetColumn="YoshiKaiinUp" />
+              <Mapping SourceColumn="YoshiHiKaiinUp" DataSetColumn="YoshiHiKaiinUp" />
+              <Mapping SourceColumn="YoshiKaiinSetKakaku" DataSetColumn="YoshiKaiinSetKakaku" />
+              <Mapping SourceColumn="YoshiHiKaiinSetKakaku" DataSetColumn="YoshiHiKaiinSetKakaku" />
+              <Mapping SourceColumn="YoshiSetBusu" DataSetColumn="YoshiSetBusu" />
+              <Mapping SourceColumn="YoshiHanbaiSuryo" DataSetColumn="YoshiHanbaiSuryo" />
+              <Mapping SourceColumn="YoshiHanbaiSetSuryo" DataSetColumn="YoshiHanbaiSetSuryo" />
+              <Mapping SourceColumn="YoshiHanbaiKakaku" DataSetColumn="YoshiHanbaiKakaku" />
+              <Mapping SourceColumn="YoshiHanbaiYoshiCd" DataSetColumn="YoshiHanbaiYoshiCd" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="YoshiHanbaiHdrTblKensakuTableAdapter" GeneratorDataComponentClassName="YoshiHanbaiHdrTblKensakuTableAdapter" Name="YoshiHanbaiHdrTblKensaku" UserDataComponentName="YoshiHanbaiHdrTblKensakuTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FukjBizSystemConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT                      yhht.YoshiHanbaiChumonNo, CONVERT(CHAR(10), CONVERT(DATETIME, yhht.YoshiHanbaiDt), 111) AS YoshiHanbaiDt, gm.GyoshaNm, 
+                                      yhht.YoshiHanbaiGokeiKingaku
+FROM                         YoshiHanbaiHdrTbl AS yhht LEFT OUTER JOIN
+                                      GyoshaMst AS gm ON gm.GyoshaCd = yhht.YoshiHanbaisakiGyoshaCd
+ORDER BY               yhht.YoshiHanbaiChumonNo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="YoshiHanbaiChumonNo" DataSetColumn="YoshiHanbaiChumonNo" />
+              <Mapping SourceColumn="YoshiHanbaiDt" DataSetColumn="YoshiHanbaiDt" />
+              <Mapping SourceColumn="YoshiHanbaiGokeiKingaku" DataSetColumn="YoshiHanbaiGokeiKingaku" />
+              <Mapping SourceColumn="GyoshaNm" DataSetColumn="GyoshaNm" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="RyosyuPrintInfoTableAdapter" GeneratorDataComponentClassName="RyosyuPrintInfoTableAdapter" Name="RyosyuPrintInfo" UserDataComponentName="RyosyuPrintInfoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FukjBizSystemConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT                      TOP (1) YoshiHanbaiHdrTbl.YoshiHanbaiChumonNo, YoshiHanbaiHdrTbl.YoshiHanbaiDt, GyoshaMst.GyoshaNm, 
+                                      YoshiHanbaiHdrTbl.YoshiHanbaiGokeiKingaku, HoteiKanriMst.JimukyokuNm, HoteiKanriMst.JimukyokuZipCd, HoteiKanriMst.JimukyokuHoteiKanriAdr, 
+                                      HoteiKanriMst.JimukyokuTelNo, HoteiKanriMst.JimukyokuFaxNo
+FROM                         HoteiKanriMst CROSS JOIN
+                                      GyoshaMst CROSS JOIN
+                                      YoshiHanbaiHdrTbl
+WHERE                       (HoteiKanriMst.JimukyokuKbn = '0')</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="YoshiHanbaiChumonNo" DataSetColumn="YoshiHanbaiChumonNo" />
+              <Mapping SourceColumn="YoshiHanbaiDt" DataSetColumn="YoshiHanbaiDt" />
+              <Mapping SourceColumn="GyoshaNm" DataSetColumn="GyoshaNm" />
+              <Mapping SourceColumn="YoshiHanbaiGokeiKingaku" DataSetColumn="YoshiHanbaiGokeiKingaku" />
+              <Mapping SourceColumn="JimukyokuNm" DataSetColumn="JimukyokuNm" />
+              <Mapping SourceColumn="JimukyokuZipCd" DataSetColumn="JimukyokuZipCd" />
+              <Mapping SourceColumn="JimukyokuHoteiKanriAdr" DataSetColumn="JimukyokuHoteiKanriAdr" />
+              <Mapping SourceColumn="JimukyokuTelNo" DataSetColumn="JimukyokuTelNo" />
+              <Mapping SourceColumn="JimukyokuFaxNo" DataSetColumn="JimukyokuFaxNo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="YoshiHanbaiHdrTblDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="YoshiHanbaiHdrTblDataSet" msprop:Generator_UserDSName="YoshiHanbaiHdrTblDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="YoshiUriageList" msprop:Generator_TableClassName="YoshiUriageListDataTable" msprop:Generator_TableVarName="tableYoshiUriageList" msprop:Generator_RowChangedName="YoshiUriageListRowChanged" msprop:Generator_TablePropName="YoshiUriageList" msprop:Generator_RowDeletingName="YoshiUriageListRowDeleting" msprop:Generator_RowChangingName="YoshiUriageListRowChanging" msprop:Generator_RowEvHandlerName="YoshiUriageListRowChangeEventHandler" msprop:Generator_RowDeletedName="YoshiUriageListRowDeleted" msprop:Generator_RowClassName="YoshiUriageListRow" msprop:Generator_UserTableName="YoshiUriageList" msprop:Generator_RowEvArgName="YoshiUriageListRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="GyoshaNm" msprop:Generator_ColumnVarNameInTable="columnGyoshaNm" msprop:Generator_ColumnPropNameInRow="GyoshaNm" msprop:Generator_ColumnPropNameInTable="GyoshaNmColumn" msprop:Generator_UserColumnName="GyoshaNm">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YoshiHanbaisakiGyoshaCd" msprop:Generator_ColumnVarNameInTable="columnYoshiHanbaisakiGyoshaCd" msprop:Generator_ColumnPropNameInRow="YoshiHanbaisakiGyoshaCd" msprop:Generator_ColumnPropNameInTable="YoshiHanbaisakiGyoshaCdColumn" msprop:Generator_UserColumnName="YoshiHanbaisakiGyoshaCd" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YoshiHanbaiDt" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="YoshiHanbaiDt" msprop:Generator_ColumnVarNameInTable="columnYoshiHanbaiDt" msprop:Generator_ColumnPropNameInTable="YoshiHanbaiDtColumn" msprop:Generator_UserColumnName="YoshiHanbaiDt" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YoshiHanbaiGokeiKingaku" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnYoshiHanbaiGokeiKingaku" msprop:Generator_ColumnPropNameInRow="YoshiHanbaiGokeiKingaku" msprop:Generator_ColumnPropNameInTable="YoshiHanbaiGokeiKingakuColumn" msprop:Generator_UserColumnName="YoshiHanbaiGokeiKingaku" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="YoshiHanbaiHdrTbl" msprop:Generator_TableClassName="YoshiHanbaiHdrTblDataTable" msprop:Generator_TableVarName="tableYoshiHanbaiHdrTbl" msprop:Generator_RowChangedName="YoshiHanbaiHdrTblRowChanged" msprop:Generator_TablePropName="YoshiHanbaiHdrTbl" msprop:Generator_RowDeletingName="YoshiHanbaiHdrTblRowDeleting" msprop:Generator_RowChangingName="YoshiHanbaiHdrTblRowChanging" msprop:Generator_RowEvHandlerName="YoshiHanbaiHdrTblRowChangeEventHandler" msprop:Generator_RowDeletedName="YoshiHanbaiHdrTblRowDeleted" msprop:Generator_RowClassName="YoshiHanbaiHdrTblRow" msprop:Generator_UserTableName="YoshiHanbaiHdrTbl" msprop:Generator_RowEvArgName="YoshiHanbaiHdrTblRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="YoshiHanbaiChumonNo" msprop:Generator_ColumnVarNameInTable="columnYoshiHanbaiChumonNo" msprop:Generator_ColumnPropNameInRow="YoshiHanbaiChumonNo" msprop:Generator_ColumnPropNameInTable="YoshiHanbaiChumonNoColumn" msprop:Generator_UserColumnName="YoshiHanbaiChumonNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YoshiHanbaiShishoCd" msprop:Generator_ColumnVarNameInTable="columnYoshiHanbaiShishoCd" msprop:Generator_ColumnPropNameInRow="YoshiHanbaiShishoCd" msprop:Generator_ColumnPropNameInTable="YoshiHanbaiShishoCdColumn" msprop:Generator_UserColumnName="YoshiHanbaiShishoCd">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YoshiHanbaiDt" msprop:Generator_ColumnVarNameInTable="columnYoshiHanbaiDt" msprop:Generator_ColumnPropNameInRow="YoshiHanbaiDt" msprop:Generator_ColumnPropNameInTable="YoshiHanbaiDtColumn" msprop:Generator_UserColumnName="YoshiHanbaiDt">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YoshiHanbaisakiGyoshaCd" msprop:Generator_ColumnVarNameInTable="columnYoshiHanbaisakiGyoshaCd" msprop:Generator_ColumnPropNameInRow="YoshiHanbaisakiGyoshaCd" msprop:Generator_ColumnPropNameInTable="YoshiHanbaisakiGyoshaCdColumn" msprop:Generator_UserColumnName="YoshiHanbaisakiGyoshaCd">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YoshiHanbaisakiTantosha" msprop:Generator_ColumnVarNameInTable="columnYoshiHanbaisakiTantosha" msprop:Generator_ColumnPropNameInRow="YoshiHanbaisakiTantosha" msprop:Generator_ColumnPropNameInTable="YoshiHanbaisakiTantoshaColumn" msprop:Generator_UserColumnName="YoshiHanbaisakiTantosha" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YoshiHanbaiGokeiKingaku" msprop:Generator_ColumnVarNameInTable="columnYoshiHanbaiGokeiKingaku" msprop:Generator_ColumnPropNameInRow="YoshiHanbaiGokeiKingaku" msprop:Generator_ColumnPropNameInTable="YoshiHanbaiGokeiKingakuColumn" msprop:Generator_UserColumnName="YoshiHanbaiGokeiKingaku" type="xs:decimal" minOccurs="0" />
+              <xs:element name="YoshiHanbaiGenkinNyukingaku" msprop:Generator_ColumnVarNameInTable="columnYoshiHanbaiGenkinNyukingaku" msprop:Generator_ColumnPropNameInRow="YoshiHanbaiGenkinNyukingaku" msprop:Generator_ColumnPropNameInTable="YoshiHanbaiGenkinNyukingakuColumn" msprop:Generator_UserColumnName="YoshiHanbaiGenkinNyukingaku" type="xs:decimal" minOccurs="0" />
+              <xs:element name="YoshiHanbaiSeikyuKingaku" msprop:Generator_ColumnVarNameInTable="columnYoshiHanbaiSeikyuKingaku" msprop:Generator_ColumnPropNameInRow="YoshiHanbaiSeikyuKingaku" msprop:Generator_ColumnPropNameInTable="YoshiHanbaiSeikyuKingakuColumn" msprop:Generator_UserColumnName="YoshiHanbaiSeikyuKingaku" type="xs:decimal" minOccurs="0" />
+              <xs:element name="YoshiHanbaiKansaiFlg" msprop:Generator_ColumnVarNameInTable="columnYoshiHanbaiKansaiFlg" msprop:Generator_ColumnPropNameInRow="YoshiHanbaiKansaiFlg" msprop:Generator_ColumnPropNameInTable="YoshiHanbaiKansaiFlgColumn" msprop:Generator_UserColumnName="YoshiHanbaiKansaiFlg" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YoshiHanbaiSeikyushoHakkoFlg" msprop:Generator_ColumnVarNameInTable="columnYoshiHanbaiSeikyushoHakkoFlg" msprop:Generator_ColumnPropNameInRow="YoshiHanbaiSeikyushoHakkoFlg" msprop:Generator_ColumnPropNameInTable="YoshiHanbaiSeikyushoHakkoFlgColumn" msprop:Generator_UserColumnName="YoshiHanbaiSeikyushoHakkoFlg" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YoshiHanbaiNohinshoHakkoFlg" msprop:Generator_ColumnVarNameInTable="columnYoshiHanbaiNohinshoHakkoFlg" msprop:Generator_ColumnPropNameInRow="YoshiHanbaiNohinshoHakkoFlg" msprop:Generator_ColumnPropNameInTable="YoshiHanbaiNohinshoHakkoFlgColumn" msprop:Generator_UserColumnName="YoshiHanbaiNohinshoHakkoFlg" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YoshiHanbaiHassoFlg" msprop:Generator_ColumnVarNameInTable="columnYoshiHanbaiHassoFlg" msprop:Generator_ColumnPropNameInRow="YoshiHanbaiHassoFlg" msprop:Generator_ColumnPropNameInTable="YoshiHanbaiHassoFlgColumn" msprop:Generator_UserColumnName="YoshiHanbaiHassoFlg" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YoshiHanbaiHassoDt" msprop:Generator_ColumnVarNameInTable="columnYoshiHanbaiHassoDt" msprop:Generator_ColumnPropNameInRow="YoshiHanbaiHassoDt" msprop:Generator_ColumnPropNameInTable="YoshiHanbaiHassoDtColumn" msprop:Generator_UserColumnName="YoshiHanbaiHassoDt" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InsertDt" msprop:Generator_ColumnVarNameInTable="columnInsertDt" msprop:Generator_ColumnPropNameInRow="InsertDt" msprop:Generator_ColumnPropNameInTable="InsertDtColumn" msprop:Generator_UserColumnName="InsertDt" type="xs:dateTime" />
+              <xs:element name="InsertUser" msprop:Generator_ColumnVarNameInTable="columnInsertUser" msprop:Generator_ColumnPropNameInRow="InsertUser" msprop:Generator_ColumnPropNameInTable="InsertUserColumn" msprop:Generator_UserColumnName="InsertUser">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InsertTarm" msprop:Generator_ColumnVarNameInTable="columnInsertTarm" msprop:Generator_ColumnPropNameInRow="InsertTarm" msprop:Generator_ColumnPropNameInTable="InsertTarmColumn" msprop:Generator_UserColumnName="InsertTarm">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UpdateDt" msprop:Generator_ColumnVarNameInTable="columnUpdateDt" msprop:Generator_ColumnPropNameInRow="UpdateDt" msprop:Generator_ColumnPropNameInTable="UpdateDtColumn" msprop:Generator_UserColumnName="UpdateDt" type="xs:dateTime" />
+              <xs:element name="UpdateUser" msprop:Generator_ColumnVarNameInTable="columnUpdateUser" msprop:Generator_ColumnPropNameInRow="UpdateUser" msprop:Generator_ColumnPropNameInTable="UpdateUserColumn" msprop:Generator_UserColumnName="UpdateUser">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UpdateTarm" msprop:Generator_ColumnVarNameInTable="columnUpdateTarm" msprop:Generator_ColumnPropNameInRow="UpdateTarm" msprop:Generator_ColumnPropNameInTable="UpdateTarmColumn" msprop:Generator_UserColumnName="UpdateTarm">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TyumonShosai" msprop:Generator_TableClassName="TyumonShosaiDataTable" msprop:Generator_TableVarName="tableTyumonShosai" msprop:Generator_RowChangedName="TyumonShosaiRowChanged" msprop:Generator_TablePropName="TyumonShosai" msprop:Generator_RowDeletingName="TyumonShosaiRowDeleting" msprop:Generator_RowChangingName="TyumonShosaiRowChanging" msprop:Generator_RowEvHandlerName="TyumonShosaiRowChangeEventHandler" msprop:Generator_RowDeletedName="TyumonShosaiRowDeleted" msprop:Generator_RowClassName="TyumonShosaiRow" msprop:Generator_UserTableName="TyumonShosai" msprop:Generator_RowEvArgName="TyumonShosaiRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="YoshiCd" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="YoshiCd" msprop:Generator_ColumnVarNameInTable="columnYoshiCd" msprop:Generator_ColumnPropNameInTable="YoshiCdColumn" msprop:Generator_UserColumnName="YoshiCd" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YoshiNm" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="YoshiNm" msprop:Generator_ColumnVarNameInTable="columnYoshiNm" msprop:Generator_ColumnPropNameInTable="YoshiNmColumn" msprop:Generator_UserColumnName="YoshiNm" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YoshiKaiinUp" msprop:nullValue="0" msprop:Generator_ColumnPropNameInRow="YoshiKaiinUp" msprop:Generator_ColumnVarNameInTable="columnYoshiKaiinUp" msprop:Generator_ColumnPropNameInTable="YoshiKaiinUpColumn" msprop:Generator_UserColumnName="YoshiKaiinUp" type="xs:decimal" minOccurs="0" />
+              <xs:element name="YoshiHiKaiinUp" msprop:nullValue="0" msprop:Generator_ColumnPropNameInRow="YoshiHiKaiinUp" msprop:Generator_ColumnVarNameInTable="columnYoshiHiKaiinUp" msprop:Generator_ColumnPropNameInTable="YoshiHiKaiinUpColumn" msprop:Generator_UserColumnName="YoshiHiKaiinUp" type="xs:decimal" minOccurs="0" />
+              <xs:element name="YoshiKaiinSetKakaku" msprop:nullValue="0" msprop:Generator_ColumnPropNameInRow="YoshiKaiinSetKakaku" msprop:Generator_ColumnVarNameInTable="columnYoshiKaiinSetKakaku" msprop:Generator_ColumnPropNameInTable="YoshiKaiinSetKakakuColumn" msprop:Generator_UserColumnName="YoshiKaiinSetKakaku" type="xs:decimal" minOccurs="0" />
+              <xs:element name="YoshiHiKaiinSetKakaku" msprop:nullValue="0" msprop:Generator_ColumnPropNameInRow="YoshiHiKaiinSetKakaku" msprop:Generator_ColumnVarNameInTable="columnYoshiHiKaiinSetKakaku" msprop:Generator_ColumnPropNameInTable="YoshiHiKaiinSetKakakuColumn" msprop:Generator_UserColumnName="YoshiHiKaiinSetKakaku" type="xs:decimal" minOccurs="0" />
+              <xs:element name="YoshiSetBusu" msprop:nullValue="0" msprop:Generator_ColumnPropNameInRow="YoshiSetBusu" msprop:Generator_ColumnVarNameInTable="columnYoshiSetBusu" msprop:Generator_ColumnPropNameInTable="YoshiSetBusuColumn" msprop:Generator_UserColumnName="YoshiSetBusu" type="xs:int" minOccurs="0" />
+              <xs:element name="YoshiHanbaiSuryo" msprop:nullValue="0" msprop:Generator_ColumnPropNameInRow="YoshiHanbaiSuryo" msprop:Generator_ColumnVarNameInTable="columnYoshiHanbaiSuryo" msprop:Generator_ColumnPropNameInTable="YoshiHanbaiSuryoColumn" msprop:Generator_UserColumnName="YoshiHanbaiSuryo" type="xs:int" minOccurs="0" />
+              <xs:element name="YoshiHanbaiSetSuryo" msprop:nullValue="0" msprop:Generator_ColumnPropNameInRow="YoshiHanbaiSetSuryo" msprop:Generator_ColumnVarNameInTable="columnYoshiHanbaiSetSuryo" msprop:Generator_ColumnPropNameInTable="YoshiHanbaiSetSuryoColumn" msprop:Generator_UserColumnName="YoshiHanbaiSetSuryo" type="xs:int" minOccurs="0" />
+              <xs:element name="YoshiHanbaiKakaku" msprop:nullValue="0" msprop:Generator_ColumnPropNameInRow="YoshiHanbaiKakaku" msprop:Generator_ColumnVarNameInTable="columnYoshiHanbaiKakaku" msprop:Generator_ColumnPropNameInTable="YoshiHanbaiKakakuColumn" msprop:Generator_UserColumnName="YoshiHanbaiKakaku" type="xs:decimal" minOccurs="0" />
+              <xs:element name="YoshiHanbaiYoshiCd" msprop:nullValue="_empty" msprop:Generator_ColumnPropNameInRow="YoshiHanbaiYoshiCd" msprop:Generator_ColumnVarNameInTable="columnYoshiHanbaiYoshiCd" msprop:Generator_ColumnPropNameInTable="YoshiHanbaiYoshiCdColumn" msprop:Generator_UserColumnName="YoshiHanbaiYoshiCd" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="YoshiHanbaiHdrTblKensaku" msprop:Generator_TableClassName="YoshiHanbaiHdrTblKensakuDataTable" msprop:Generator_TableVarName="tableYoshiHanbaiHdrTblKensaku" msprop:Generator_TablePropName="YoshiHanbaiHdrTblKensaku" msprop:Generator_RowDeletingName="YoshiHanbaiHdrTblKensakuRowDeleting" msprop:Generator_RowChangingName="YoshiHanbaiHdrTblKensakuRowChanging" msprop:Generator_RowEvHandlerName="YoshiHanbaiHdrTblKensakuRowChangeEventHandler" msprop:Generator_RowDeletedName="YoshiHanbaiHdrTblKensakuRowDeleted" msprop:Generator_UserTableName="YoshiHanbaiHdrTblKensaku" msprop:Generator_RowChangedName="YoshiHanbaiHdrTblKensakuRowChanged" msprop:Generator_RowEvArgName="YoshiHanbaiHdrTblKensakuRowChangeEvent" msprop:Generator_RowClassName="YoshiHanbaiHdrTblKensakuRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="YoshiHanbaiChumonNo" msprop:nullValue="_throw" msprop:Generator_ColumnPropNameInRow="YoshiHanbaiChumonNo" msprop:Generator_ColumnVarNameInTable="columnYoshiHanbaiChumonNo" msprop:Generator_ColumnPropNameInTable="YoshiHanbaiChumonNoColumn" msprop:Generator_UserColumnName="YoshiHanbaiChumonNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YoshiHanbaiDt" msprop:Generator_ColumnVarNameInTable="columnYoshiHanbaiDt" msprop:Generator_ColumnPropNameInRow="YoshiHanbaiDt" msprop:Generator_ColumnPropNameInTable="YoshiHanbaiDtColumn" msprop:Generator_UserColumnName="YoshiHanbaiDt" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YoshiHanbaiGokeiKingaku" msprop:Generator_ColumnVarNameInTable="columnYoshiHanbaiGokeiKingaku" msprop:Generator_ColumnPropNameInRow="YoshiHanbaiGokeiKingaku" msprop:Generator_ColumnPropNameInTable="YoshiHanbaiGokeiKingakuColumn" msprop:Generator_UserColumnName="YoshiHanbaiGokeiKingaku" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GyoshaNm" msprop:nullValue="_throw" msprop:Generator_ColumnPropNameInRow="GyoshaNm" msprop:Generator_ColumnVarNameInTable="columnGyoshaNm" msprop:Generator_ColumnPropNameInTable="GyoshaNmColumn" msprop:Generator_UserColumnName="GyoshaNm" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RyosyuPrintInfo" msprop:Generator_TableClassName="RyosyuPrintInfoDataTable" msprop:Generator_TableVarName="tableRyosyuPrintInfo" msprop:Generator_TablePropName="RyosyuPrintInfo" msprop:Generator_RowDeletingName="RyosyuPrintInfoRowDeleting" msprop:Generator_RowChangingName="RyosyuPrintInfoRowChanging" msprop:Generator_RowEvHandlerName="RyosyuPrintInfoRowChangeEventHandler" msprop:Generator_RowDeletedName="RyosyuPrintInfoRowDeleted" msprop:Generator_UserTableName="RyosyuPrintInfo" msprop:Generator_RowChangedName="RyosyuPrintInfoRowChanged" msprop:Generator_RowEvArgName="RyosyuPrintInfoRowChangeEvent" msprop:Generator_RowClassName="RyosyuPrintInfoRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="YoshiHanbaiChumonNo" msprop:Generator_ColumnVarNameInTable="columnYoshiHanbaiChumonNo" msprop:Generator_ColumnPropNameInRow="YoshiHanbaiChumonNo" msprop:Generator_ColumnPropNameInTable="YoshiHanbaiChumonNoColumn" msprop:Generator_UserColumnName="YoshiHanbaiChumonNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YoshiHanbaiDt" msprop:Generator_ColumnVarNameInTable="columnYoshiHanbaiDt" msprop:Generator_ColumnPropNameInRow="YoshiHanbaiDt" msprop:Generator_ColumnPropNameInTable="YoshiHanbaiDtColumn" msprop:Generator_UserColumnName="YoshiHanbaiDt" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GyoshaNm" msprop:Generator_ColumnVarNameInTable="columnGyoshaNm" msprop:Generator_ColumnPropNameInRow="GyoshaNm" msprop:Generator_ColumnPropNameInTable="GyoshaNmColumn" msprop:Generator_UserColumnName="GyoshaNm" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YoshiHanbaiGokeiKingaku" msprop:Generator_ColumnVarNameInTable="columnYoshiHanbaiGokeiKingaku" msprop:Generator_ColumnPropNameInRow="YoshiHanbaiGokeiKingaku" msprop:Generator_ColumnPropNameInTable="YoshiHanbaiGokeiKingakuColumn" msprop:Generator_UserColumnName="YoshiHanbaiGokeiKingaku" type="xs:decimal" minOccurs="0" />
+              <xs:element name="JimukyokuNm" msprop:Generator_ColumnVarNameInTable="columnJimukyokuNm" msprop:Generator_ColumnPropNameInRow="JimukyokuNm" msprop:Generator_ColumnPropNameInTable="JimukyokuNmColumn" msprop:Generator_UserColumnName="JimukyokuNm" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="28" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="JimukyokuZipCd" msprop:Generator_ColumnVarNameInTable="columnJimukyokuZipCd" msprop:Generator_ColumnPropNameInRow="JimukyokuZipCd" msprop:Generator_ColumnPropNameInTable="JimukyokuZipCdColumn" msprop:Generator_UserColumnName="JimukyokuZipCd" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="JimukyokuHoteiKanriAdr" msprop:Generator_ColumnVarNameInTable="columnJimukyokuHoteiKanriAdr" msprop:Generator_ColumnPropNameInRow="JimukyokuHoteiKanriAdr" msprop:Generator_ColumnPropNameInTable="JimukyokuHoteiKanriAdrColumn" msprop:Generator_UserColumnName="JimukyokuHoteiKanriAdr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="80" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="JimukyokuTelNo" msprop:Generator_ColumnVarNameInTable="columnJimukyokuTelNo" msprop:Generator_ColumnPropNameInRow="JimukyokuTelNo" msprop:Generator_ColumnPropNameInTable="JimukyokuTelNoColumn" msprop:Generator_UserColumnName="JimukyokuTelNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="JimukyokuFaxNo" msprop:Generator_ColumnVarNameInTable="columnJimukyokuFaxNo" msprop:Generator_ColumnPropNameInRow="JimukyokuFaxNo" msprop:Generator_ColumnPropNameInTable="JimukyokuFaxNoColumn" msprop:Generator_UserColumnName="JimukyokuFaxNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:YoshiHanbaiHdrTbl" />
+      <xs:field xpath="mstns:YoshiHanbaiChumonNo" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

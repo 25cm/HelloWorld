@@ -1,0 +1,2936 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9943AF35-E365-4C5D-87EE-80A56A32DF53}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FukjBizSystem</RootNamespace>
+    <AssemblyName>FukjBizSystem</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.AcroPDFLib">
+      <HintPath>C:\Users\Ham Hap\Desktop\AxInterop.AcroPDFLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.AcroPDFLib">
+      <HintPath>C:\Users\Ham Hap\Desktop\Interop.AcroPDFLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MapWorks50">
+      <HintPath>..\MapWorksDLL\StandAloneTrial\MapWorks50.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application\ApplicationLogic\Common\ChikuMstSearch\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Common\ChikuMstSearch\KensakuBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Common\GetCurrentTimestamp.cs" />
+    <Compile Include="Application\ApplicationLogic\Common\GetShokuinMstByShokuinCdShokuinPassword.cs" />
+    <Compile Include="Application\ApplicationLogic\Common\GetYubinNoAdrMstByTodofukenAdr.cs" />
+    <Compile Include="Application\ApplicationLogic\Common\GyoshaMstSearch\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Common\GyoshaMstSearch\KensakuBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Common\JokasoDaichoSearch\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Common\JokasoDaichoSearch\SearchBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Common\SaisuiinMstSearch\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Common\SaisuiinMstSearch\SearchBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Common\YubinJusyoMstSearch\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Common\YubinJusyoMstSearch\KensakuBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Common\GetConstMstByKey.cs" />
+    <Compile Include="Application\ApplicationLogic\JokasoDaichoKanri\JokasoDaichoList\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\JokasoDaichoKanri\JokasoDaichoShosai\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\JokasoDaichoKanri\JokasoDaichoShosai\ZipCdTextBoxLeave.cs" />
+    <Compile Include="Application\ApplicationLogic\KaiinKanri\KaiinList\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\KaiinKanri\KaiinList\KakuninsyoBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\KaiinKanri\KaiinList\KensakuBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\KaiinKanri\KaiinShosai\DecisionBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\KaiinKanri\KaiinShosai\DeleteBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\KaiinKanri\KaiinShosai\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Keiri\MaeukekinList\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Keiri\MaeukekinList\KensakuBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Keiri\MaeukekinShosai\DecisionBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Keiri\MaeukekinShosai\DeleteBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Keiri\MaeukekinShosai\EntryBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Keiri\MaeukekinShosai\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\KensaKekka\KensaKekkaList\FaxPrintBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\KensaKekka\KensaKekkaList\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\KensaKekka\KensaKekkaList\KensakuBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\KinoHoshoKanri\HoshoNoPrint\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\KinoHoshoKanri\HoshoNoPrint\PrintBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\KinoHoshoKanri\HoshoShinseiKokan\ExChangeBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\KinoHoshoKanri\HoshoShinseiKokan\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\KinoHoshoKanri\HoshoShinseiShosai\DecisionBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\KinoHoshoKanri\HoshoShinseiShosai\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\KinoHoshoKanri\HoshoShinseiList\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\KinoHoshoKanri\HoshoShinseiList\KensakuBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\BushoMstList\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\BushoMstList\KensakuBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\BushoMstShosai\DecisionBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\BushoMstShosai\DeleteBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\BushoMstShosai\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\ChikuMstList\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\ChikuMstList\KensakuBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\ChikuMstShosai\DecisionBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\ChikuMstShosai\DeleteBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\ChikuMstShosai\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\GaikankensaKomokuMstList\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\GaikankensaKomokuMstList\KensakuBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\GaikankensaKomokuMstShosai\DecisionBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\GaikankensaKomokuMstShosai\DeleteBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\GaikankensaKomokuMstShosai\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\GyoshaMstList\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\GyoshaMstList\KensakuBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\GyoshaMstShosai\DecisionBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\GyoshaMstShosai\DeleteBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\GyoshaMstShosai\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\HokenjoMstList\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\HokenjoMstList\SearchBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\HokenjoMstShosai\ConfirmBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\HokenjoMstShosai\DeleteBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\HokenjoMstShosai\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\KatashikiMstList\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\KatashikiMstList\KensakuBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\KatashikiMstShosai\DecisionBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\KatashikiMstShosai\DeleteBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\KatashikiMstShosai\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\KenchikuyotoMstList\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\KenchikuyotoMstList\KensakuBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\KenchikuyotoMstShosai\DecisionBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\KenchikuyotoMstShosai\DeleteBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\KenchikuyotoMstShosai\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\MemoMstList\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\MemoMstList\KensakuBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\MemoMstShosai\DecisionBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\MemoMstShosai\DeleteBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\MemoMstShosai\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\NameMstEditList\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\NameMstEditList\KoshinBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\NameMstEditList\SearchBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\SaisuiinMstList\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\SaisuiinMstList\SearchBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\SaisuiinMstShosai\DecisionBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\SaisuiinMstShosai\DeleteBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\SaisuiinMstShosai\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\ShishoMstList\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\ShishoMstList\SearchBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\ShishoMstShosai\DecisionBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\ShishoMstShosai\DeleteBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\ShishoMstShosai\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\ShokuinMstList\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\ShokuinMstList\KensakuBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\ShokuinMstShosai\DecisionBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\ShokuinMstShosai\DeleteBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\ShokuinMstShosai\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\ShoriHoshikiMstList\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\ShoriHoshikiMstList\KensakuBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\ShoriHoshikiMstShosai\DecisionBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\ShoriHoshikiMstShosai\DeleteBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\ShoriHoshikiMstShosai\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\SuishitsuKekkaNmMstList\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\SuishitsuKekkaNmMstList\KensakuBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\SuishitsuKekkaNmMstShosai\DecisionBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\SuishitsuKekkaNmMstShosai\DeleteBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\SuishitsuKekkaNmMstShosai\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\SuishitsuKensaSetMstList\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\SuishitsuKensaSetMstList\KensakuBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\SuishitsuKensaSetMstShosai\DecisionBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\SuishitsuKensaSetMstShosai\DeleteBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\SuishitsuKensaSetMstShosai\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\SuishitsuKensaSetMstShosai\SetKomokuCdCellValueChanged.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\SuishitsuMstList\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\SuishitsuMstList\SearchBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\SuishitsuMstShosai\ConfirmBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\SuishitsuMstShosai\DeleteBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\SuishitsuMstShosai\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\SuishitsuShikenKoumokuMstList\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\SuishitsuShikenKoumokuMstList\KensakuBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\SuishitsuShikenKoumokuMstShosai\DecisionBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\SuishitsuShikenKoumokuMstShosai\DeleteBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\SuishitsuShikenKoumokuMstShosai\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\YakushokuMstList\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\YakushokuMstList\KensakuBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\YakushokuMstShosai\DecisionBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\YakushokuMstShosai\DeleteBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Master\YakushokuMstShosai\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Others\EnkabutsuIonNodoHikakuList\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Others\EnkabutsuIonNodoHikakuList\KensakuBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Others\FileKanriList\ChangeBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Others\FileKanriList\DeleteBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Others\FileKanriList\EntryBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Others\FileKanriList\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Others\FileKanriList\KensakuBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Others\KensainGeppoList\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Others\KensainGeppoList\KensakuBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Others\KensainSyuhoList\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Others\KensainSyuhoList\KensakuBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Others\KensaJokyoList\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Others\KensaJokyoList\KensakuBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Others\KensaKeihatsuSuishinhiList\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Others\KensaKeihatsuSuishinhiList\IkkatsuPrintBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Others\KensaKeihatsuSuishinhiList\KensakuBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Others\KensaKeihatsuSuishinhiList\KobetsuGyosyaBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Others\KensaKeihatsuSuishinhiList\KobetsuKumiaiBtnClick.cs" />
+    <Compile Include="Application\Boundary\GaikanKensa\KensaRireki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\GaikanKensa\KensaRireki.Designer.cs">
+      <DependentUpon>KensaRireki.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\BusinessLogic\Others\EnkabutsuIonNodoHikakuList\GetEnkabutsuIonNodoHikakuListBySearchCond.cs" />
+    <Compile Include="Application\BusinessLogic\Others\KensaKeihatsuSuishinhiList\PrintKensaKeihatsuIchiran.cs" />
+    <Compile Include="Application\ApplicationLogic\Others\TuckSealList\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\Others\TuckSealList\PrintBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Others\TuckSealList\PrintSofujoBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\Others\TuckSealList\SearchBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\SaisuiinKanri\JyukoshaInput\EntryBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\SaisuiinKanri\JyukoshaInput\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\SaisuiinKanri\JyukoYoteishaList\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\SaisuiinKanri\JyukoYoteishaList\KensakuBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\SaisuiinKanri\JyukoYoteishaList\Output1BtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\SaisuiinKanri\SaisuiinInfoList\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\SaisuiinKanri\SaisuiinInfoList\KensakuBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\SaisuiinKanri\SaisuiinInfoShosai\DecisionBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\SaisuiinKanri\SaisuiinInfoShosai\DeleteBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\SaisuiinKanri\SaisuiinInfoShosai\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\SaisuiinKanri\SaisuiinShomeishoHakko\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\SaisuiinKanri\SaisuiinShomeishoHakko\SearchBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\SaisuiinKanri\SaisuiinShomeishoHakko\ShiteishoBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\SaisuiinKanri\SaisuiinShomeishoHakko\ShomeishoBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\YoshiHanbaiKanri\RyosyuPrint\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\YoshiHanbaiKanri\RyosyuPrint\PrintBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\YoshiHanbaiKanri\TyumonList\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\YoshiHanbaiKanri\TyumonList\KensakuBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\YoshiHanbaiKanri\TyumonShosai\DecisionBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\YoshiHanbaiKanri\TyumonShosai\DeleteBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\YoshiHanbaiKanri\TyumonShosai\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\YoshiHanbaiKanri\YoshiMstList\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\YoshiHanbaiKanri\YoshiMstList\KensakuBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\YoshiHanbaiKanri\YoshiMstList\KoshinBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\YoshiHanbaiKanri\YoshiUriageList\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\YoshiHanbaiKanri\YoshiUriageList\KensakuBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\YoshiHanbaiKanri\ZaikoList\FormLoad.cs" />
+    <Compile Include="Application\ApplicationLogic\YoshiHanbaiKanri\ZaikoList\KensakuBtnClick.cs" />
+    <Compile Include="Application\ApplicationLogic\YoshiHanbaiKanri\ZaikoList\KoshinBtnClick.cs" />
+    <Compile Include="Application\Boundary\Common\ChikuMstSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Common\ChikuMstSearch.designer.cs">
+      <DependentUpon>ChikuMstSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Common\Common.cs" />
+    <Compile Include="Application\Boundary\Common\GyoshaMstSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Common\GyoshaMstSearch.Designer.cs">
+      <DependentUpon>GyoshaMstSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Common\JokasoDaichoSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Common\JokasoDaichoSearch.Designer.cs">
+      <DependentUpon>JokasoDaichoSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Common\KensaMstSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Common\KensaMstSearch.designer.cs">
+      <DependentUpon>KensaMstSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Common\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Common\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Common\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Common\Menu.designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Common\SaisuiinMstSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Common\SaisuiinMstSearch.designer.cs">
+      <DependentUpon>SaisuiinMstSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Common\WorkList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Common\WorkList.Designer.cs">
+      <DependentUpon>WorkList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Common\YubinJusyoMstSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Common\YubinJusyoMstSearch.designer.cs">
+      <DependentUpon>YubinJusyoMstSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Common\YubinNoKensaku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Common\YubinNoKensaku.Designer.cs">
+      <DependentUpon>YubinNoKensaku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\KensaKeiyaku\Common.cs" />
+    <Compile Include="Application\Boundary\Demo\KensaKeiyaku\KensaMemoList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\KensaKeiyaku\KensaMemoList.Designer.cs">
+      <DependentUpon>KensaMemoList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\KensaKeiyaku\KensaYoteiCalender.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\KensaKeiyaku\KensaYoteiCalender.Designer.cs">
+      <DependentUpon>KensaYoteiCalender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\KensaKeiyaku\KensaYoteiHeijyun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\KensaKeiyaku\KensaYoteiHeijyun.Designer.cs">
+      <DependentUpon>KensaYoteiHeijyun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\KensaKeiyaku\KensaYoteiHeijyunDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\KensaKeiyaku\KensaYoteiHeijyunDetail.Designer.cs">
+      <DependentUpon>KensaYoteiHeijyunDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\KensaKeiyaku\KensaYoteiList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\KensaKeiyaku\KensaYoteiList.Designer.cs">
+      <DependentUpon>KensaYoteiList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\KensaKeiyaku\KensaYoteiMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\KensaKeiyaku\KensaYoteiMap.Designer.cs">
+      <DependentUpon>KensaYoteiMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\GaikanKensa\GaikanKensaMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\GaikanKensa\GaikanKensaMenu.Designer.cs">
+      <DependentUpon>GaikanKensaMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\GaikanKensa\KensaHoryuList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\GaikanKensa\KensaHoryuList.Designer.cs">
+      <DependentUpon>KensaHoryuList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\GaikanKensa\KensaHoryuShosai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\GaikanKensa\KensaHoryuShosai.Designer.cs">
+      <DependentUpon>KensaHoryuShosai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\JokasoDaichoKanri\JokasoDaichoKanriMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\JokasoDaichoKanri\JokasoDaichoKanriMenu.Designer.cs">
+      <DependentUpon>JokasoDaichoKanriMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\JokasoDaichoKanri\JokasoDaichoList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\JokasoDaichoKanri\JokasoDaichoList.Designer.cs">
+      <DependentUpon>JokasoDaichoList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\JokasoDaichoKanri\JokasoDaichoShosai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\JokasoDaichoKanri\JokasoDaichoShosai.Designer.cs">
+      <DependentUpon>JokasoDaichoShosai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\KaiinKanri\KaiinList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\KaiinKanri\KaiinList.Designer.cs">
+      <DependentUpon>KaiinList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\KaiinKanri\KaiinMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\KaiinKanri\KaiinMenu.Designer.cs">
+      <DependentUpon>KaiinMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\KaiinKanri\KaiinShosai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\KaiinKanri\KaiinShosai.Designer.cs">
+      <DependentUpon>KaiinShosai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\HenkinList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\HenkinList.Designer.cs">
+      <DependentUpon>HenkinList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\HenkinShosai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\HenkinShosai.Designer.cs">
+      <DependentUpon>HenkinShosai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\KaikeiMakeFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\KaikeiMakeFile.Designer.cs">
+      <DependentUpon>KaikeiMakeFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\KaikeiRendoList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\KaikeiRendoList.Designer.cs">
+      <DependentUpon>KaikeiRendoList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\KaikeiRendoShosai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\KaikeiRendoShosai.Designer.cs">
+      <DependentUpon>KaikeiRendoShosai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\KeiriMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\KeiriMenu.Designer.cs">
+      <DependentUpon>KeiriMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\KingakuShisan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\KingakuShisan.designer.cs">
+      <DependentUpon>KingakuShisan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\MaeukekinList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\MaeukekinList.Designer.cs">
+      <DependentUpon>MaeukekinList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\MaeukekinShosai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\MaeukekinShosai.Designer.cs">
+      <DependentUpon>MaeukekinShosai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\MitsumoriList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\MitsumoriList.Designer.cs">
+      <DependentUpon>MitsumoriList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\MitsumoriShosai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\MitsumoriShosai.Designer.cs">
+      <DependentUpon>MitsumoriShosai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\NyukinList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\NyukinList.Designer.cs">
+      <DependentUpon>NyukinList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\NyukinShosai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\NyukinShosai.Designer.cs">
+      <DependentUpon>NyukinShosai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\SeikyuAddMeisai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\SeikyuAddMeisai.Designer.cs">
+      <DependentUpon>SeikyuAddMeisai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\SeikyuList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\SeikyuList.Designer.cs">
+      <DependentUpon>SeikyuList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\SeikyuShime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\SeikyuShime.Designer.cs">
+      <DependentUpon>SeikyuShime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\SeikyuShosai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\SeikyuShosai.Designer.cs">
+      <DependentUpon>SeikyuShosai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\UriageList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\UriageList.Designer.cs">
+      <DependentUpon>UriageList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\ZandakaList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Keiri\ZandakaList.Designer.cs">
+      <DependentUpon>ZandakaList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\KensaIraiKanri\KensaIraiKanriMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\KensaIraiKanri\KensaIraiKanriMenu.Designer.cs">
+      <DependentUpon>KensaIraiKanriMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\KensaIraiKanri\KensaIraishoDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\KensaIraiKanri\KensaIraishoDisplay.Designer.cs">
+      <DependentUpon>KensaIraishoDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\KensaIraiKanri\KensaIraishoDisplayTiff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\KensaIraiKanri\KensaIraishoDisplayTiff.Designer.cs">
+      <DependentUpon>KensaIraishoDisplayTiff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\KensaIraiKanri\KensaIraishoImageList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\KensaIraiKanri\KensaIraishoImageList.Designer.cs">
+      <DependentUpon>KensaIraishoImageList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\KensaIraiKanri\KensaIraishoList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\KensaIraiKanri\KensaIraishoList.Designer.cs">
+      <DependentUpon>KensaIraishoList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\KensaIraiKanri\KensaIraiToroku7jo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\KensaIraiKanri\KensaIraiToroku7jo.Designer.cs">
+      <DependentUpon>KensaIraiToroku7jo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\KensaKekka\KekkaMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\KensaKekka\KekkaMenu.Designer.cs">
+      <DependentUpon>KekkaMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\KensaKekka\KensaKekkaList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\KensaKekka\KensaKekkaList.Designer.cs">
+      <DependentUpon>KensaKekkaList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\SuishitsuKensaDaicho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Demo\SuishitsuKensaDaicho.Designer.cs">
+      <DependentUpon>SuishitsuKensaDaicho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\KinoHoshoKanri\HoshoNoPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\KinoHoshoKanri\HoshoNoPrint.designer.cs">
+      <DependentUpon>HoshoNoPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\KinoHoshoKanri\HoshoShinseiKokan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\KinoHoshoKanri\HoshoShinseiKokan.designer.cs">
+      <DependentUpon>HoshoShinseiKokan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\KinoHoshoKanri\HoshoShinseiList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\KinoHoshoKanri\HoshoShinseiList.Designer.cs">
+      <DependentUpon>HoshoShinseiList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\KinoHoshoKanri\HoshoShinseiShosai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\KinoHoshoKanri\HoshoShinseiShosai.designer.cs">
+      <DependentUpon>HoshoShinseiShosai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\KinoHoshoKanri\KinoMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\KinoHoshoKanri\KinoMenu.Designer.cs">
+      <DependentUpon>KinoMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\BushoMstList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\BushoMstList.Designer.cs">
+      <DependentUpon>BushoMstList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\BushoMstShosai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\BushoMstShosai.designer.cs">
+      <DependentUpon>BushoMstShosai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\ChikuMstList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\ChikuMstList.designer.cs">
+      <DependentUpon>ChikuMstList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\GaikankensaKomokuMstList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\GaikankensaKomokuMstList.Designer.cs">
+      <DependentUpon>GaikankensaKomokuMstList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\GaikankensaKomokuMstShosai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\GaikankensaKomokuMstShosai.designer.cs">
+      <DependentUpon>GaikankensaKomokuMstShosai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\GyoshaMstList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\GyoshaMstList.Designer.cs">
+      <DependentUpon>GyoshaMstList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\GyoshaMstShosai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\GyoshaMstShosai.Designer.cs">
+      <DependentUpon>GyoshaMstShosai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\ChikuMstShosai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\ChikuMstShosai.Designer.cs">
+      <DependentUpon>ChikuMstShosai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\HokenjoMstList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\HokenjoMstList.designer.cs">
+      <DependentUpon>HokenjoMstList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\HokenjoMstShosai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\HokenjoMstShosai.designer.cs">
+      <DependentUpon>HokenjoMstShosai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\KatashikiMstList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\KatashikiMstList.Designer.cs">
+      <DependentUpon>KatashikiMstList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\KatashikiMstShosai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\KatashikiMstShosai.designer.cs">
+      <DependentUpon>KatashikiMstShosai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\KenchikuyotoMstList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\KenchikuyotoMstList.Designer.cs">
+      <DependentUpon>KenchikuyotoMstList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\KenchikuyotoMstShosai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\KenchikuyotoMstShosai.designer.cs">
+      <DependentUpon>KenchikuyotoMstShosai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\MstMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\MstMenu.Designer.cs">
+      <DependentUpon>MstMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\NameMstEditList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\NameMstEditList.designer.cs">
+      <DependentUpon>NameMstEditList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\NameMstUpdateDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NameMstUpdateDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\SaisuiinMstList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\SaisuiinMstList.designer.cs">
+      <DependentUpon>SaisuiinMstList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\SaisuiinMstShosai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\SaisuiinMstShosai.designer.cs">
+      <DependentUpon>SaisuiinMstShosai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\MemoMstList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\MemoMstList.Designer.cs">
+      <DependentUpon>MemoMstList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\MemoMstShosai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\MemoMstShosai.designer.cs">
+      <DependentUpon>MemoMstShosai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\ShishoMstList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\ShishoMstList.Designer.cs">
+      <DependentUpon>ShishoMstList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\ShishoMstShosai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\ShishoMstShosai.Designer.cs">
+      <DependentUpon>ShishoMstShosai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\ShokenList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\ShokenList.Designer.cs">
+      <DependentUpon>ShokenList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\ShokenShosai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\ShokenShosai.designer.cs">
+      <DependentUpon>ShokenShosai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\ShokuinMstList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\ShokuinMstList.Designer.cs">
+      <DependentUpon>ShokuinMstList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\ShokuinMstShosai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\ShokuinMstShosai.designer.cs">
+      <DependentUpon>ShokuinMstShosai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\ShoriHoshikiMstList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\ShoriHoshikiMstList.Designer.cs">
+      <DependentUpon>ShoriHoshikiMstList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\ShoriHoshikiMstShosai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\ShoriHoshikiMstShosai.Designer.cs">
+      <DependentUpon>ShoriHoshikiMstShosai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\SuishitsuMstList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\SuishitsuMstList.Designer.cs">
+      <DependentUpon>SuishitsuMstList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\SuishitsuMstShosai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\SuishitsuMstShosai.Designer.cs">
+      <DependentUpon>SuishitsuMstShosai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\SuishitsuKekkaNmMstList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\SuishitsuKekkaNmMstList.Designer.cs">
+      <DependentUpon>SuishitsuKekkaNmMstList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\SuishitsuKekkaNmMstShosai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\SuishitsuKekkaNmMstShosai.designer.cs">
+      <DependentUpon>SuishitsuKekkaNmMstShosai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\SuishitsuShikenKoumokuMstList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\SuishitsuShikenKoumokuMstList.Designer.cs">
+      <DependentUpon>SuishitsuShikenKoumokuMstList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\SuishitsuShikenKoumokuMstShosai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\SuishitsuShikenKoumokuMstShosai.designer.cs">
+      <DependentUpon>SuishitsuShikenKoumokuMstShosai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\YakushokuMstList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\YakushokuMstList.Designer.cs">
+      <DependentUpon>YakushokuMstList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\YakushokuMstShosai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\YakushokuMstShosai.designer.cs">
+      <DependentUpon>YakushokuMstShosai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\SuishitsuKensaSetMstList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\SuishitsuKensaSetMstList.Designer.cs">
+      <DependentUpon>SuishitsuKensaSetMstList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\SuishitsuKensaSetMstShosai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Master\SuishitsuKensaSetMstShosai.designer.cs">
+      <DependentUpon>SuishitsuKensaSetMstShosai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Others\EnkabutsuIonNodoHikakuList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Others\EnkabutsuIonNodoHikakuList.Designer.cs">
+      <DependentUpon>EnkabutsuIonNodoHikakuList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Others\FileKanriList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Others\FileKanriList.Designer.cs">
+      <DependentUpon>FileKanriList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Others\JokasoDaichoSyukeiList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Others\JokasoDaichoSyukeiList.Designer.cs">
+      <DependentUpon>JokasoDaichoSyukeiList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Others\KensainGeppoList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Others\KensainGeppoList.Designer.cs">
+      <DependentUpon>KensainGeppoList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Others\KensainSyuhoList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Others\KensainSyuhoList.Designer.cs">
+      <DependentUpon>KensainSyuhoList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Others\KensaJokyoList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Others\KensaJokyoList.Designer.cs">
+      <DependentUpon>KensaJokyoList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Others\KensaKeihatsuSuishinhiList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Others\KensaKeihatsuSuishinhiList.Designer.cs">
+      <DependentUpon>KensaKeihatsuSuishinhiList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Others\KensaKeihatsuSuishinhiSyukei.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Others\KensaKeihatsuSuishinhiSyukei.Designer.cs">
+      <DependentUpon>KensaKeihatsuSuishinhiSyukei.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Others\OthersMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Others\OthersMenu.Designer.cs">
+      <DependentUpon>OthersMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\Others\TuckSealList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\Others\TuckSealList.Designer.cs">
+      <DependentUpon>TuckSealList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\SaisuiinKanri\JyukoshaInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\SaisuiinKanri\JyukoshaInput.designer.cs">
+      <DependentUpon>JyukoshaInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\SaisuiinKanri\JyukoYoteishaList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\SaisuiinKanri\JyukoYoteishaList.Designer.cs">
+      <DependentUpon>JyukoYoteishaList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\SaisuiinKanri\SaisuiinInfoList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\SaisuiinKanri\SaisuiinInfoList.Designer.cs">
+      <DependentUpon>SaisuiinInfoList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\SaisuiinKanri\SaisuiinInfoShosai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\SaisuiinKanri\SaisuiinInfoShosai.designer.cs">
+      <DependentUpon>SaisuiinInfoShosai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\SaisuiinKanri\SaisuiinMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\SaisuiinKanri\SaisuiinMenu.Designer.cs">
+      <DependentUpon>SaisuiinMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\SaisuiinKanri\SaisuiinShomeishoHakko.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\SaisuiinKanri\SaisuiinShomeishoHakko.Designer.cs">
+      <DependentUpon>SaisuiinShomeishoHakko.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\YoshiHanbaiKanri\RyosyuPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\YoshiHanbaiKanri\RyosyuPrint.Designer.cs">
+      <DependentUpon>RyosyuPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\YoshiHanbaiKanri\TyumonList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\YoshiHanbaiKanri\TyumonList.Designer.cs">
+      <DependentUpon>TyumonList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\YoshiHanbaiKanri\TyumonMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\YoshiHanbaiKanri\TyumonMenu.Designer.cs">
+      <DependentUpon>TyumonMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\YoshiHanbaiKanri\TyumonPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\YoshiHanbaiKanri\TyumonPrint.Designer.cs">
+      <DependentUpon>TyumonPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\YoshiHanbaiKanri\TyumonShosai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\YoshiHanbaiKanri\TyumonShosai.Designer.cs">
+      <DependentUpon>TyumonShosai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\YoshiHanbaiKanri\YoshiMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\YoshiHanbaiKanri\YoshiMenu.Designer.cs">
+      <DependentUpon>YoshiMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\YoshiHanbaiKanri\YoshiMstUpdateDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YoshiMstUpdateDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\YoshiHanbaiKanri\YoshiMstList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\YoshiHanbaiKanri\YoshiMstList.Designer.cs">
+      <DependentUpon>YoshiMstList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\YoshiHanbaiKanri\YoshiUriageList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\YoshiHanbaiKanri\YoshiUriageList.Designer.cs">
+      <DependentUpon>YoshiUriageList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\Boundary\YoshiHanbaiKanri\ZaikoList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application\Boundary\YoshiHanbaiKanri\ZaikoList.Designer.cs">
+      <DependentUpon>ZaikoList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Application\BusinessLogic\Common\GetCurrentTimestamp.cs" />
+    <Compile Include="Application\BusinessLogic\Common\GetKeySaiban.cs" />
+    <Compile Include="Application\BusinessLogic\Common\GetSaibanRenban.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Application\BusinessLogic\Common\GetShokuinMstByShokuinCdShokuinPassword.cs" />
+    <Compile Include="Application\BusinessLogic\Common\GetYubinNoAdrMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Common\GetYubinNoAdrMstByTodofukenAdr.cs" />
+    <Compile Include="Application\BusinessLogic\Common\JokasoDaichoSearch\GetJokasoDaichoMstSearchBySearchCond.cs" />
+    <Compile Include="Application\BusinessLogic\Common\YubinJusyoMstSearch\GetYubinNoAdrMstBySearchCond.cs" />
+    <Compile Include="Application\BusinessLogic\JokasoDaichoKanri\GetJokasoDaichoMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\JokasoDaichoKanri\GetJokasoDaichoMstInfo.cs" />
+    <Compile Include="Application\BusinessLogic\JokasoDaichoKanri\GetYubinNoAdrMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\KaiinKanri\KaiinList\GetKaiinListBySearchCond.cs" />
+    <Compile Include="Application\BusinessLogic\KaiinKanri\KaiinList\GetKaiinPrintInfoByGyoshaCd.cs" />
+    <Compile Include="Application\BusinessLogic\KaiinKanri\KaiinList\PrintKaiinInfo.cs" />
+    <Compile Include="Application\BusinessLogic\Keiri\MaeukekinList\GetMaeukekinTblBySearchCond.cs" />
+    <Compile Include="Application\BusinessLogic\Keiri\MaeukekinShosai\DeleteMaeukekinTblByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Keiri\MaeukekinShosai\GetMaeukekinTblByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Keiri\MaeukekinShosai\UpdateMaeukekinTbl.cs" />
+    <Compile Include="Application\BusinessLogic\KensaKekka\KensaKekkaList\GetKensaIraiTblBySearchCond.cs" />
+    <Compile Include="Application\BusinessLogic\KensaKekka\KensaKekkaList\GetSouShinhyo1PrintInfo.cs" />
+    <Compile Include="Application\BusinessLogic\KensaKekka\KensaKekkaList\GetSouShinhyo2PrintInfo.cs" />
+    <Compile Include="Application\BusinessLogic\KensaKekka\KensaKekkaList\PrintSouShinhyo1Info.cs" />
+    <Compile Include="Application\BusinessLogic\KensaKekka\KensaKekkaList\PrintSouShinhyo2Info.cs" />
+    <Compile Include="Application\BusinessLogic\KinoHoshoKanri\HoshoNoPrint\GetHoshoTorokuTblByKeyBetween.cs" />
+    <Compile Include="Application\BusinessLogic\KinoHoshoKanri\HoshoNoPrint\PrintHoshoNoInfo.cs" />
+    <Compile Include="Application\BusinessLogic\KinoHoshoKanri\HoshoNoPrint\UpdateHoshoTorokuTbl.cs" />
+    <Compile Include="Application\BusinessLogic\KinoHoshoKanri\HoshoShinseiKokan\GetHoshoShinseiKokanInfo.cs" />
+    <Compile Include="Application\BusinessLogic\KinoHoshoKanri\HoshoShinseiKokan\UpdateKokanHoshoTbl.cs" />
+    <Compile Include="Application\BusinessLogic\KinoHoshoKanri\HoshoShinseiShosai\GetHoshoShinseiShosaiByKensakikanNendoRenban.cs" />
+    <Compile Include="Application\BusinessLogic\KinoHoshoKanri\HoshoShinseiShosai\GetHoshoTorokuTblByKey.cs" />
+    <Compile Include="Application\BusinessLogic\KinoHoshoKanri\HoshoShinseiShosai\GetHoteiKanriMstInfo.cs" />
+    <Compile Include="Application\BusinessLogic\KinoHoshoKanri\HoshoShinseiShosai\GetJokasoMstInfo.cs" />
+    <Compile Include="Application\BusinessLogic\KinoHoshoKanri\HoshoShinseiShosai\GetYubinNoAdrMstInfo.cs" />
+    <Compile Include="Application\BusinessLogic\KinoHoshoKanri\HoshoShinseiList\GetHoshoTorokuTblBySearchCond.cs" />
+    <Compile Include="Application\BusinessLogic\Master\BushoMstList\GetBushoMstBySearchCond.cs" />
+    <Compile Include="Application\BusinessLogic\Master\BushoMstShosai\DeleteBushoMstBykey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\BushoMstShosai\GetBushoMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\BushoMstShosai\GetBushoMstInfo.cs" />
+    <Compile Include="Application\BusinessLogic\Master\BushoMstShosai\UpdateBushoMst.cs" />
+    <Compile Include="Application\BusinessLogic\Master\ChikuMstList\GetChikuMstBySearchCond.cs" />
+    <Compile Include="Application\BusinessLogic\Master\ChikuMstShosai\DeleteChikuMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\ChikuMstShosai\GetChikuMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\ChikuMstShosai\UpdateChikuMst.cs" />
+    <Compile Include="Application\BusinessLogic\Master\ConstMst\GetConstMstByKbn.cs" />
+    <Compile Include="Application\BusinessLogic\Master\ConstMst\GetConstMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\GaikankensaKomokuMstList\GetGaikankensaKomokuMstBySearchCond.cs" />
+    <Compile Include="Application\BusinessLogic\Master\GaikankensaKomokuMstShosai\DeleteGaikankensaKomokuMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\GaikankensaKomokuMstShosai\GetGaikankensaKomokuMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\GaikankensaKomokuMstShosai\UpdateGaikankensaKomokuMst.cs" />
+    <Compile Include="Application\BusinessLogic\Master\GyoshaMstShosai\DeleteGyoshaBukaiMstByGyoshaCd.cs" />
+    <Compile Include="Application\BusinessLogic\Master\GyoshaMstShosai\GetGyoshaBukaiMstByGyoshaCd.cs" />
+    <Compile Include="Application\BusinessLogic\Master\GyoshaMstShosai\DeleteGyoshaEigyoChikuMstByGyoshaCd.cs" />
+    <Compile Include="Application\BusinessLogic\Master\GyoshaMstShosai\GetGyoshaBukaiMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\GyoshaMstShosai\GetGyoshaEigyoChikuMstByGyoshaCd.cs" />
+    <Compile Include="Application\BusinessLogic\Master\GyoshaMstShosai\DeleteGyoshaEigyoshoMstByGyoshaCd.cs" />
+    <Compile Include="Application\BusinessLogic\Master\GyoshaMstShosai\GetGyoshaEigyoChikuMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\GyoshaMstShosai\GetGyoshaEigyoshoMstByGyoshaCd.cs" />
+    <Compile Include="Application\BusinessLogic\Master\GyoshaMstShosai\DeleteGyoshaMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\GyoshaMstShosai\GetGyoshaEigyoshoMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\GyoshaMstShosai\GetGyoshaMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\GyoshaMstList\GetGyoshaMstBySearchCond.cs" />
+    <Compile Include="Application\BusinessLogic\Master\GyoshaMstShosai\GetGyoshaMstInfo.cs" />
+    <Compile Include="Application\BusinessLogic\Master\GyoshaMstShosai\UpdateGyoshaBukaiMst.cs" />
+    <Compile Include="Application\BusinessLogic\Master\GyoshaMstShosai\UpdateGyoshaEigyoChikuMst.cs" />
+    <Compile Include="Application\BusinessLogic\Master\GyoshaMstShosai\UpdateGyoshaEigyoshoMst.cs" />
+    <Compile Include="Application\BusinessLogic\Master\GyoshaMstShosai\UpdateGyoshaMst.cs" />
+    <Compile Include="Application\BusinessLogic\Master\HokenjoMstList\GetHokenjoMstBySearchCond.cs" />
+    <Compile Include="Application\BusinessLogic\Master\HokenjoMstList\GetHokenjoMstInfo.cs" />
+    <Compile Include="Application\BusinessLogic\Master\HokenjoMstShosai\DeleteHokenjoMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\HokenjoMstShosai\GetHokenjoMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\HokenjoMstShosai\UpdateHokenjoMst.cs" />
+    <Compile Include="Application\BusinessLogic\Master\KatashikiMstList\GetKatashikiMstBySearchCond.cs" />
+    <Compile Include="Application\BusinessLogic\Master\KatashikiMstShosai\DeleteKatashikiBetsuTaniSochiMstByKatashikiMakerCdKatashikiCd.cs" />
+    <Compile Include="Application\BusinessLogic\Master\KatashikiMstShosai\DeleteKatashikiBurowaMstByKatashikiMakerCdKatashikiCd.cs" />
+    <Compile Include="Application\BusinessLogic\Master\KatashikiMstShosai\DeleteKatashikiMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\KatashikiMstShosai\GetBetsuTaniSochiByMakerCdKatashikiCd.cs" />
+    <Compile Include="Application\BusinessLogic\Master\KatashikiMstShosai\GetGyoshaMstBySeizoGyoShaKbn.cs" />
+    <Compile Include="Application\BusinessLogic\Master\KatashikiMstShosai\GetKatashikiBetsuTaniSochiMstByKatashikiMakerCdKatashikiCd.cs" />
+    <Compile Include="Application\BusinessLogic\Master\KatashikiMstShosai\GetKatashikiBetsuTaniSochiMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\KatashikiMstShosai\GetKatashikiBurowaMstByKatashikiMakerCdKatashikiCd.cs" />
+    <Compile Include="Application\BusinessLogic\Master\KatashikiMstShosai\GetKatashikiMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\KatashikiMstShosai\GetTaniSochiGroupMstInfo.cs" />
+    <Compile Include="Application\BusinessLogic\Master\KatashikiMstShosai\GetTaniSochiListByMakerCdKatashikiCd.cs" />
+    <Compile Include="Application\BusinessLogic\Master\KatashikiMstShosai\UpdateKatashikiBetsuTaniSochiMst.cs" />
+    <Compile Include="Application\BusinessLogic\Master\KatashikiMstShosai\UpdateKatashikiBurowaMst.cs" />
+    <Compile Include="Application\BusinessLogic\Master\KatashikiMstShosai\UpdateKatashikiMst.cs" />
+    <Compile Include="Application\BusinessLogic\Master\KenchikuyotoMstList\GetKenchikuyotoDaibunruiMstInfo.cs" />
+    <Compile Include="Application\BusinessLogic\Master\KenchikuyotoMstList\GetKenchikuyotoMstBySearchCond.cs" />
+    <Compile Include="Application\BusinessLogic\Master\KenchikuyotoMstShosai\DeleteKenchikuyotoMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\KenchikuyotoMstShosai\GetKenchikuyotoDaibunruiMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\KenchikuyotoMstShosai\GetKenchiKuyotoMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\KenchikuyotoMstShosai\GetKenchikuyotoShobunruiMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\KenchikuyotoMstShosai\GetKenchikuyotoShobunruiMstInfo.cs" />
+    <Compile Include="Application\BusinessLogic\Master\KenchikuyotoMstShosai\UpdateKenchikuyotoMst.cs" />
+    <Compile Include="Application\BusinessLogic\Master\MemoMstList\GetMemoDaibunruiMstInfo.cs" />
+    <Compile Include="Application\BusinessLogic\Master\MemoMstList\GetMemoMstListBySearchCond.cs" />
+    <Compile Include="Application\BusinessLogic\Master\MemoMstShosai\DeleteMemoMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\MemoMstShosai\GetMemoMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\MemoMstShosai\UpdateMemoMst.cs" />
+    <Compile Include="Application\BusinessLogic\Master\NameMstEditList\GetNameMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\NameMstEditList\GetNameMstByNameKbn.cs" />
+    <Compile Include="Application\BusinessLogic\Master\NameMstEditList\GetNameMstBySearchCond.cs" />
+    <Compile Include="Application\BusinessLogic\Master\NameMstEditList\InsertNameMst.cs" />
+    <Compile Include="Application\BusinessLogic\Master\NameMstEditList\UpdateNameMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\SaisuiinMstList\GetSaisuiinMstBySearchCond.cs" />
+    <Compile Include="Application\BusinessLogic\Master\ShishoMstShosai\DeleteShishoMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\ShishoMstShosai\GetShishoMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\ShishoMstList\GetShishoMstBySearchCond.cs" />
+    <Compile Include="Application\BusinessLogic\Master\ShishoMstShosai\GetShishoMstInfo.cs" />
+    <Compile Include="Application\BusinessLogic\Master\ShishoMstShosai\UpdateShishoMst.cs" />
+    <Compile Include="Application\BusinessLogic\Master\ShokuinMstList\GetShokuinMstBySearchCond.cs" />
+    <Compile Include="Application\BusinessLogic\Master\ShokuinMstShosai\DeleteShokuinMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\ShokuinMstShosai\GetShokuinMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\ShokuinMstShosai\UpdateShokuinMst.cs" />
+    <Compile Include="Application\BusinessLogic\Master\ShoriHoshikiMstShosai\DeleteShoriHoshikiMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\ShoriHoshikiMstShosai\GetShoriHoshikiMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\ShoriHoshikiMstList\GetShoriHoshikiMstBySearchCond.cs" />
+    <Compile Include="Application\BusinessLogic\Master\ShoriHoshikiMstShosai\GetShoriHoshikiMstInfo.cs" />
+    <Compile Include="Application\BusinessLogic\Master\ShoriHoshikiMstShosai\UpdateShoriHoshikiMst.cs" />
+    <Compile Include="Application\BusinessLogic\Master\ShozokuMstShosai\DeleteShozokuMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\ShozokuMstShosai\DeleteShozokuMstByShokuinCd.cs" />
+    <Compile Include="Application\BusinessLogic\Master\ShozokuMstShosai\GetShozokuMstByShokuinCd.cs" />
+    <Compile Include="Application\BusinessLogic\Master\ShozokuMstShosai\UpdateShozokuMst.cs" />
+    <Compile Include="Application\BusinessLogic\Master\SuishitsuKekkaNmMstList\GetSuishitsuKekkaNmMstBySearchCond.cs" />
+    <Compile Include="Application\BusinessLogic\Master\SuishitsuKekkaNmMstShosai\DeleteSuishitsuKekkaNmMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\SuishitsuKekkaNmMstShosai\GetSuishitsuKekkaNmMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\SuishitsuKekkaNmMstShosai\UpdateSuishitsuKekkaNmMst.cs" />
+    <Compile Include="Application\BusinessLogic\Master\SuishitsuKensaSetMstList\GetSuishitsuKensaSetMstBySearchCond.cs" />
+    <Compile Include="Application\BusinessLogic\Master\SuishitsuKensaSetMstShosai\DeleteSetShikenKomokuMstBySetKomokuSetCd.cs" />
+    <Compile Include="Application\BusinessLogic\Master\SuishitsuKensaSetMstShosai\DeleteSuishitsuKensaSetMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\SuishitsuKensaSetMstShosai\GetSetShikenKomokuMstBySetKomokuSetCd.cs.cs" />
+    <Compile Include="Application\BusinessLogic\Master\SuishitsuKensaSetMstShosai\GetSuishitsuKensaSetMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\SuishitsuKensaSetMstShosai\GetSuishitsuKensaSetMstShosaiBySetCd.cs" />
+    <Compile Include="Application\BusinessLogic\Master\SuishitsuKensaSetMstShosai\UpdateSetShikenKomokuMst.cs" />
+    <Compile Include="Application\BusinessLogic\Master\SuishitsuKensaSetMstShosai\UpdateSuishitsuKensaSetMst.cs" />
+    <Compile Include="Application\BusinessLogic\Master\SuishitsuMstShosai\DeleteSuishitsuMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\SuishitsuMstShosai\UpdateSuishitsuMst.cs" />
+    <Compile Include="Application\BusinessLogic\Master\SuishitsuMstShosai\GetSuishitsuMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\SaisuiinMstShosai\DeleteSaisuiinMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\SaisuiinMstShosai\GetSaisuiinMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\SaisuiinMstShosai\UpdateSaisuiinMst.cs" />
+    <Compile Include="Application\BusinessLogic\Master\SuishitsuMstList\GetSuishitsuMstBySearchCond.cs" />
+    <Compile Include="Application\BusinessLogic\Master\SuishitsuShikenKoumokuMstList\GetSuishitsuShikenKoumokuMstInfo.cs" />
+    <Compile Include="Application\BusinessLogic\Master\SuishitsuShikenKoumokuMstShosai\DeleteSuishitsuShikenKoumokuMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\SuishitsuShikenKoumokuMstShosai\GetSuishitsuShikenKoumokuMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\SuishitsuShikenKoumokuMstList\GetSuishitsuShikenKoumokuMstKensakuByCond.cs" />
+    <Compile Include="Application\BusinessLogic\Master\SuishitsuShikenKoumokuMstShosai\UpdateSuishitsuShikenKoumokuMst.cs" />
+    <Compile Include="Application\BusinessLogic\Master\YakushokuMstList\GetYakushokuMstBySearchCond.cs" />
+    <Compile Include="Application\BusinessLogic\Master\YakushokuMstShosai\DeleteYakushokuMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\YakushokuMstShosai\GetYakushokuMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Master\YakushokuMstShosai\GetYakushokuMstInfo.cs" />
+    <Compile Include="Application\BusinessLogic\Master\YakushokuMstShosai\UpdateYakushokuMst.cs" />
+    <Compile Include="Application\BusinessLogic\Others\FileKanriList\DeleteFileKanriTblByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Others\FileKanriList\GetFileKanriListBySearchCond.cs" />
+    <Compile Include="Application\BusinessLogic\Others\FileKanriList\GetFileKanriTblByKey.cs" />
+    <Compile Include="Application\BusinessLogic\Others\FileKanriList\UpdateFileKanriTbl.cs" />
+    <Compile Include="Application\BusinessLogic\Others\KensainGeppoList\GetKensainGeppoListBySearchCond.cs" />
+    <Compile Include="Application\BusinessLogic\Others\KensaKeihatsuSuishinhiList\GetKensaKeihatsuSuishinListBySearchCond.cs" />
+    <Compile Include="Application\BusinessLogic\Others\KensaKeihatsuSuishinhiList\GetKyodoKumiaiMstInfo.cs" />
+    <Compile Include="Application\BusinessLogic\Others\KensaJokyoList\GetKensaJokyoListBySearchCond.cs" />
+    <Compile Include="Application\BusinessLogic\Others\KensaKeihatsuSuishinhiList\PrintKensaKeihatsuKyodoKumiai.cs" />
+    <Compile Include="Application\BusinessLogic\Others\KensaKeihatsuSuishinhiList\PrintMochikomiGyosha.cs" />
+    <Compile Include="Application\BusinessLogic\Others\KensaKeihatsuSuishinhiList\PrintShushuToriatsukaiGyosha.cs" />
+    <Compile Include="Application\BusinessLogic\Others\TuckSealList\GetTuckSealListBySearchCond.cs" />
+    <Compile Include="Application\BusinessLogic\Others\TuckSealList\PrintSealTack.cs" />
+    <Compile Include="Application\BusinessLogic\Others\TuckSealList\PrintSofujo.cs" />
+    <Compile Include="Application\BusinessLogic\Report\PrintSampleReport.cs.cs" />
+    <Compile Include="Application\BusinessLogic\SaisuiinKanri\JyukoshaInput\GetSaisuiinInfoList.cs" />
+    <Compile Include="Application\BusinessLogic\SaisuiinKanri\JyukoYoteishaList\GetJyukoYoteishaListBySearchCond.cs" />
+    <Compile Include="Application\BusinessLogic\SaisuiinKanri\JyukoYoteishaList\PrintJukoMoshikomisho.cs" />
+    <Compile Include="Application\BusinessLogic\SaisuiinKanri\SaisuiinInfoList\GetSaisuiinInfoListBySearchCond.cs" />
+    <Compile Include="Application\BusinessLogic\SaisuiinKanri\SaisuiinInfoShosai\GetSaisuiinInfoShosaiBySaisuiinCd.cs" />
+    <Compile Include="Application\BusinessLogic\SaisuiinKanri\SaisuiinShomeishoHakko\GetSaisuiinShomeishoHakkoKensakuByCond.cs" />
+    <Compile Include="Application\BusinessLogic\SaisuiinKanri\SaisuiinShomeishoHakko\PrintSaisuiinShiteisho.cs" />
+    <Compile Include="Application\BusinessLogic\SaisuiinKanri\SaisuiinShomeishoHakko\PrintSaisuiinShomeisho.cs" />
+    <Compile Include="Application\BusinessLogic\YoshiHanbaiKanri\RyosyuPrint\GetRyosyuPrintInfo.cs" />
+    <Compile Include="Application\BusinessLogic\YoshiHanbaiKanri\RyosyuPrint\PrintRyosyu.cs" />
+    <Compile Include="Application\BusinessLogic\YoshiHanbaiKanri\TyumonList\GetYoshiHanbaiHdrTblBySearchCond.cs" />
+    <Compile Include="Application\BusinessLogic\YoshiHanbaiKanri\TyumonShosai\DeleteYoshiHanbaiDtlTblByYoshiHanbaiChumonNo.cs" />
+    <Compile Include="Application\BusinessLogic\YoshiHanbaiKanri\TyumonShosai\DeleteYoshiHanbaiHdrTblByKey.cs" />
+    <Compile Include="Application\BusinessLogic\YoshiHanbaiKanri\TyumonShosai\GetTyumonShosai.cs" />
+    <Compile Include="Application\BusinessLogic\YoshiHanbaiKanri\YoshiMstList\GetYoshiMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\YoshiHanbaiKanri\YoshiMstList\GetYoshiMstBySearchCond.cs" />
+    <Compile Include="Application\BusinessLogic\YoshiHanbaiKanri\YoshiMstList\InsertYoshiMst.cs" />
+    <Compile Include="Application\BusinessLogic\YoshiHanbaiKanri\TyumonShosai\GetYoshiHanbaiDtlTblByKey.cs" />
+    <Compile Include="Application\BusinessLogic\YoshiHanbaiKanri\TyumonShosai\GetYoshiHanbaiDtlTblByYoshiHanbaiChumonNo.cs" />
+    <Compile Include="Application\BusinessLogic\YoshiHanbaiKanri\TyumonShosai\GetYoshiHanbaiHdrTblByKey.cs" />
+    <Compile Include="Application\BusinessLogic\YoshiHanbaiKanri\TyumonShosai\UpdateTyumon.cs" />
+    <Compile Include="Application\BusinessLogic\YoshiHanbaiKanri\YoshiMstList\UpdateYoshiMstByKey.cs" />
+    <Compile Include="Application\BusinessLogic\YoshiHanbaiKanri\YoshiUriageList\GetYoshiUriageListBySearchCond.cs" />
+    <Compile Include="Application\BusinessLogic\YoshiHanbaiKanri\ZaikoList\DeleteYoshiZaikoTblByShishoCdAndYoshiCd.cs" />
+    <Compile Include="Application\BusinessLogic\YoshiHanbaiKanri\ZaikoList\GetYoshiZaikoTblByKey.cs" />
+    <Compile Include="Application\BusinessLogic\YoshiHanbaiKanri\ZaikoList\GetYoshiZaikoTblBySearchCond.cs" />
+    <Compile Include="Application\BusinessLogic\YoshiHanbaiKanri\ZaikoList\GetYoshiZaikoTblInfo.cs" />
+    <Compile Include="Application\BusinessLogic\YoshiHanbaiKanri\ZaikoList\UpdateYoshiZaikoTbl.cs" />
+    <Compile Include="Application\DataAccess\BushoMst\DeleteBushoMstByKey.cs" />
+    <Compile Include="Application\DataAccess\BushoMst\SelectBushoMstByKey.cs" />
+    <Compile Include="Application\DataAccess\BushoMst\SelectBushoMstBySearchCond.cs" />
+    <Compile Include="Application\DataAccess\BushoMst\SelectBushoMstInfo.cs" />
+    <Compile Include="Application\DataAccess\BushoMst\UpdateBushoMst.cs" />
+    <Compile Include="Application\DataAccess\ChikuMst\DeleteChikuMstByKey.cs" />
+    <Compile Include="Application\DataAccess\ChikuMst\SelectChikuMstByKey.cs" />
+    <Compile Include="Application\DataAccess\ChikuMst\SelectChikuMstBySearchCond.cs" />
+    <Compile Include="Application\DataAccess\ChikuMst\UpdateChikuMst.cs" />
+    <Compile Include="Application\DataAccess\Common\SelectCurrentTimestamp.cs" />
+    <Compile Include="Application\DataAccess\ConstMst\SelectConstMstByKbn.cs" />
+    <Compile Include="Application\DataAccess\ConstMst\SelectConstMstByKey.cs" />
+    <Compile Include="Application\DataAccess\DataAccessUtility.cs" />
+    <Compile Include="Application\DataAccess\FileKanriTbl\DeleteFileKanriTblByKey.cs" />
+    <Compile Include="Application\DataAccess\FileKanriTbl\SelectFileKanriListBySearchCond.cs" />
+    <Compile Include="Application\DataAccess\FileKanriTbl\SelectFileKanriTblByKey.cs" />
+    <Compile Include="Application\DataAccess\FileKanriTbl\UpdateFileKanriTbl.cs" />
+    <Compile Include="Application\DataAccess\GaikankensaKomokuMst\DeleteGaikankensaKomokuMstByKey.cs" />
+    <Compile Include="Application\DataAccess\GaikankensaKomokuMst\SelectGaikankensaKomokuMstByKey.cs" />
+    <Compile Include="Application\DataAccess\GaikankensaKomokuMst\SelectGaikankensaKomokuMstBySearchCond.cs" />
+    <Compile Include="Application\DataAccess\GaikankensaKomokuMst\UpdateGaikankensaKomokuMst.cs" />
+    <Compile Include="Application\DataAccess\GyoshaBukaiMst\DeleteGyoshaBukaiMstByGyoshaCd.cs" />
+    <Compile Include="Application\DataAccess\GyoshaBukaiMst\SelectGyoshaBukaiMstByGyoshaCd.cs" />
+    <Compile Include="Application\DataAccess\GyoshaBukaiMst\SelectGyoshaBukaiMstByKey.cs" />
+    <Compile Include="Application\DataAccess\GyoshaBukaiMst\SelectKaiinListBySearchCond.cs" />
+    <Compile Include="Application\DataAccess\GyoshaBukaiMst\SelectKaiinPrintInfoByGyoshaCd.cs" />
+    <Compile Include="Application\DataAccess\GyoshaBukaiMst\UpdateGyoshaBukaiMst.cs" />
+    <Compile Include="Application\DataAccess\GyoshaEigyoChikuMst\DeleteGyoshaEigyoChikuMstByGyoshaCd.cs" />
+    <Compile Include="Application\DataAccess\GyoshaEigyoChikuMst\SelectGyoshaEigyoChikuMstByGyoshaCd.cs" />
+    <Compile Include="Application\DataAccess\GyoshaEigyoChikuMst\SelectGyoshaEigyoChikuMstByKey.cs" />
+    <Compile Include="Application\DataAccess\GyoshaEigyoChikuMst\UpdateGyoshaEigyoChikuMst.cs" />
+    <Compile Include="Application\DataAccess\GyoshaEigyoshoMst\DeleteGyoshaEigyoshoMstByGyoshaCd.cs" />
+    <Compile Include="Application\DataAccess\GyoshaEigyoshoMst\SelectGyoshaEigyoshoMstByGyoshaCd.cs" />
+    <Compile Include="Application\DataAccess\GyoshaEigyoshoMst\SelectGyoshaEigyoshoMstByKey.cs" />
+    <Compile Include="Application\DataAccess\GyoshaEigyoshoMst\UpdateGyoshaEigyoshoMst.cs" />
+    <Compile Include="Application\DataAccess\GyoshaMst\DeleteGyoshaMstByKey.cs" />
+    <Compile Include="Application\DataAccess\GyoshaMst\SelectGyoshaMstByKey.cs" />
+    <Compile Include="Application\DataAccess\GyoshaMst\SelectGyoshaMstBySearchCond.cs" />
+    <Compile Include="Application\DataAccess\GyoshaMst\SelectGyoshaMstBySeizoGyoShaKbn.cs" />
+    <Compile Include="Application\DataAccess\GyoshaMst\SelectGyoshaMstInfo.cs" />
+    <Compile Include="Application\DataAccess\GyoshaMst\UpdateGyoshaMst.cs" />
+    <Compile Include="Application\DataAccess\HokenjoMst\DeleteHokenjoMstByKey.cs" />
+    <Compile Include="Application\DataAccess\HokenjoMst\SelectHokenjoMstByKey.cs" />
+    <Compile Include="Application\DataAccess\HokenjoMst\SelectHokenjoMstBySearchCond.cs" />
+    <Compile Include="Application\DataAccess\HokenjoMst\SelectHokenjoMstInfo.cs" />
+    <Compile Include="Application\DataAccess\HokenjoMst\UpdateHokenjoMst.cs" />
+    <Compile Include="Application\DataAccess\HoshoTorokuTbl\SelectHoshoShinseiKokanInfo.cs" />
+    <Compile Include="Application\DataAccess\HoshoTorokuTbl\SelectHoshoShinseiShosaiByKensakikanNendoRenban.cs" />
+    <Compile Include="Application\DataAccess\HoshoTorokuTbl\SelectHoshoTorokuTblByKey.cs" />
+    <Compile Include="Application\DataAccess\HoshoTorokuTbl\SelectHoshoTorokuTblBySearchCond.cs" />
+    <Compile Include="Application\DataAccess\HoshoTorokuTbl\SelectHoshoTorokuTblByKeyBetween.cs" />
+    <Compile Include="Application\DataAccess\HoshoTorokuTbl\UpdateHoshoTorokuTbl.cs" />
+    <Compile Include="Application\DataAccess\HoteiKanriMst\SelectHoteiKanriMstByKey.cs" />
+    <Compile Include="Application\DataAccess\HoteiKanriMst\SelectHoteiKanriMstInfo.cs" />
+    <Compile Include="Application\DataAccess\JokasoDaichoMst\SelectJokasoDaichoMstByKey.cs" />
+    <Compile Include="Application\DataAccess\JokasoDaichoMst\SelectJokasoDaichoMstInfo.cs" />
+    <Compile Include="Application\DataAccess\JokasoDaichoMst\SelectJokasoDaichoMstSearchBySearchCond.cs" />
+    <Compile Include="Application\DataAccess\JokasoDaichoMst\SelectTuckSealListBySearchCond.cs" />
+    <Compile Include="Application\DataAccess\JokasoMst\SelectJokasoMstInfo.cs" />
+    <Compile Include="Application\DataAccess\KatashikiBetsuTaniSochiMst\DeleteKatashikiBetsuTaniSochiMstByKatashikiMakerCdKatashikiCd.cs" />
+    <Compile Include="Application\DataAccess\KatashikiBetsuTaniSochiMst\SelectBetsuTaniSochiByMakerCdKatashikiCd.cs" />
+    <Compile Include="Application\DataAccess\KatashikiBetsuTaniSochiMst\SelectKatashikiBetsuTaniSochiMstByKatashikiMakerCdKatashikiCd.cs" />
+    <Compile Include="Application\DataAccess\KatashikiBetsuTaniSochiMst\SelectKatashikiBetsuTaniSochiMstByKey.cs" />
+    <Compile Include="Application\DataAccess\KatashikiBetsuTaniSochiMst\UpdateKatashikiBetsuTaniSochiMst.cs" />
+    <Compile Include="Application\DataAccess\KatashikiBurowaMst\DeleteKatashikiBurowaMstByKatashikiMakerCdKatashikiCd.cs" />
+    <Compile Include="Application\DataAccess\KatashikiBurowaMst\SelectKatashikiBurowaMstByKatashikiMakerCdKatashikiCd.cs" />
+    <Compile Include="Application\DataAccess\KatashikiBurowaMst\InsertKatashikiBurowaMst.cs" />
+    <Compile Include="Application\DataAccess\KatashikiMst\DeleteKatashikiMstByKey.cs" />
+    <Compile Include="Application\DataAccess\KatashikiMst\SelectKatashikiMstByKey.cs" />
+    <Compile Include="Application\DataAccess\KatashikiMst\SelectKatashikiMstBySearchCond.cs" />
+    <Compile Include="Application\DataAccess\KatashikiMst\UpdateKatashikiMst.cs" />
+    <Compile Include="Application\DataAccess\KenchikuyotoDaibunruiMst\SelectKenchikuyotoDaibunruiMstByKey.cs" />
+    <Compile Include="Application\DataAccess\KenchikuyotoDaibunruiMst\SelectKenchikuyotoDaibunruiMstInfo.cs" />
+    <Compile Include="Application\DataAccess\KenchikuyotoMst\DeleteKenchiKuyotoMstByKey.cs" />
+    <Compile Include="Application\DataAccess\KenchikuyotoMst\SelectKenchiKuyotoMstByKey.cs" />
+    <Compile Include="Application\DataAccess\KenchikuyotoMst\SelectKenchiKuyotoMstBySearchCond.cs" />
+    <Compile Include="Application\DataAccess\KenchikuyotoMst\UpdateKenchikuyotoMst.cs" />
+    <Compile Include="Application\DataAccess\KenchikuyotoShobunruiMst\SelectKenchikuyotoShobunruiMstByKey.cs" />
+    <Compile Include="Application\DataAccess\KenchikuyotoShobunruiMst\SelectKenchikuyotoShobunruiMstInfo.cs" />
+    <Compile Include="Application\DataAccess\KensainGeppoTbl\SelectKensainGeppoListBySearchCond.cs" />
+    <Compile Include="Application\DataAccess\KensaIraiTbl\SelectEnkabutsuIonNodoHikakuListBySearchCond.cs" />
+    <Compile Include="Application\DataAccess\KensaIraiTbl\SelectKensaIraiTblBySearchCond.cs" />
+    <Compile Include="Application\DataAccess\KensaIraiTbl\SelectKensaJokyoListBySearchCond.cs" />
+    <Compile Include="Application\DataAccess\KensaIraiTbl\SelectSouShinhyo1PrintInfo.cs" />
+    <Compile Include="Application\DataAccess\KensaIraiTbl\SelectSouShinhyo2PrintInfo.cs" />
+    <Compile Include="Application\DataAccess\KensaKeihatsuSuishinHiShukeiTbl\SelectKensaKeihatsuSuishinListBySearchCond.cs" />
+    <Compile Include="Application\DataAccess\KokanHoshoTbl\UpdateKokanHoshoTbl.cs" />
+    <Compile Include="Application\DataAccess\KyodoKumiaiMst\SelectKyodoKumiaiMstInfo.cs" />
+    <Compile Include="Application\DataAccess\MaeukekinTbl\DeleteMaeukekinTblByKey.cs" />
+    <Compile Include="Application\DataAccess\MaeukekinTbl\SelectMaeukekinTblByKey.cs" />
+    <Compile Include="Application\DataAccess\MaeukekinTbl\SelectMaeukekinTblBySearchCond.cs" />
+    <Compile Include="Application\DataAccess\MaeukekinTbl\UpdateMaeukekinTbl.cs" />
+    <Compile Include="Application\DataAccess\MemoDaibunruiMst\SelectMemoDaibunruiMstInfo.cs" />
+    <Compile Include="Application\DataAccess\MemoMst\DeleteMemoMstByKey.cs" />
+    <Compile Include="Application\DataAccess\MemoMst\SelectMemoMstByKey.cs" />
+    <Compile Include="Application\DataAccess\MemoMst\SelectMemoMstListBySearchCond.cs" />
+    <Compile Include="Application\DataAccess\MemoMst\UpdateMemoMst.cs" />
+    <Compile Include="Application\DataAccess\MstKeySaibanTbl\InsertMstKeySaibanTbl.cs" />
+    <Compile Include="Application\DataAccess\MstKeySaibanTbl\SelectMstKeySaibanTblByKey.cs" />
+    <Compile Include="Application\DataAccess\MstKeySaibanTbl\UpdateMstKeySaibanTbl.cs" />
+    <Compile Include="Application\DataAccess\NameMst\InsertNameMst.cs" />
+    <Compile Include="Application\DataAccess\NameMst\SelectNameMstByKey.cs" />
+    <Compile Include="Application\DataAccess\NameMst\SelectNameMstByNameKbn.cs" />
+    <Compile Include="Application\DataAccess\NameMst\SelectNameMstBySearchCond.cs" />
+    <Compile Include="Application\DataAccess\NameMst\UpdateNameMstByKey.cs" />
+    <Compile Include="Application\DataAccess\SaibanTbl\InsertSaibanTbl.cs" />
+    <Compile Include="Application\DataAccess\SaibanTbl\SelectSaibanTblByKey.cs" />
+    <Compile Include="Application\DataAccess\SaibanTbl\SelectSaibanTblBySaibanKbn.cs" />
+    <Compile Include="Application\DataAccess\SaibanTbl\UpdateSaibanTbl.cs" />
+    <Compile Include="Application\DataAccess\SaisuiinMst\DeleteSaisuiinMstByKey.cs" />
+    <Compile Include="Application\DataAccess\SaisuiinMst\SelectJyukoYoteishaListBySearchCond.cs" />
+    <Compile Include="Application\DataAccess\SaisuiinMst\SelectSaisuiinInfoList.cs" />
+    <Compile Include="Application\DataAccess\SaisuiinMst\SelectSaisuiinInfoListBySearchCond.cs" />
+    <Compile Include="Application\DataAccess\SaisuiinMst\SelectSaisuiinInfoShosaiBySaisuiinCd.cs" />
+    <Compile Include="Application\DataAccess\SaisuiinMst\SelectSaisuiinMstByKey.cs" />
+    <Compile Include="Application\DataAccess\SaisuiinMst\SelectSaisuiinMstBySearchCond.cs" />
+    <Compile Include="Application\DataAccess\SaisuiinMst\SelectSaisuiinShomeishoHakkoKensakuByCond.cs" />
+    <Compile Include="Application\DataAccess\SaisuiinMst\UpdateSaisuiinMst.cs" />
+    <Compile Include="Application\DataAccess\SetShikenKomokuMst\DeleteSetShikenKomokuMstBySetKomokuSetCd.cs" />
+    <Compile Include="Application\DataAccess\SetShikenKomokuMst\SelectSetShikenKomokuMstBySetKomokuSetCd.cs" />
+    <Compile Include="Application\DataAccess\SetShikenKomokuMst\UpdateSetShikenKomokuMst.cs" />
+    <Compile Include="Application\DataAccess\ShishoMst\DeleteShishoMstByKey.cs" />
+    <Compile Include="Application\DataAccess\ShishoMst\SelectShishoMstByKey.cs" />
+    <Compile Include="Application\DataAccess\ShishoMst\SelectShishoMstBySearchCond.cs" />
+    <Compile Include="Application\DataAccess\ShishoMst\SelectShishoMstInfo.cs" />
+    <Compile Include="Application\DataAccess\ShishoMst\UpdateShishoMst.cs" />
+    <Compile Include="Application\DataAccess\ShokuinMst\DeleteShokuinMstByKey.cs" />
+    <Compile Include="Application\DataAccess\ShokuinMst\SelectShokuinMstByKey.cs" />
+    <Compile Include="Application\DataAccess\ShokuinMst\SelectShokuinMstBySearchCond.cs" />
+    <Compile Include="Application\DataAccess\ShokuinMst\SelectShokuinMstByShokuinCdShokuinPassword.cs" />
+    <Compile Include="Application\DataAccess\ShokuinMst\UpdateShokuinMst.cs" />
+    <Compile Include="Application\DataAccess\ShoriHoshikiMst\DeleteShoriHoshikiMstByKey.cs" />
+    <Compile Include="Application\DataAccess\ShoriHoshikiMst\SelectShoriHoshikiMstByKey.cs" />
+    <Compile Include="Application\DataAccess\ShoriHoshikiMst\SelectShoriHoshikiMstBySearchCond.cs" />
+    <Compile Include="Application\DataAccess\ShoriHoshikiMst\SelectShoriHoshikiMstInfo.cs" />
+    <Compile Include="Application\DataAccess\ShoriHoshikiMst\UpdateShoriHoshikiMst.cs" />
+    <Compile Include="Application\DataAccess\ShozokuMst\DeleteShozokuMstByKey.cs" />
+    <Compile Include="Application\DataAccess\ShozokuMst\DeleteShozokuMstByShokuinCd.cs" />
+    <Compile Include="Application\DataAccess\ShozokuMst\SelectShozokuMstByShokuinCd.cs" />
+    <Compile Include="Application\DataAccess\ShozokuMst\UpdateShozokuMst.cs" />
+    <Compile Include="Application\DataAccess\SuishitsuKekkaNmMst\DeleteSuishitsuKekkaNmMstByKey.cs" />
+    <Compile Include="Application\DataAccess\SuishitsuKekkaNmMst\SelectSuishitsuKekkaNmMstByKey.cs" />
+    <Compile Include="Application\DataAccess\SuishitsuKekkaNmMst\SelectSuishitsuKekkaNmMstBySearchCond.cs" />
+    <Compile Include="Application\DataAccess\SuishitsuKekkaNmMst\UpdateSuishitsuKekkaNmMst.cs" />
+    <Compile Include="Application\DataAccess\SuishitsuKensaSetMst\DeleteSuishitsuKensaSetMstByKey.cs" />
+    <Compile Include="Application\DataAccess\SuishitsuKensaSetMst\SelectSuishitsuKensaSetMstByKey.cs" />
+    <Compile Include="Application\DataAccess\SuishitsuKensaSetMst\SelectSuishitsuKensaSetMstBySearchCond.cs" />
+    <Compile Include="Application\DataAccess\SuishitsuKensaSetMst\SelectSuishitsuKensaSetMstShosaiBySetCd.cs" />
+    <Compile Include="Application\DataAccess\SuishitsuKensaSetMst\UpdateSuishitsuKensaSetMst.cs" />
+    <Compile Include="Application\DataAccess\SuishitsuMst\DeleteSuishitsuMstByKey.cs" />
+    <Compile Include="Application\DataAccess\SuishitsuMst\SelectSuishitsuMstByKey.cs" />
+    <Compile Include="Application\DataAccess\SuishitsuMst\SelectSuishitsuMstBySearchCond.cs" />
+    <Compile Include="Application\DataAccess\SuishitsuMst\UpdateSuishitsuMst.cs" />
+    <Compile Include="Application\DataAccess\SuishitsuShikenKoumokuMst\DeleteSuishitsuShikenKoumokuMstByKey.cs" />
+    <Compile Include="Application\DataAccess\SuishitsuShikenKoumokuMst\SelectSuishitsuShikenKoumokuMstByKey.cs" />
+    <Compile Include="Application\DataAccess\SuishitsuShikenKoumokuMst\SelectSuishitsuShikenKoumokuMstInfo.cs" />
+    <Compile Include="Application\DataAccess\SuishitsuShikenKoumokuMst\SelectSuishitsuShikenKoumokuMstKensakuByCond.cs" />
+    <Compile Include="Application\DataAccess\SuishitsuShikenKoumokuMst\UpdateSuishitsuShikenKoumokuMst.cs" />
+    <Compile Include="Application\DataAccess\TaniSochiGroupMst\SelectTaniSochiGroupMstInfo.cs" />
+    <Compile Include="Application\DataAccess\TaniSoshiMst\SelectTaniSochiListByMakerCdKatashikiCd.cs" />
+    <Compile Include="Application\DataAccess\YakushokuMst\DeleteYakushokuMstByKey.cs" />
+    <Compile Include="Application\DataAccess\YakushokuMst\SelectYakushokuMstByKey.cs" />
+    <Compile Include="Application\DataAccess\YakushokuMst\SelectYakushokuMstBySearchCond.cs" />
+    <Compile Include="Application\DataAccess\YakushokuMst\SelectYakushokuMstInfo.cs" />
+    <Compile Include="Application\DataAccess\YakushokuMst\UpdateYakushokuMst.cs" />
+    <Compile Include="Application\DataAccess\YoshiHanbaiDtlTbl\DeleteYoshiHanbaiDtlTblByYoshiHanbaiChumonNo.cs" />
+    <Compile Include="Application\DataAccess\YoshiHanbaiDtlTbl\SelectYoshiHanbaiDtlTblByKey.cs" />
+    <Compile Include="Application\DataAccess\YoshiHanbaiDtlTbl\SelectYoshiHanbaiDtlTblByYoshiHanbaiChumonNo.cs" />
+    <Compile Include="Application\DataAccess\YoshiHanbaiDtlTbl\UpdateYoshiHanbaiDtlTbl.cs" />
+    <Compile Include="Application\DataAccess\YoshiHanbaiHdrTbl\DeleteYoshiHanbaiHdrTblByKey.cs" />
+    <Compile Include="Application\DataAccess\YoshiHanbaiHdrTbl\SelectRyosyuPrintInfo.cs" />
+    <Compile Include="Application\DataAccess\YoshiHanbaiHdrTbl\SelectTyumonShosai.cs" />
+    <Compile Include="Application\DataAccess\YoshiHanbaiHdrTbl\SelectYoshiHanbaiHdrTblByKey.cs" />
+    <Compile Include="Application\DataAccess\YoshiHanbaiHdrTbl\SelectYoshiHanbaiHdrTblBySearchCond.cs" />
+    <Compile Include="Application\DataAccess\YoshiHanbaiHdrTbl\SelectYoshiUriageListBySearchCond.cs" />
+    <Compile Include="Application\DataAccess\YoshiMst\InsertYoshiMst.cs" />
+    <Compile Include="Application\DataAccess\YoshiMst\SelectYoshiMstByKey.cs" />
+    <Compile Include="Application\DataAccess\YoshiMst\SelectYoshiMstBySearchCond.cs" />
+    <Compile Include="Application\DataAccess\YoshiHanbaiHdrTbl\UpdateYoshiHanbaiHdrTbl.cs" />
+    <Compile Include="Application\DataAccess\YoshiMst\UpdateYoshiMstByKey.cs" />
+    <Compile Include="Application\DataAccess\YoshiZaikoTbl\SelectYoshiZaikoTblByKey.cs" />
+    <Compile Include="Application\DataAccess\YoshiZaikoTbl\SelectYoshiZaikoTblBySearchCond.cs" />
+    <Compile Include="Application\DataAccess\YoshiZaikoTbl\UpdateYoshiZaikoTbl.cs" />
+    <Compile Include="Application\DataAccess\YoshiZaikoTbl\DeleteYoshiZaikoTblByShishoCdAndYoshiCd.cs" />
+    <Compile Include="Application\DataAccess\YoshiZaikoTbl\SelectYoshiZaikoTblInfo.cs" />
+    <Compile Include="Application\DataAccess\YubinNoAdrMstKensaku\SelectYubinNoAdrMstByKey.cs" />
+    <Compile Include="Application\DataAccess\YubinNoAdrMstKensaku\SelectYubinNoAdrMstByTodofukenAdr.cs" />
+    <Compile Include="Application\DataAccess\YubinNoAdrMst\SelectYubinNoAdrMstByKey.cs" />
+    <Compile Include="Application\DataAccess\YubinNoAdrMst\SelectYubinNoAdrMstBySearchCond.cs" />
+    <Compile Include="Application\DataAccess\YubinNoAdrMst\SelectYubinNoAdrMstInfo.cs" />
+    <Compile Include="Application\DataSet\BushoMstDataSet.cs">
+      <DependentUpon>BushoMstDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\BushoMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BushoMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\ChikuMstDataSet.cs">
+      <DependentUpon>ChikuMstDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\ChikuMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChikuMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\ConstMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConstMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\current_timestampDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>current_timestampDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\FileKanriTblDataSet.cs">
+      <DependentUpon>FileKanriTblDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\FileKanriTblDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FileKanriTblDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\GaikankensaKomokuMstDataSet.cs">
+      <DependentUpon>GaikankensaKomokuMstDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\GaikankensaKomokuMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GaikankensaKomokuMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\GyoshaBukaiMstDataSet.cs">
+      <DependentUpon>GyoshaBukaiMstDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\GyoshaBukaiMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GyoshaBukaiMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\GyoshaEigyoChikuMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GyoshaEigyoChikuMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\GyoshaEigyoshoMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GyoshaEigyoshoMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\GyoshaMstDataSet.cs">
+      <DependentUpon>GyoshaMstDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\GyoshaMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GyoshaMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\HokenjoMstDataSet.cs">
+      <DependentUpon>HokenjoMstDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\HokenjoMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HokenjoMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\HoshoTorokuTblDataSet.cs">
+      <DependentUpon>HoshoTorokuTblDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\HoshoTorokuTblDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HoshoTorokuTblDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\HoteiKanriMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HoteiKanriMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\JokasoDaichoMstDataSet.cs">
+      <DependentUpon>JokasoDaichoMstDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\JokasoDaichoMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JokasoDaichoMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\JokasoMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JokasoMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\KatashikiBetsuTaniSochiMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KatashikiBetsuTaniSochiMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\KatashikiBurowaMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KatashikiBurowaMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\KatashikiMstDataSet.cs">
+      <DependentUpon>KatashikiMstDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\KatashikiMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KatashikiMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\KenchikuyotoDaibunruiMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KenchikuyotoDaibunruiMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\KenchikuyotoMstDataSet.cs">
+      <DependentUpon>KenchikuyotoMstDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\KenchikuyotoMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KenchikuyotoMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\KenchikuyotoShobunruiMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KenchikuyotoShobunruiMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\KensainGeppoTblDataSet.cs">
+      <DependentUpon>KensainGeppoTblDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\KensainGeppoTblDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KensainGeppoTblDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\KensaIraiTblDataSet.cs">
+      <DependentUpon>KensaIraiTblDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\KensaIraiTblDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KensaIraiTblDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\KensaKeihatsuSuishinHiShukeiTblDataSet.cs">
+      <DependentUpon>KensaKeihatsuSuishinHiShukeiTblDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\KensaKeihatsuSuishinHiShukeiTblDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KensaKeihatsuSuishinHiShukeiTblDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\KokanHoshoTblDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KokanHoshoTblDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\KyodoKumiaiMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KyodoKumiaiMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\MaeukekinTblDataSet.cs">
+      <DependentUpon>MaeukekinTblDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\MaeukekinTblDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaeukekinTblDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\MemoDaibunruiMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MemoDaibunruiMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\MemoMstDataSet.cs">
+      <DependentUpon>MemoMstDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\MemoMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MemoMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\MstKeySaibanTblDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MstKeySaibanTblDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\NameMstDataSet.cs">
+      <DependentUpon>NameMstDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\NameMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NameMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\SaibanTblDataSet.cs">
+      <DependentUpon>SaibanTblDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\SaibanTblDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SaibanTblDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\SaisuiinMstDataSet.cs">
+      <DependentUpon>SaisuiinMstDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\SaisuiinMstDataSet.Designer.cs">
+      <DependentUpon>SaisuiinMstDataSet.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Application\DataSet\SetShikenKomokuMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SetShikenKomokuMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\ShishoMstDataSet.cs">
+      <DependentUpon>ShishoMstDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\ShishoMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShishoMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\ShokenMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShokenMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\ShokuinMstDataSet.cs">
+      <DependentUpon>ShokuinMstDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\ShokuinMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShokuinMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\ShoriHoshikiMstDataSet.cs">
+      <DependentUpon>ShoriHoshikiMstDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\ShoriHoshikiMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShoriHoshikiMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\ShozokuMstDataSet.cs">
+      <DependentUpon>ShozokuMstDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\ShozokuMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShozokuMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\SuishitsuKekkaNmMstDataSet.cs">
+      <DependentUpon>SuishitsuKekkaNmMstDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\SuishitsuKekkaNmMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SuishitsuKekkaNmMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\SuishitsuKensaSetMstDataSet.cs">
+      <DependentUpon>SuishitsuKensaSetMstDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\SuishitsuKensaSetMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SuishitsuKensaSetMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\SuishitsuMstDataSet.cs">
+      <DependentUpon>SuishitsuMstDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\SuishitsuMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SuishitsuMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\SuishitsuShikenKoumokuMstDataSet.cs">
+      <DependentUpon>SuishitsuShikenKoumokuMstDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\SuishitsuShikenKoumokuMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SuishitsuShikenKoumokuMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\TaniSochiGroupMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TaniSochiGroupMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\TaniSochiKensaJokyoMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TaniSochiKensaJokyoMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\TaniSochiKensaJokyoTeidoMstDataSet.Designer.cs">
+      <DependentUpon>TaniSochiKensaJokyoTeidoMstDataSet.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Application\DataSet\TaniSochiKensaKomokuMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TaniSochiKensaKomokuMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\TaniSochiMstDataSet.cs">
+      <DependentUpon>TaniSochiMstDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\TaniSochiMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TaniSochiMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\YakushokuMstDataSet.cs">
+      <DependentUpon>YakushokuMstDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\YakushokuMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YakushokuMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\YoshiHanbaiDtlTblDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YoshiHanbaiDtlTblDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\YoshiHanbaiHdrTblDataSet.cs">
+      <DependentUpon>YoshiHanbaiHdrTblDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\YoshiHanbaiHdrTblDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YoshiHanbaiHdrTblDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\YoshiMstDataSet.cs">
+      <DependentUpon>YoshiMstDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\YoshiMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YoshiMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\YoshiZaikoTblDataSet.cs">
+      <DependentUpon>YoshiZaikoTblDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\YoshiZaikoTblDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YoshiZaikoTblDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\YubinNoAdrMstDataSet.cs">
+      <DependentUpon>YubinNoAdrMstDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Application\DataSet\YubinNoAdrMstDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YubinNoAdrMstDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\DataSet\YubinNoAdrMstKensakuDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YubinNoAdrMstKensakuDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Application\MapWorksLib\DataConversion.cs" />
+    <Compile Include="Application\MapWorksLib\SettingFile.cs" />
+    <Compile Include="Application\MapWorksLib\Viewer.cs" />
+    <Compile Include="Application\MapWorksLib\XmlInitial.cs" />
+    <Compile Include="Application\Utility\Constants.cs" />
+    <Compile Include="Application\Utility\PrinterNameSettings.cs" />
+    <Compile Include="Application\Utility\ShokuinInfo.cs" />
+    <Compile Include="Application\Utility\Utility.cs" />
+    <Compile Include="Control\NumberTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\NumberTextBox.Designer.cs">
+      <DependentUpon>NumberTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\ZTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Control\ZTextBox.Designer.cs">
+      <DependentUpon>ZTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <EmbeddedResource Include="Application\Boundary\Common\ChikuMstSearch.resx">
+      <DependentUpon>ChikuMstSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Common\GyoshaMstSearch.resx">
+      <DependentUpon>GyoshaMstSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Common\JokasoDaichoSearch.resx">
+      <DependentUpon>JokasoDaichoSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Common\KensaMstSearch.resx">
+      <DependentUpon>KensaMstSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Common\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Common\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Common\SaisuiinMstSearch.resx">
+      <DependentUpon>SaisuiinMstSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Common\WorkList.resx">
+      <DependentUpon>WorkList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Common\YubinJusyoMstSearch.resx">
+      <DependentUpon>YubinJusyoMstSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Common\YubinNoKensaku.resx">
+      <DependentUpon>YubinNoKensaku.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Demo\KensaKeiyaku\KensaMemoList.resx">
+      <DependentUpon>KensaMemoList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Demo\KensaKeiyaku\KensaYoteiCalender.resx">
+      <DependentUpon>KensaYoteiCalender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Demo\KensaKeiyaku\KensaYoteiHeijyun.resx">
+      <DependentUpon>KensaYoteiHeijyun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Demo\KensaKeiyaku\KensaYoteiHeijyunDetail.resx">
+      <DependentUpon>KensaYoteiHeijyunDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Demo\KensaKeiyaku\KensaYoteiList.resx">
+      <DependentUpon>KensaYoteiList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Demo\KensaKeiyaku\KensaYoteiMap.resx">
+      <DependentUpon>KensaYoteiMap.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\GaikanKensa\GaikanKensaMenu.resx">
+      <DependentUpon>GaikanKensaMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\GaikanKensa\KensaHoryuList.resx">
+      <DependentUpon>KensaHoryuList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\GaikanKensa\KensaHoryuShosai.resx">
+      <DependentUpon>KensaHoryuShosai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\GaikanKensa\KensaRireki.resx">
+      <DependentUpon>KensaRireki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\JokasoDaichoKanri\JokasoDaichoKanriMenu.resx">
+      <DependentUpon>JokasoDaichoKanriMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\JokasoDaichoKanri\JokasoDaichoList.resx">
+      <DependentUpon>JokasoDaichoList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\JokasoDaichoKanri\JokasoDaichoShosai.resx">
+      <DependentUpon>JokasoDaichoShosai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\KaiinKanri\KaiinList.resx">
+      <DependentUpon>KaiinList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\KaiinKanri\KaiinMenu.resx">
+      <DependentUpon>KaiinMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\KaiinKanri\KaiinShosai.resx">
+      <DependentUpon>KaiinShosai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Keiri\HenkinList.resx">
+      <DependentUpon>HenkinList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Keiri\HenkinShosai.resx">
+      <DependentUpon>HenkinShosai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Keiri\KaikeiMakeFile.resx">
+      <DependentUpon>KaikeiMakeFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Keiri\KaikeiRendoList.resx">
+      <DependentUpon>KaikeiRendoList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Keiri\KaikeiRendoShosai.resx">
+      <DependentUpon>KaikeiRendoShosai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Keiri\KeiriMenu.resx">
+      <DependentUpon>KeiriMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Keiri\KingakuShisan.resx">
+      <DependentUpon>KingakuShisan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Keiri\MaeukekinList.resx">
+      <DependentUpon>MaeukekinList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Keiri\MaeukekinShosai.resx">
+      <DependentUpon>MaeukekinShosai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Keiri\MitsumoriList.resx">
+      <DependentUpon>MitsumoriList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Keiri\MitsumoriShosai.resx">
+      <DependentUpon>MitsumoriShosai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Keiri\NyukinList.resx">
+      <DependentUpon>NyukinList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Keiri\NyukinShosai.resx">
+      <DependentUpon>NyukinShosai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Keiri\SeikyuAddMeisai.resx">
+      <DependentUpon>SeikyuAddMeisai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Keiri\SeikyuList.resx">
+      <DependentUpon>SeikyuList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Keiri\SeikyuShime.resx">
+      <DependentUpon>SeikyuShime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Keiri\SeikyuShosai.resx">
+      <DependentUpon>SeikyuShosai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Keiri\UriageList.resx">
+      <DependentUpon>UriageList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Keiri\ZandakaList.resx">
+      <DependentUpon>ZandakaList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\KensaIraiKanri\KensaIraiKanriMenu.resx">
+      <DependentUpon>KensaIraiKanriMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\KensaIraiKanri\KensaIraishoDisplay.resx">
+      <DependentUpon>KensaIraishoDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\KensaIraiKanri\KensaIraishoDisplayTiff.resx">
+      <DependentUpon>KensaIraishoDisplayTiff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\KensaIraiKanri\KensaIraishoImageList.resx">
+      <DependentUpon>KensaIraishoImageList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\KensaIraiKanri\KensaIraishoList.resx">
+      <DependentUpon>KensaIraishoList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\KensaIraiKanri\KensaIraiToroku7jo.resx">
+      <DependentUpon>KensaIraiToroku7jo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\KensaKekka\KekkaMenu.resx">
+      <DependentUpon>KekkaMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\KensaKekka\KensaKekkaList.resx">
+      <DependentUpon>KensaKekkaList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Demo\SuishitsuKensaDaicho.resx">
+      <DependentUpon>SuishitsuKensaDaicho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\KinoHoshoKanri\HoshoNoPrint.resx">
+      <DependentUpon>HoshoNoPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\KinoHoshoKanri\HoshoShinseiKokan.resx">
+      <DependentUpon>HoshoShinseiKokan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\KinoHoshoKanri\HoshoShinseiList.resx">
+      <DependentUpon>HoshoShinseiList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\KinoHoshoKanri\HoshoShinseiShosai.resx">
+      <DependentUpon>HoshoShinseiShosai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\KinoHoshoKanri\KinoMenu.resx">
+      <DependentUpon>KinoMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\BushoMstList.resx">
+      <DependentUpon>BushoMstList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\BushoMstShosai.resx">
+      <DependentUpon>BushoMstShosai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\ChikuMstList.resx">
+      <DependentUpon>ChikuMstList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\GaikankensaKomokuMstList.resx">
+      <DependentUpon>GaikankensaKomokuMstList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\GaikankensaKomokuMstShosai.resx">
+      <DependentUpon>GaikankensaKomokuMstShosai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\GyoshaMstList.resx">
+      <DependentUpon>GyoshaMstList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\GyoshaMstShosai.resx">
+      <DependentUpon>GyoshaMstShosai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\ChikuMstShosai.resx">
+      <DependentUpon>ChikuMstShosai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\HokenjoMstList.resx">
+      <DependentUpon>HokenjoMstList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\HokenjoMstShosai.resx">
+      <DependentUpon>HokenjoMstShosai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\KatashikiMstList.resx">
+      <DependentUpon>KatashikiMstList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\KatashikiMstShosai.resx">
+      <DependentUpon>KatashikiMstShosai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\KenchikuyotoMstList.resx">
+      <DependentUpon>KenchikuyotoMstList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\KenchikuyotoMstShosai.resx">
+      <DependentUpon>KenchikuyotoMstShosai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\MstMenu.resx">
+      <DependentUpon>MstMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\NameMstEditList.resx">
+      <DependentUpon>NameMstEditList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\SaisuiinMstList.resx">
+      <DependentUpon>SaisuiinMstList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\SaisuiinMstShosai.resx">
+      <DependentUpon>SaisuiinMstShosai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\MemoMstList.resx">
+      <DependentUpon>MemoMstList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\MemoMstShosai.resx">
+      <DependentUpon>MemoMstShosai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\ShishoMstList.resx">
+      <DependentUpon>ShishoMstList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\ShishoMstShosai.resx">
+      <DependentUpon>ShishoMstShosai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\ShokenList.resx">
+      <DependentUpon>ShokenList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\ShokenShosai.resx">
+      <DependentUpon>ShokenShosai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\ShokuinMstList.resx">
+      <DependentUpon>ShokuinMstList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\ShokuinMstShosai.resx">
+      <DependentUpon>ShokuinMstShosai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\ShoriHoshikiMstList.resx">
+      <DependentUpon>ShoriHoshikiMstList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\ShoriHoshikiMstShosai.resx">
+      <DependentUpon>ShoriHoshikiMstShosai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\SuishitsuMstList.resx">
+      <DependentUpon>SuishitsuMstList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\SuishitsuMstShosai.resx">
+      <DependentUpon>SuishitsuMstShosai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\SuishitsuShikenKoumokuMstList.resx">
+      <DependentUpon>SuishitsuShikenKoumokuMstList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\SuishitsuShikenKoumokuMstShosai.resx">
+      <DependentUpon>SuishitsuShikenKoumokuMstShosai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\YakushokuMstList.resx">
+      <DependentUpon>YakushokuMstList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\YakushokuMstShosai.resx">
+      <DependentUpon>YakushokuMstShosai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\SuishitsuKensaSetMstList.resx">
+      <DependentUpon>SuishitsuKensaSetMstList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\SuishitsuKensaSetMstShosai.resx">
+      <DependentUpon>SuishitsuKensaSetMstShosai.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Others\EnkabutsuIonNodoHikakuList.resx">
+      <DependentUpon>EnkabutsuIonNodoHikakuList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Others\FileKanriList.resx">
+      <DependentUpon>FileKanriList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Others\JokasoDaichoSyukeiList.resx">
+      <DependentUpon>JokasoDaichoSyukeiList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Others\KensainGeppoList.resx">
+      <DependentUpon>KensainGeppoList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Others\KensainSyuhoList.resx">
+      <DependentUpon>KensainSyuhoList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Others\KensaJokyoList.resx">
+      <DependentUpon>KensaJokyoList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Others\KensaKeihatsuSuishinhiList.resx">
+      <DependentUpon>KensaKeihatsuSuishinhiList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Others\KensaKeihatsuSuishinhiSyukei.resx">
+      <DependentUpon>KensaKeihatsuSuishinhiSyukei.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Others\OthersMenu.resx">
+      <DependentUpon>OthersMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Others\TuckSealList.resx">
+      <DependentUpon>TuckSealList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\SaisuiinKanri\JyukoshaInput.resx">
+      <DependentUpon>JyukoshaInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\SaisuiinKanri\JyukoYoteishaList.resx">
+      <DependentUpon>JyukoYoteishaList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\SaisuiinKanri\SaisuiinInfoList.resx">
+      <DependentUpon>SaisuiinInfoList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\SaisuiinKanri\SaisuiinInfoShosai.resx">
+      <DependentUpon>SaisuiinInfoShosai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\SaisuiinKanri\SaisuiinMenu.resx">
+      <DependentUpon>SaisuiinMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\SaisuiinKanri\SaisuiinShomeishoHakko.resx">
+      <DependentUpon>SaisuiinShomeishoHakko.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\YoshiHanbaiKanri\RyosyuPrint.resx">
+      <DependentUpon>RyosyuPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\YoshiHanbaiKanri\TyumonList.resx">
+      <DependentUpon>TyumonList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\YoshiHanbaiKanri\TyumonMenu.resx">
+      <DependentUpon>TyumonMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\YoshiHanbaiKanri\TyumonPrint.resx">
+      <DependentUpon>TyumonPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\YoshiHanbaiKanri\TyumonShosai.resx">
+      <DependentUpon>TyumonShosai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\YoshiHanbaiKanri\YoshiMenu.resx">
+      <DependentUpon>YoshiMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\YoshiHanbaiKanri\YoshiMstList.resx">
+      <DependentUpon>YoshiMstList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\YoshiHanbaiKanri\YoshiUriageList.resx">
+      <DependentUpon>YoshiUriageList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\YoshiHanbaiKanri\ZaikoList.resx">
+      <DependentUpon>ZaikoList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\SuishitsuKekkaNmMstList.resx">
+      <DependentUpon>SuishitsuKekkaNmMstList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Application\Boundary\Master\SuishitsuKekkaNmMstShosai.resx">
+      <DependentUpon>SuishitsuKekkaNmMstShosai.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Application\Boundary\Master\NameMstUpdateDataSet.xsc">
+      <DependentUpon>NameMstUpdateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\Boundary\Master\NameMstUpdateDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NameMstUpdateDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\Boundary\Master\NameMstUpdateDataSet.xss">
+      <DependentUpon>NameMstUpdateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\Boundary\YoshiHanbaiKanri\YoshiMstUpdateDataSet.xsc">
+      <DependentUpon>YoshiMstUpdateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\Boundary\YoshiHanbaiKanri\YoshiMstUpdateDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>YoshiMstUpdateDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\Boundary\YoshiHanbaiKanri\YoshiMstUpdateDataSet.xss">
+      <DependentUpon>YoshiMstUpdateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\BushoMstDataSet.xsc">
+      <DependentUpon>BushoMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\BushoMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BushoMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\BushoMstDataSet.xss">
+      <DependentUpon>BushoMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\ChikuMstDataSet.xsc">
+      <DependentUpon>ChikuMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\ChikuMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ChikuMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\ChikuMstDataSet.xss">
+      <DependentUpon>ChikuMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\ConstMstDataSet.xsc">
+      <DependentUpon>ConstMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\ConstMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ConstMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\ConstMstDataSet.xss">
+      <DependentUpon>ConstMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\current_timestampDataSet.xsc">
+      <DependentUpon>current_timestampDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\current_timestampDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>current_timestampDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\current_timestampDataSet.xss">
+      <DependentUpon>current_timestampDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\FileKanriTblDataSet.xsc">
+      <DependentUpon>FileKanriTblDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\FileKanriTblDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FileKanriTblDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\FileKanriTblDataSet.xss">
+      <DependentUpon>FileKanriTblDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\GaikankensaKomokuMstDataSet.xsc">
+      <DependentUpon>GaikankensaKomokuMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\GaikankensaKomokuMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GaikankensaKomokuMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\GaikankensaKomokuMstDataSet.xss">
+      <DependentUpon>GaikankensaKomokuMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\GyoshaBukaiMstDataSet.xsc">
+      <DependentUpon>GyoshaBukaiMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\GyoshaBukaiMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GyoshaBukaiMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\GyoshaBukaiMstDataSet.xss">
+      <DependentUpon>GyoshaBukaiMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\GyoshaEigyoChikuMstDataSet.xsc">
+      <DependentUpon>GyoshaEigyoChikuMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\GyoshaEigyoChikuMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GyoshaEigyoChikuMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\GyoshaEigyoChikuMstDataSet.xss">
+      <DependentUpon>GyoshaEigyoChikuMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\GyoshaEigyoshoMstDataSet.xsc">
+      <DependentUpon>GyoshaEigyoshoMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\GyoshaEigyoshoMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GyoshaEigyoshoMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\GyoshaEigyoshoMstDataSet.xss">
+      <DependentUpon>GyoshaEigyoshoMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\GyoshaMstDataSet.xsc">
+      <DependentUpon>GyoshaMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\GyoshaMstDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GyoshaMstDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Application\DataSet\GyoshaMstDataSet.xss">
+      <DependentUpon>GyoshaMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\HokenjoMstDataSet.xsc">
+      <DependentUpon>HokenjoMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\HokenjoMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HokenjoMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\HokenjoMstDataSet.xss">
+      <DependentUpon>HokenjoMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\HoshoTorokuTblDataSet.xsc">
+      <DependentUpon>HoshoTorokuTblDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\HoshoTorokuTblDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HoshoTorokuTblDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\HoshoTorokuTblDataSet.xss">
+      <DependentUpon>HoshoTorokuTblDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\HoteiKanriMstDataSet.xsc">
+      <DependentUpon>HoteiKanriMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\HoteiKanriMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HoteiKanriMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\HoteiKanriMstDataSet.xss">
+      <DependentUpon>HoteiKanriMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\JokasoDaichoMstDataSet.xsc">
+      <DependentUpon>JokasoDaichoMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\JokasoDaichoMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JokasoDaichoMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\JokasoDaichoMstDataSet.xss">
+      <DependentUpon>JokasoDaichoMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\JokasoMstDataSet.xsc">
+      <DependentUpon>JokasoMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\JokasoMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JokasoMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\JokasoMstDataSet.xss">
+      <DependentUpon>JokasoMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\KatashikiBetsuTaniSochiMstDataSet.xsc">
+      <DependentUpon>KatashikiBetsuTaniSochiMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\KatashikiBetsuTaniSochiMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KatashikiBetsuTaniSochiMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\KatashikiBetsuTaniSochiMstDataSet.xss">
+      <DependentUpon>KatashikiBetsuTaniSochiMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\KatashikiBurowaMstDataSet.xsc">
+      <DependentUpon>KatashikiBurowaMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\KatashikiBurowaMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KatashikiBurowaMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\KatashikiBurowaMstDataSet.xss">
+      <DependentUpon>KatashikiBurowaMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\KatashikiMstDataSet.xsc">
+      <DependentUpon>KatashikiMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\KatashikiMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KatashikiMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\KatashikiMstDataSet.xss">
+      <DependentUpon>KatashikiMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\KenchikuyotoDaibunruiMstDataSet.xsc">
+      <DependentUpon>KenchikuyotoDaibunruiMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\KenchikuyotoDaibunruiMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KenchikuyotoDaibunruiMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\KenchikuyotoDaibunruiMstDataSet.xss">
+      <DependentUpon>KenchikuyotoDaibunruiMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\KenchikuyotoMstDataSet.xsc">
+      <DependentUpon>KenchikuyotoMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\KenchikuyotoMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KenchikuyotoMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\KenchikuyotoMstDataSet.xss">
+      <DependentUpon>KenchikuyotoMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\KenchikuyotoShobunruiMstDataSet.xsc">
+      <DependentUpon>KenchikuyotoShobunruiMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\KenchikuyotoShobunruiMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KenchikuyotoShobunruiMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\KenchikuyotoShobunruiMstDataSet.xss">
+      <DependentUpon>KenchikuyotoShobunruiMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\KensainGeppoTblDataSet.xsc">
+      <DependentUpon>KensainGeppoTblDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\KensainGeppoTblDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KensainGeppoTblDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\KensainGeppoTblDataSet.xss">
+      <DependentUpon>KensainGeppoTblDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\KensaIraiTblDataSet.xsc">
+      <DependentUpon>KensaIraiTblDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\KensaIraiTblDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KensaIraiTblDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\KensaIraiTblDataSet.xss">
+      <DependentUpon>KensaIraiTblDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\KensaKeihatsuSuishinHiShukeiTblDataSet.xsc">
+      <DependentUpon>KensaKeihatsuSuishinHiShukeiTblDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\KensaKeihatsuSuishinHiShukeiTblDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KensaKeihatsuSuishinHiShukeiTblDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\KensaKeihatsuSuishinHiShukeiTblDataSet.xss">
+      <DependentUpon>KensaKeihatsuSuishinHiShukeiTblDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\KokanHoshoTblDataSet.xsc">
+      <DependentUpon>KokanHoshoTblDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\KokanHoshoTblDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KokanHoshoTblDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\KokanHoshoTblDataSet.xss">
+      <DependentUpon>KokanHoshoTblDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\KyodoKumiaiMstDataSet.xsc">
+      <DependentUpon>KyodoKumiaiMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\KyodoKumiaiMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>KyodoKumiaiMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\KyodoKumiaiMstDataSet.xss">
+      <DependentUpon>KyodoKumiaiMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\MaeukekinTblDataSet.xsc">
+      <DependentUpon>MaeukekinTblDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\MaeukekinTblDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MaeukekinTblDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\MaeukekinTblDataSet.xss">
+      <DependentUpon>MaeukekinTblDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\MemoDaibunruiMstDataSet.xsc">
+      <DependentUpon>MemoDaibunruiMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\MemoDaibunruiMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MemoDaibunruiMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\MemoDaibunruiMstDataSet.xss">
+      <DependentUpon>MemoDaibunruiMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\MemoMstDataSet.xsc">
+      <DependentUpon>MemoMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\MemoMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MemoMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\MemoMstDataSet.xss">
+      <DependentUpon>MemoMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\MstKeySaibanTblDataSet.xsc">
+      <DependentUpon>MstKeySaibanTblDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\MstKeySaibanTblDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MstKeySaibanTblDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\MstKeySaibanTblDataSet.xss">
+      <DependentUpon>MstKeySaibanTblDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\NameMstDataSet.xsc">
+      <DependentUpon>NameMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\NameMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NameMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\NameMstDataSet.xss">
+      <DependentUpon>NameMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\SaibanTblDataSet.xsc">
+      <DependentUpon>SaibanTblDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\SaibanTblDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SaibanTblDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\SaibanTblDataSet.xss">
+      <DependentUpon>SaibanTblDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\SaisuiinMstDataSet.xsc">
+      <DependentUpon>SaisuiinMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\SaisuiinMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SaisuiinMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\SaisuiinMstDataSet.xss">
+      <DependentUpon>SaisuiinMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\SetShikenKomokuMstDataSet.xsc">
+      <DependentUpon>SetShikenKomokuMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\SetShikenKomokuMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SetShikenKomokuMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\SetShikenKomokuMstDataSet.xss">
+      <DependentUpon>SetShikenKomokuMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\ShishoMstDataSet.xsc">
+      <DependentUpon>ShishoMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\ShishoMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShishoMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\ShishoMstDataSet.xss">
+      <DependentUpon>ShishoMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\ShokenMstDataSet.xsc">
+      <DependentUpon>ShokenMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\ShokenMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShokenMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\ShokenMstDataSet.xss">
+      <DependentUpon>ShokenMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\ShokuinMstDataSet.xsc">
+      <DependentUpon>ShokuinMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\ShokuinMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShokuinMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\ShokuinMstDataSet.xss">
+      <DependentUpon>ShokuinMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\ShoriHoshikiMstDataSet.xsc">
+      <DependentUpon>ShoriHoshikiMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\ShoriHoshikiMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShoriHoshikiMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\ShoriHoshikiMstDataSet.xss">
+      <DependentUpon>ShoriHoshikiMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\ShozokuMstDataSet.xsc">
+      <DependentUpon>ShozokuMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\ShozokuMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ShozokuMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\ShozokuMstDataSet.xss">
+      <DependentUpon>ShozokuMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\SuishitsuKekkaNmMstDataSet.xsc">
+      <DependentUpon>SuishitsuKekkaNmMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\SuishitsuKekkaNmMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SuishitsuKekkaNmMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\SuishitsuKekkaNmMstDataSet.xss">
+      <DependentUpon>SuishitsuKekkaNmMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\SuishitsuKensaSetMstDataSet.xsc">
+      <DependentUpon>SuishitsuKensaSetMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\SuishitsuKensaSetMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SuishitsuKensaSetMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\SuishitsuKensaSetMstDataSet.xss">
+      <DependentUpon>SuishitsuKensaSetMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\SuishitsuMstDataSet.xsc">
+      <DependentUpon>SuishitsuMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\SuishitsuMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SuishitsuMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\SuishitsuMstDataSet.xss">
+      <DependentUpon>SuishitsuMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\SuishitsuShikenKoumokuMstDataSet.xsc">
+      <DependentUpon>SuishitsuShikenKoumokuMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\SuishitsuShikenKoumokuMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SuishitsuShikenKoumokuMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\SuishitsuShikenKoumokuMstDataSet.xss">
+      <DependentUpon>SuishitsuShikenKoumokuMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\TaniSochiGroupMstDataSet.xsc">
+      <DependentUpon>TaniSochiGroupMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\TaniSochiGroupMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TaniSochiGroupMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\TaniSochiGroupMstDataSet.xss">
+      <DependentUpon>TaniSochiGroupMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\TaniSochiKensaJokyoMstDataSet.xsc">
+      <DependentUpon>TaniSochiKensaJokyoMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\TaniSochiKensaJokyoMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TaniSochiKensaJokyoMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\TaniSochiKensaJokyoMstDataSet.xss">
+      <DependentUpon>TaniSochiKensaJokyoMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\TaniSochiKensaJokyoTeidoMstDataSet.xsc">
+      <DependentUpon>TaniSochiKensaJokyoTeidoMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\TaniSochiKensaJokyoTeidoMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TaniSochiKensaJokyoTeidoMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\TaniSochiKensaJokyoTeidoMstDataSet.xss">
+      <DependentUpon>TaniSochiKensaJokyoTeidoMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\TaniSochiKensaKomokuMstDataSet.xsc">
+      <DependentUpon>TaniSochiKensaKomokuMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\TaniSochiKensaKomokuMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TaniSochiKensaKomokuMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\TaniSochiKensaKomokuMstDataSet.xss">
+      <DependentUpon>TaniSochiKensaKomokuMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\TaniSochiMstDataSet.xsc">
+      <DependentUpon>TaniSochiMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\TaniSochiMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TaniSochiMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\TaniSochiMstDataSet.xss">
+      <DependentUpon>TaniSochiMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\YakushokuMstDataSet.xsc">
+      <DependentUpon>YakushokuMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\YakushokuMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>YakushokuMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\YakushokuMstDataSet.xss">
+      <DependentUpon>YakushokuMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\YoshiHanbaiDtlTblDataSet.xsc">
+      <DependentUpon>YoshiHanbaiDtlTblDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\YoshiHanbaiDtlTblDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>YoshiHanbaiDtlTblDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\YoshiHanbaiDtlTblDataSet.xss">
+      <DependentUpon>YoshiHanbaiDtlTblDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\YoshiHanbaiHdrTblDataSet.xsc">
+      <DependentUpon>YoshiHanbaiHdrTblDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\YoshiHanbaiHdrTblDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>YoshiHanbaiHdrTblDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\YoshiHanbaiHdrTblDataSet.xss">
+      <DependentUpon>YoshiHanbaiHdrTblDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\YoshiMstDataSet.xsc">
+      <DependentUpon>YoshiMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\YoshiMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>YoshiMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\YoshiMstDataSet.xss">
+      <DependentUpon>YoshiMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\YoshiZaikoTblDataSet.xsc">
+      <DependentUpon>YoshiZaikoTblDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\YoshiZaikoTblDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>YoshiZaikoTblDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\YoshiZaikoTblDataSet.xss">
+      <DependentUpon>YoshiZaikoTblDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\YubinNoAdrMstDataSet.xsc">
+      <DependentUpon>YubinNoAdrMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\YubinNoAdrMstDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>YubinNoAdrMstDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\YubinNoAdrMstDataSet.xss">
+      <DependentUpon>YubinNoAdrMstDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\YubinNoAdrMstKensakuDataSet.xsc">
+      <DependentUpon>YubinNoAdrMstKensakuDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Application\DataSet\YubinNoAdrMstKensakuDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>YubinNoAdrMstKensakuDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Application\DataSet\YubinNoAdrMstKensakuDataSet.xss">
+      <DependentUpon>YubinNoAdrMstKensakuDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ErrMsgFile.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="HolidayFile.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MapWorksViewer.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Microsoft.Office.Interop.Excel.dll" />
+    <Content Include="Resources\icon01.png" />
+    <Content Include="Resources\icon010.png" />
+    <Content Include="Resources\icon02.png" />
+    <Content Include="Resources\icon03.png" />
+    <Content Include="Resources\icon04.png" />
+    <Content Include="Resources\icon05.png" />
+    <Content Include="Resources\icon06.png" />
+    <Content Include="Resources\icon07.png" />
+    <Content Include="Resources\icon08.png" />
+    <Content Include="Resources\icon09.png" />
+    <Content Include="Resources\icon11.png" />
+    <Content Include="Resources\icon12.png" />
+    <Content Include="Resources\icon13.png" />
+    <Content Include="Resources\icon_end.png" />
+    <Content Include="Resources\icon_search.png" />
+    <Content Include="Resources\yoteiIcon1.png" />
+    <Content Include="Resources\yoteiIcon1b.png" />
+    <None Include="Resources\menu_bg.png" />
+    <None Include="Resources\title_bg.png" />
+    <None Include="Resources\Image1.png" />
+    <Content Include="Resources\logofjk.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ZynasControl\ZynasControl.csproj">
+      <Project>{FAE6400B-48ED-44CF-9FFB-2E4A17FDA8A1}</Project>
+      <Name>ZynasControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ZynasFramework\ZynasFramework.csproj">
+      <Project>{13672596-FDA4-4C66-8A43-74D64836A854}</Project>
+      <Name>ZynasFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Application\BusinessLogic\KaiinKanri\KaiinShosai\" />
+    <Folder Include="Application\BusinessLogic\Others\KensainSyuhoList\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="FileViewLib">
+      <Guid>{BE79C475-D632-4A57-91B3-DA044FA27CDA}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,8 @@
+*.suo
+*.csproj.user
+/FukjTabletSystem/bin
+/FukjTabletSystem/obj
+/FukjBizSystem/bin
+/FukjBizSystem/obj
+/ZynasControl/obj
+/ZynasFramework/obj

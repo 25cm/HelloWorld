@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ShokenMstDataSet" targetNamespace="http://tempuri.org/ShokenMstDataSet.xsd" xmlns:mstns="http://tempuri.org/ShokenMstDataSet.xsd" xmlns="http://tempuri.org/ShokenMstDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="FukjTabletSystemConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="FukjTabletSystemConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.FukjTabletSystem.Properties.Settings.GlobalReference.Default.FukjTabletSystemConnectionString" Provider="System.Data.SqlServerCe.3.5" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ShokenMstTableAdapter" GeneratorDataComponentClassName="ShokenMstTableAdapter" Name="ShokenMst" UserDataComponentName="ShokenMstTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="FukjTabletSystemConnectionString (Settings)" DbObjectName="FukjTabletSystem.dbo.ShokenMst" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT
+  ShokenKbn
+  , ShokenCd
+  , ShokenWd
+  , ShokenRyakubun
+  , ShokenGaikankensaKoumokuCd
+  , ShokenGaikankensaKoumokuHandan
+  , ShokenGaikankensaKoumokuJuyodo
+  , ShokenGaikankensaKoumokuHantei
+  , ShokenGyoseiHokokuLevel
+  , ShokenMakerGenin7JouKbn
+  , ShokenKoujiGenin7JouKbn
+  , ShokenHoshuGenin7JouKbn
+  , ShokenSeisouGenin7JouKbn
+  , ShokenSetchishaGenin7JouKbn
+  , ShokenMekaGenin11JouKbn
+  , ShokenKoujiGenin11JouKbn
+  , ShokenHoshuGenin11JouKbn
+  , ShokenSeisouGenin11JouKbn
+  , ShokenSetchishaGenin11JouKbn
+  , ShokenHyoujiIchiDaiCd
+  , ShokenHyoujiIchiChuCd
+  , ShokenHyoujiIchiShoCd
+  , ShokenSakujouKbn
+  , ShokenGaikankensaCd
+  , ShokenTanisouchiCd
+  , ShokenBikou
+  , InsertDt
+  , InsertUser
+  , InsertTarm
+  , UpdateDt
+  , UpdateUser
+  , UpdateTarm 
+FROM
+  ShokenMst
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ShokenKbn" DataSetColumn="ShokenKbn" />
+              <Mapping SourceColumn="ShokenCd" DataSetColumn="ShokenCd" />
+              <Mapping SourceColumn="ShokenWd" DataSetColumn="ShokenWd" />
+              <Mapping SourceColumn="ShokenRyakubun" DataSetColumn="ShokenRyakubun" />
+              <Mapping SourceColumn="ShokenGaikankensaKoumokuCd" DataSetColumn="ShokenGaikankensaKoumokuCd" />
+              <Mapping SourceColumn="ShokenGaikankensaKoumokuHandan" DataSetColumn="ShokenGaikankensaKoumokuHandan" />
+              <Mapping SourceColumn="ShokenGaikankensaKoumokuJuyodo" DataSetColumn="ShokenGaikankensaKoumokuJuyodo" />
+              <Mapping SourceColumn="ShokenGaikankensaKoumokuHantei" DataSetColumn="ShokenGaikankensaKoumokuHantei" />
+              <Mapping SourceColumn="ShokenGyoseiHokokuLevel" DataSetColumn="ShokenGyoseiHokokuLevel" />
+              <Mapping SourceColumn="ShokenMakerGenin7JouKbn" DataSetColumn="ShokenMakerGenin7JouKbn" />
+              <Mapping SourceColumn="ShokenKoujiGenin7JouKbn" DataSetColumn="ShokenKoujiGenin7JouKbn" />
+              <Mapping SourceColumn="ShokenHoshuGenin7JouKbn" DataSetColumn="ShokenHoshuGenin7JouKbn" />
+              <Mapping SourceColumn="ShokenSeisouGenin7JouKbn" DataSetColumn="ShokenSeisouGenin7JouKbn" />
+              <Mapping SourceColumn="ShokenSetchishaGenin7JouKbn" DataSetColumn="ShokenSetchishaGenin7JouKbn" />
+              <Mapping SourceColumn="ShokenMekaGenin11JouKbn" DataSetColumn="ShokenMekaGenin11JouKbn" />
+              <Mapping SourceColumn="ShokenKoujiGenin11JouKbn" DataSetColumn="ShokenKoujiGenin11JouKbn" />
+              <Mapping SourceColumn="ShokenHoshuGenin11JouKbn" DataSetColumn="ShokenHoshuGenin11JouKbn" />
+              <Mapping SourceColumn="ShokenSeisouGenin11JouKbn" DataSetColumn="ShokenSeisouGenin11JouKbn" />
+              <Mapping SourceColumn="ShokenSetchishaGenin11JouKbn" DataSetColumn="ShokenSetchishaGenin11JouKbn" />
+              <Mapping SourceColumn="ShokenHyoujiIchiDaiCd" DataSetColumn="ShokenHyoujiIchiDaiCd" />
+              <Mapping SourceColumn="ShokenHyoujiIchiChuCd" DataSetColumn="ShokenHyoujiIchiChuCd" />
+              <Mapping SourceColumn="ShokenHyoujiIchiShoCd" DataSetColumn="ShokenHyoujiIchiShoCd" />
+              <Mapping SourceColumn="ShokenSakujouKbn" DataSetColumn="ShokenSakujouKbn" />
+              <Mapping SourceColumn="ShokenGaikankensaCd" DataSetColumn="ShokenGaikankensaCd" />
+              <Mapping SourceColumn="ShokenTanisouchiCd" DataSetColumn="ShokenTanisouchiCd" />
+              <Mapping SourceColumn="ShokenBikou" DataSetColumn="ShokenBikou" />
+              <Mapping SourceColumn="InsertDt" DataSetColumn="InsertDt" />
+              <Mapping SourceColumn="InsertUser" DataSetColumn="InsertUser" />
+              <Mapping SourceColumn="InsertTarm" DataSetColumn="InsertTarm" />
+              <Mapping SourceColumn="UpdateDt" DataSetColumn="UpdateDt" />
+              <Mapping SourceColumn="UpdateUser" DataSetColumn="UpdateUser" />
+              <Mapping SourceColumn="UpdateTarm" DataSetColumn="UpdateTarm" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ShokenMstDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ShokenMstDataSet" msprop:Generator_UserDSName="ShokenMstDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ShokenMst" msprop:Generator_TableClassName="ShokenMstDataTable" msprop:Generator_TableVarName="tableShokenMst" msprop:Generator_RowChangedName="ShokenMstRowChanged" msprop:Generator_TablePropName="ShokenMst" msprop:Generator_RowDeletingName="ShokenMstRowDeleting" msprop:Generator_RowChangingName="ShokenMstRowChanging" msprop:Generator_RowEvHandlerName="ShokenMstRowChangeEventHandler" msprop:Generator_RowDeletedName="ShokenMstRowDeleted" msprop:Generator_RowClassName="ShokenMstRow" msprop:Generator_UserTableName="ShokenMst" msprop:Generator_RowEvArgName="ShokenMstRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ShokenKbn" msprop:Generator_ColumnVarNameInTable="columnShokenKbn" msprop:Generator_ColumnPropNameInRow="ShokenKbn" msprop:Generator_ColumnPropNameInTable="ShokenKbnColumn" msprop:Generator_UserColumnName="ShokenKbn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShokenCd" msprop:Generator_ColumnVarNameInTable="columnShokenCd" msprop:Generator_ColumnPropNameInRow="ShokenCd" msprop:Generator_ColumnPropNameInTable="ShokenCdColumn" msprop:Generator_UserColumnName="ShokenCd">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShokenWd" msprop:Generator_ColumnVarNameInTable="columnShokenWd" msprop:Generator_ColumnPropNameInRow="ShokenWd" msprop:Generator_ColumnPropNameInTable="ShokenWdColumn" msprop:Generator_UserColumnName="ShokenWd">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="160" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShokenRyakubun" msprop:Generator_ColumnVarNameInTable="columnShokenRyakubun" msprop:Generator_ColumnPropNameInRow="ShokenRyakubun" msprop:Generator_ColumnPropNameInTable="ShokenRyakubunColumn" msprop:Generator_UserColumnName="ShokenRyakubun">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShokenGaikankensaKoumokuCd" msprop:Generator_ColumnVarNameInTable="columnShokenGaikankensaKoumokuCd" msprop:Generator_ColumnPropNameInRow="ShokenGaikankensaKoumokuCd" msprop:Generator_ColumnPropNameInTable="ShokenGaikankensaKoumokuCdColumn" msprop:Generator_UserColumnName="ShokenGaikankensaKoumokuCd">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShokenGaikankensaKoumokuHandan" msprop:Generator_ColumnVarNameInTable="columnShokenGaikankensaKoumokuHandan" msprop:Generator_ColumnPropNameInRow="ShokenGaikankensaKoumokuHandan" msprop:Generator_ColumnPropNameInTable="ShokenGaikankensaKoumokuHandanColumn" msprop:Generator_UserColumnName="ShokenGaikankensaKoumokuHandan">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShokenGaikankensaKoumokuJuyodo" msprop:Generator_ColumnVarNameInTable="columnShokenGaikankensaKoumokuJuyodo" msprop:Generator_ColumnPropNameInRow="ShokenGaikankensaKoumokuJuyodo" msprop:Generator_ColumnPropNameInTable="ShokenGaikankensaKoumokuJuyodoColumn" msprop:Generator_UserColumnName="ShokenGaikankensaKoumokuJuyodo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShokenGaikankensaKoumokuHantei" msprop:Generator_ColumnVarNameInTable="columnShokenGaikankensaKoumokuHantei" msprop:Generator_ColumnPropNameInRow="ShokenGaikankensaKoumokuHantei" msprop:Generator_ColumnPropNameInTable="ShokenGaikankensaKoumokuHanteiColumn" msprop:Generator_UserColumnName="ShokenGaikankensaKoumokuHantei">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShokenGyoseiHokokuLevel" msprop:Generator_ColumnVarNameInTable="columnShokenGyoseiHokokuLevel" msprop:Generator_ColumnPropNameInRow="ShokenGyoseiHokokuLevel" msprop:Generator_ColumnPropNameInTable="ShokenGyoseiHokokuLevelColumn" msprop:Generator_UserColumnName="ShokenGyoseiHokokuLevel">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShokenMakerGenin7JouKbn" msprop:Generator_ColumnVarNameInTable="columnShokenMakerGenin7JouKbn" msprop:Generator_ColumnPropNameInRow="ShokenMakerGenin7JouKbn" msprop:Generator_ColumnPropNameInTable="ShokenMakerGenin7JouKbnColumn" msprop:Generator_UserColumnName="ShokenMakerGenin7JouKbn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShokenKoujiGenin7JouKbn" msprop:Generator_ColumnVarNameInTable="columnShokenKoujiGenin7JouKbn" msprop:Generator_ColumnPropNameInRow="ShokenKoujiGenin7JouKbn" msprop:Generator_ColumnPropNameInTable="ShokenKoujiGenin7JouKbnColumn" msprop:Generator_UserColumnName="ShokenKoujiGenin7JouKbn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShokenHoshuGenin7JouKbn" msprop:Generator_ColumnVarNameInTable="columnShokenHoshuGenin7JouKbn" msprop:Generator_ColumnPropNameInRow="ShokenHoshuGenin7JouKbn" msprop:Generator_ColumnPropNameInTable="ShokenHoshuGenin7JouKbnColumn" msprop:Generator_UserColumnName="ShokenHoshuGenin7JouKbn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShokenSeisouGenin7JouKbn" msprop:Generator_ColumnVarNameInTable="columnShokenSeisouGenin7JouKbn" msprop:Generator_ColumnPropNameInRow="ShokenSeisouGenin7JouKbn" msprop:Generator_ColumnPropNameInTable="ShokenSeisouGenin7JouKbnColumn" msprop:Generator_UserColumnName="ShokenSeisouGenin7JouKbn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShokenSetchishaGenin7JouKbn" msprop:Generator_ColumnVarNameInTable="columnShokenSetchishaGenin7JouKbn" msprop:Generator_ColumnPropNameInRow="ShokenSetchishaGenin7JouKbn" msprop:Generator_ColumnPropNameInTable="ShokenSetchishaGenin7JouKbnColumn" msprop:Generator_UserColumnName="ShokenSetchishaGenin7JouKbn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShokenMekaGenin11JouKbn" msprop:Generator_ColumnVarNameInTable="columnShokenMekaGenin11JouKbn" msprop:Generator_ColumnPropNameInRow="ShokenMekaGenin11JouKbn" msprop:Generator_ColumnPropNameInTable="ShokenMekaGenin11JouKbnColumn" msprop:Generator_UserColumnName="ShokenMekaGenin11JouKbn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShokenKoujiGenin11JouKbn" msprop:Generator_ColumnVarNameInTable="columnShokenKoujiGenin11JouKbn" msprop:Generator_ColumnPropNameInRow="ShokenKoujiGenin11JouKbn" msprop:Generator_ColumnPropNameInTable="ShokenKoujiGenin11JouKbnColumn" msprop:Generator_UserColumnName="ShokenKoujiGenin11JouKbn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShokenHoshuGenin11JouKbn" msprop:Generator_ColumnVarNameInTable="columnShokenHoshuGenin11JouKbn" msprop:Generator_ColumnPropNameInRow="ShokenHoshuGenin11JouKbn" msprop:Generator_ColumnPropNameInTable="ShokenHoshuGenin11JouKbnColumn" msprop:Generator_UserColumnName="ShokenHoshuGenin11JouKbn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShokenSeisouGenin11JouKbn" msprop:Generator_ColumnVarNameInTable="columnShokenSeisouGenin11JouKbn" msprop:Generator_ColumnPropNameInRow="ShokenSeisouGenin11JouKbn" msprop:Generator_ColumnPropNameInTable="ShokenSeisouGenin11JouKbnColumn" msprop:Generator_UserColumnName="ShokenSeisouGenin11JouKbn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShokenSetchishaGenin11JouKbn" msprop:Generator_ColumnVarNameInTable="columnShokenSetchishaGenin11JouKbn" msprop:Generator_ColumnPropNameInRow="ShokenSetchishaGenin11JouKbn" msprop:Generator_ColumnPropNameInTable="ShokenSetchishaGenin11JouKbnColumn" msprop:Generator_UserColumnName="ShokenSetchishaGenin11JouKbn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShokenHyoujiIchiDaiCd" msprop:Generator_ColumnVarNameInTable="columnShokenHyoujiIchiDaiCd" msprop:Generator_ColumnPropNameInRow="ShokenHyoujiIchiDaiCd" msprop:Generator_ColumnPropNameInTable="ShokenHyoujiIchiDaiCdColumn" msprop:Generator_UserColumnName="ShokenHyoujiIchiDaiCd">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShokenHyoujiIchiChuCd" msprop:Generator_ColumnVarNameInTable="columnShokenHyoujiIchiChuCd" msprop:Generator_ColumnPropNameInRow="ShokenHyoujiIchiChuCd" msprop:Generator_ColumnPropNameInTable="ShokenHyoujiIchiChuCdColumn" msprop:Generator_UserColumnName="ShokenHyoujiIchiChuCd">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShokenHyoujiIchiShoCd" msprop:Generator_ColumnVarNameInTable="columnShokenHyoujiIchiShoCd" msprop:Generator_ColumnPropNameInRow="ShokenHyoujiIchiShoCd" msprop:Generator_ColumnPropNameInTable="ShokenHyoujiIchiShoCdColumn" msprop:Generator_UserColumnName="ShokenHyoujiIchiShoCd">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShokenSakujouKbn" msprop:Generator_ColumnVarNameInTable="columnShokenSakujouKbn" msprop:Generator_ColumnPropNameInRow="ShokenSakujouKbn" msprop:Generator_ColumnPropNameInTable="ShokenSakujouKbnColumn" msprop:Generator_UserColumnName="ShokenSakujouKbn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShokenGaikankensaCd" msprop:Generator_ColumnVarNameInTable="columnShokenGaikankensaCd" msprop:Generator_ColumnPropNameInRow="ShokenGaikankensaCd" msprop:Generator_ColumnPropNameInTable="ShokenGaikankensaCdColumn" msprop:Generator_UserColumnName="ShokenGaikankensaCd">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShokenTanisouchiCd" msprop:Generator_ColumnVarNameInTable="columnShokenTanisouchiCd" msprop:Generator_ColumnPropNameInRow="ShokenTanisouchiCd" msprop:Generator_ColumnPropNameInTable="ShokenTanisouchiCdColumn" msprop:Generator_UserColumnName="ShokenTanisouchiCd">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShokenBikou" msprop:Generator_ColumnVarNameInTable="columnShokenBikou" msprop:Generator_ColumnPropNameInRow="ShokenBikou" msprop:Generator_ColumnPropNameInTable="ShokenBikouColumn" msprop:Generator_UserColumnName="ShokenBikou">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InsertDt" msprop:Generator_ColumnVarNameInTable="columnInsertDt" msprop:Generator_ColumnPropNameInRow="InsertDt" msprop:Generator_ColumnPropNameInTable="InsertDtColumn" msprop:Generator_UserColumnName="InsertDt" type="xs:dateTime" />
+              <xs:element name="InsertUser" msprop:Generator_ColumnVarNameInTable="columnInsertUser" msprop:Generator_ColumnPropNameInRow="InsertUser" msprop:Generator_ColumnPropNameInTable="InsertUserColumn" msprop:Generator_UserColumnName="InsertUser">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="InsertTarm" msprop:Generator_ColumnVarNameInTable="columnInsertTarm" msprop:Generator_ColumnPropNameInRow="InsertTarm" msprop:Generator_ColumnPropNameInTable="InsertTarmColumn" msprop:Generator_UserColumnName="InsertTarm">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UpdateDt" msprop:Generator_ColumnVarNameInTable="columnUpdateDt" msprop:Generator_ColumnPropNameInRow="UpdateDt" msprop:Generator_ColumnPropNameInTable="UpdateDtColumn" msprop:Generator_UserColumnName="UpdateDt" type="xs:dateTime" />
+              <xs:element name="UpdateUser" msprop:Generator_ColumnVarNameInTable="columnUpdateUser" msprop:Generator_ColumnPropNameInRow="UpdateUser" msprop:Generator_ColumnPropNameInTable="UpdateUserColumn" msprop:Generator_UserColumnName="UpdateUser">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UpdateTarm" msprop:Generator_ColumnVarNameInTable="columnUpdateTarm" msprop:Generator_ColumnPropNameInRow="UpdateTarm" msprop:Generator_ColumnPropNameInTable="UpdateTarmColumn" msprop:Generator_UserColumnName="UpdateTarm">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ShokenMst" />
+      <xs:field xpath="mstns:ShokenKbn" />
+      <xs:field xpath="mstns:ShokenCd" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

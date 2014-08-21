@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="KensaYoteiListDataSet" targetNamespace="http://tempuri.org/KensaYoteiListDataSet.xsd" xmlns:mstns="http://tempuri.org/KensaYoteiListDataSet.xsd" xmlns="http://tempuri.org/KensaYoteiListDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="KensaYoteiListDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="KensaYoteiListDataSet" msprop:Generator_UserDSName="KensaYoteiListDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="検査予定リスト" msprop:Generator_TableClassName="検査予定リストDataTable" msprop:Generator_TableVarName="table検査予定リスト" msprop:Generator_TablePropName="検査予定リスト" msprop:Generator_RowDeletingName="検査予定リストRowDeleting" msprop:Generator_RowChangingName="検査予定リストRowChanging" msprop:Generator_RowEvHandlerName="検査予定リストRowChangeEventHandler" msprop:Generator_RowDeletedName="検査予定リストRowDeleted" msprop:Generator_UserTableName="検査予定リスト" msprop:Generator_RowChangedName="検査予定リストRowChanged" msprop:Generator_RowEvArgName="検査予定リストRowChangeEvent" msprop:Generator_RowClassName="検査予定リストRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="順番" msprop:Generator_ColumnVarNameInTable="column順番" msprop:Generator_ColumnPropNameInRow="順番" msprop:Generator_ColumnPropNameInTable="順番Column" msprop:Generator_UserColumnName="順番" type="xs:int" minOccurs="0" />
+              <xs:element name="検査箇所名" msdata:Caption="DataColumn2" msprop:Generator_ColumnVarNameInTable="column検査箇所名" msprop:Generator_ColumnPropNameInRow="検査箇所名" msprop:Generator_ColumnPropNameInTable="検査箇所名Column" msprop:Generator_UserColumnName="検査箇所名" type="xs:string" minOccurs="0" />
+              <xs:element name="状況" msdata:Caption="DataColumn2" msprop:Generator_ColumnVarNameInTable="column状況" msprop:Generator_ColumnPropNameInRow="状況" msprop:Generator_ColumnPropNameInTable="状況Column" msprop:Generator_UserColumnName="状況" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

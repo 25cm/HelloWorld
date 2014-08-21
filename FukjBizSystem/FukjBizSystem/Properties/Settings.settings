@@ -1,0 +1,83 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="FukjBizSystem.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="HolidayFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">.\HolidayFile.xml</Value>
+    </Setting>
+    <Setting Name="ErrMsgFile" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">.\ErrMsgFile.xml</Value>
+    </Setting>
+    <Setting Name="ScenarioMode" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="PrintDirectory" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\FukjBizSystem\Print</Value>
+    </Setting>
+    <Setting Name="PrintFormatFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\FukjBizSystem\PrintFormat\</Value>
+    </Setting>
+    <Setting Name="SystemName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">浄化槽基幹システム</Value>
+    </Setting>
+    <Setting Name="InputCheckFileFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">D:\</Value>
+    </Setting>
+    <Setting Name="InputCheckFileNm" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">HOS.xlsm</Value>
+    </Setting>
+    <Setting Name="RyosyuFormatFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">領収書.xlsx</Value>
+    </Setting>
+    <Setting Name="SaisuiinShomeishoFormatFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">指定採水員証明書.xlsx</Value>
+    </Setting>
+    <Setting Name="SaisuiinShiteishoFormatFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">指定採水員指定書.xlsx</Value>
+    </Setting>
+    <Setting Name="SealImage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">seal.png</Value>
+    </Setting>
+    <Setting Name="KaiinJouhouKakuninshoFormatFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">会員情報確認書.xlsx</Value>
+    </Setting>
+    <Setting Name="JukoMoshikomishoShutsuryokuFormatFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">指定採水員指定講習会受講申込書.xlsx</Value>
+    </Setting>
+    <Setting Name="HoshoNoFormatFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">保証登録申請書.xlsx</Value>
+    </Setting>
+    <Setting Name="SealTackFormatFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">タックシール.xlsx</Value>
+    </Setting>
+    <Setting Name="FukjBizSystemConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=192.168.0.193;Initial Catalog=fukjBizSystem;Persist Security Info=True;User ID=sa;Password=fukj_1800&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=192.168.0.193;Initial Catalog=fukjBizSystem;Persist Security Info=True;User ID=sa;Password=fukj_1800</Value>
+    </Setting>
+    <Setting Name="SofujoFormatFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">送付状.xlsx</Value>
+    </Setting>
+    <Setting Name="SouShishyo2FormatFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ＦＡＸ送信票２.xlsx</Value>
+    </Setting>
+    <Setting Name="SouShishyo1FormatFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ＦＡＸ送信票１.xlsx</Value>
+    </Setting>
+    <Setting Name="KensaKeihatsuKyodoKumiaiFormatFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">検査啓発推進費支払票(協同組合).xlsx</Value>
+    </Setting>
+    <Setting Name="KensaKeihatsuIchiranFormatFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">検査啓発推進費一覧.xlsx</Value>
+    </Setting>
+    <Setting Name="MoshiKomiGyoshaFormatFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">検査啓発推進費支払票(持込業者).xlsx</Value>
+    </Setting>
+    <Setting Name="ShushuToriatsukaiGyoshaFormatFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">検査啓発推進費支払票(収集取扱業者).xlsx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
